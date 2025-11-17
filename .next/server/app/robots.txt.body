@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /shop/dashboard
+Disallow: /shop/bookings
+Disallow: /shop/products
+Disallow: /shop/settings
+
+Sitemap: https://fixwise.vercel.app/sitemap.xml

@@ -1,0 +1,3 @@
+module.exports=[10019,a=>{"use strict";var b=a.i(43392);function c({children:a}){return(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",()=>c,"metadata",0,{title:{default:"Authentication - FixWise",template:"%s | FixWise"},description:"Sign in or create an account to access FixWise. Manage your repair shop, view bookings, and connect with customers.",robots:{index:!1,follow:!0}}])}];
+
+//# sourceMappingURL=app_auth_layout_tsx_6fe5c9d1._.js.map

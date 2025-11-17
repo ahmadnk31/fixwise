@@ -1,0 +1,2098 @@
+[00:00:01.904] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:02.129] Server  LOG      ✓ Ready in 1506ms
+[00:00:20.011] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:20.011] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:20.011] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:21.470] Server  LOG      ○ Compiling /shops/[id] ...
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.304] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.851] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.851] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:22.851] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:00:29.626] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:29.626] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","route":"/shops/[id]"}
+[00:00:29.626] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410363718}
+[00:00:37.195] Server  LOG      ✓ Compiled in 99ms
+[00:00:49.990] Server  LOG      ✓ Compiled in 116ms
+[00:01:03.541] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:03.947] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:03.947] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shop/bookings","route":"/shop/bookings"}
+[00:01:03.947] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/bookings color: rgb(120, 120, 120) color: inherit {"dp":"/shop/bookings","o":"http://localhost:3000/shop/bookings","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410398039}
+[00:01:10.970] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410405024}
+[00:01:19.247] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410413326}
+[00:01:38.130] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:38.442] Server  LOG      ✓ Compiled in 254ms
+[00:01:39.730] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:40.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:40.250] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:40.250] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410434225}
+[00:01:52.876] Server  LOG      ✓ Compiled in 425ms
+[00:02:42.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:42.767] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:42.767] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:42.767] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410496863}
+[00:02:47.448] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:47.684] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:47.684] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:47.684] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410501779}
+[00:02:53.488] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:53.919] Server  LOG      ✓ Compiled in 99ms
+[00:02:54.725] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:55.233] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:55.233] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:55.233] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410509086}
+[00:03:04.325] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:04.354] Server  LOG      ✓ Compiled in 97ms
+[00:03:05.360] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:06.234] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:06.234] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:06.234] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410519736}
+[00:03:15.242] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:15.268] Server  LOG      ✓ Compiled in 101ms
+[00:03:16.292] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:17.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:17.250] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:17.250] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410530738}
+[00:04:00.250] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:04:06.250] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:04:06.250] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:04:08.250] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:04:08.250] Browser ERROR   ./app/page.tsx:117:10
+Ecmascript file had an error
+  115 | }
+  116 |
+> 117 | function HomePageFooter() {
+      |          ^^^^^^^^^^^^^^
+  118 |   const { t } = require('@/lib/i18n/context').useI18n()
+  119 |   return (
+  120 |     <footer className="py-4 text-center text-sm text-muted-foreground">
+
+the name `HomePageFooter` is defined multiple times
+[00:04:08.250] Browser ERROR   ./app/page.tsx:103:10
+Ecmascript file had an error
+  101 | }
+  102 |
+> 103 | function HomePageLinks() {
+      |          ^^^^^^^^^^^^^
+  104 |   const { t } = require('@/lib/i18n/context').useI18n()
+  105 |   return (
+  106 |     <div className="flex justify-center gap-6 text-sm">
+
+the name `HomePageLinks` is defined multiple times
+[00:04:13.260] Server  LOG      ✓ Compiled in 82ms
+[00:04:15.256] Server  LOG      ✓ Compiled in 83ms
+[00:04:18.209] Server  LOG      ✓ Compiled in 92ms
+[00:04:21.047] Server  LOG      ✓ Compiled in 84ms
+[00:04:22.466] Server  LOG      ✓ Compiled in 74ms
+[00:04:53.647] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:04:53.673] Server  LOG      ✓ Compiled in 76ms
+[00:04:55.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:57.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:57.250] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:57.250] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410630429}
+[00:04:57.592] Server  LOG      ✓ Compiled in 80ms
+[00:04:57.594] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:04:58.640] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:59.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:59.250] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:59.250] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410633097}
+[00:04:59.964] Server  LOG      ✓ Compiled in 80ms
+[00:05:01.533] Server  LOG      ✓ Compiled in 86ms
+[00:05:03.225] Server  LOG      ✓ Compiled in 81ms
+[00:05:15.917] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410649995}
+[00:05:15.977] Server  LOG      ✓ Compiled in 111ms
+[00:05:21.623] Server  LOG      ✓ Compiled in 79ms
+[00:05:28.624] Server  LOG      ✓ Compiled in 79ms
+[00:05:43.819] Server  LOG      ✓ Compiled in 250ms
+[00:06:24.034] Server  LOG      ✓ Compiled in 84ms
+[00:06:24.035] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:25.787] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:26.115] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:26.115] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shop/dashboard","route":"/shop/dashboard"}
+[00:06:26.115] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410720217}
+[00:06:27.471] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:27.498] Server  LOG      ✓ Compiled in 98ms
+[00:06:29.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:29.294] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:29.294] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:29.294] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410723397}
+[00:06:31.898] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:33.062] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:33.397] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:33.397] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:33.397] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410727499}
+[00:06:36.045] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410730104}
+[00:06:36.363] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/translations.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:06:37.200] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:06:37.201] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:06:38.267] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:38.780] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:38.780] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops","route":"/shops"}
+[00:06:38.780] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410732828}
+[00:06:38.780] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:06:38.780] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:06:41.082] Server  LOG      ✓ Compiled in 78ms
+[00:06:48.976] Server  LOG      ✓ Compiled in 81ms
+[00:06:53.073] Server  LOG      ✓ Compiled in 74ms
+[00:06:57.958] Server  LOG      ✓ Compiled in 74ms
+[00:07:02.458] Server  LOG      ✓ Compiled in 134ms
+[00:07:02.513] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410756597}
+[00:07:08.277] Server  LOG      ✓ Compiled in 83ms
+[00:07:08.712] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.758] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.759] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.760] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.861] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.900] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.901] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:07:08.901] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:07:08.901] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:07:08.901] Browser ERROR   ./app/page.tsx:98:10
+Ecmascript file had an error
+   96 | }
+   97 |
+>  98 | function HomePageClient() {
+      |          ^^^^^^^^^^^^^^
+   99 |   const { t } = require('@/lib/i18n/context').useI18n()
+  100 |   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
+  101 | }
+
+the name `HomePageClient` is defined multiple times
+[00:07:08.901] Browser ERROR   ./app/page.tsx:117:10
+Ecmascript file had an error
+  115 | }
+  116 |
+> 117 | function HomePageFooter() {
+      |          ^^^^^^^^^^^^^^
+  118 |   const { t } = require('@/lib/i18n/context').useI18n()
+  119 |   return (
+  120 |     <footer className="py-4 text-center text-sm text-muted-foreground">
+
+the name `HomePageFooter` is defined multiple times
+[00:07:08.901] Browser ERROR   ./app/page.tsx:103:10
+Ecmascript file had an error
+  101 | }
+  102 |
+> 103 | function HomePageLinks() {
+      |          ^^^^^^^^^^^^^
+  104 |   const { t } = require('@/lib/i18n/context').useI18n()
+  105 |   return (
+  106 |     <div className="flex justify-center gap-6 text-sm">
+
+the name `HomePageLinks` is defined multiple times
+[00:07:08.912] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.912] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:08.912] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.013] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.014] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.015] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.015] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.015] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.015] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.247] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./lib/i18n/context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:09.796] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410763849}
+[00:07:10.306] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:10.307] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b. Falling back to browser navigation. {}
+[00:07:12.119] Server  LOG      ✓ Compiled in 74ms
+[00:07:14.488] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:14.488] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","route":"/shops/[id]"}
+[00:07:14.488] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410768590}
+[00:07:16.384] Server  LOG      ✓ Compiled in 89ms
+[00:07:32.978] Server  LOG      ✓ Compiled in 76ms
+[00:07:41.386] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410795477}
+[00:07:46.153] Server  LOG      ✓ Compiled in 80ms
+[00:07:50.578] Server  LOG      ✓ Compiled in 82ms
+[00:07:52.588] Server  LOG      ✓ Compiled in 83ms
+[00:07:55.226] Server  LOG      ✓ Compiled in 83ms
+[00:07:57.569] Server  LOG      ✓ Compiled in 76ms
+[00:08:01.973] Server  LOG      ✓ Compiled in 81ms
+[00:08:22.692] Server  LOG      ✓ Compiled in 82ms
+[00:08:37.398] Server  LOG      ✓ Compiled in 91ms
+[00:08:39.359] Server  LOG      ✓ Compiled in 142ms
+[00:08:41.449] Server  LOG      ✓ Compiled in 92ms
+[00:08:43.447] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.450] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.455] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.459] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.464] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.468] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.473] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.476] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.481] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.484] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.491] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.494] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.499] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.505] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.510] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.513] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.520] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.522] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.529] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.532] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.537] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:43.539] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:44.250] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:08:45.439] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.440] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.445] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.450] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.454] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.458] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.463] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.466] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.469] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.471] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.474] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.476] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.480] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.481] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.484] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.486] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.490] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.493] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.497] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.500] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.505] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:45.508] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:46.250] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:08:48.091] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.096] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.220] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.222] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.228] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.232] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.234] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.237] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.239] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.242] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.244] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.246] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.248] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.251] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.254] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.256] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.259] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.261] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.265] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.268] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.270] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.272] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.274] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.277] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.280] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.282] Server  ERROR    ⨯ ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:08:48.284] Server  LOG      ✓ Compiled in 265ms
+[00:08:49.250] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:08:52.148] Server  LOG      ✓ Compiled in 185ms
+[00:08:52.250] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Export ShopDetailTranslations doesn't exist in target module
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+The export ShopDetailTranslations was not found in module [project]/components/shop-detail-translations.tsx [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:08:54.200] Server  LOG      ✓ Compiled in 80ms
+[00:09:01.980] Server  LOG      ✓ Compiled in 85ms
+[00:09:20.716] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410894749}
+[00:09:42.131] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763410916226}
+[00:11:30.501] Server  LOG      ✓ Compiled in 154ms
+[00:12:19.386] Server  LOG      ✓ Compiled in 6.7s
+[00:12:24.886] Server  LOG      ✓ Compiled in 91ms
+[00:12:24.990] Browser ERROR   ./components/navbar-client.tsx:73:10
+Ecmascript file had an error
+  71 |   const isLoggedIn = !!user
+  72 |
+> 73 |   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+     |          ^^^^^^^^^^^^^^
+  74 |   const { Menu, X } = require('lucide-react')
+  75 |
+  76 |   if (variant === "minimal") {
+
+the name `mobileMenuOpen` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar-client.tsx [Client Component Browser]
+    ./components/shop-directory.tsx [Client Component Browser]
+    ./components/shop-directory.tsx [Server Component]
+    ./app/shops/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar-client.tsx [Client Component SSR]
+    ./components/shop-directory.tsx [Client Component SSR]
+    ./components/shop-directory.tsx [Server Component]
+    ./app/shops/page.tsx [Server Component]
+[00:12:24.990] Browser ERROR   ./components/navbar-client.tsx:73:26
+Ecmascript file had an error
+  71 |   const isLoggedIn = !!user
+  72 |
+> 73 |   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+     |                          ^^^^^^^^^^^^^^^^^
+  74 |   const { Menu, X } = require('lucide-react')
+  75 |
+  76 |   if (variant === "minimal") {
+
+the name `setMobileMenuOpen` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./components/navbar-client.tsx [Client Component Browser]
+    ./components/shop-directory.tsx [Client Component Browser]
+    ./components/shop-directory.tsx [Server Component]
+    ./app/shops/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/navbar-client.tsx [Client Component SSR]
+    ./components/shop-directory.tsx [Client Component SSR]
+    ./components/shop-directory.tsx [Server Component]
+    ./app/shops/page.tsx [Server Component]
+[00:12:35.614] Server  LOG      ✓ Compiled in 141ms
+[00:12:49.530] Server  LOG      ✓ Compiled in 117ms
+[00:13:00.770] Server  LOG      ✓ Compiled in 105ms
+[00:13:09.317] Server  LOG      ✓ Compiled in 141ms
+[00:13:11.573] Server  LOG      ✓ Compiled in 106ms
+[00:13:31.620] Server  LOG      ✓ Compiled in 105ms
+[00:13:36.143] Server  LOG      ✓ Compiled in 102ms
+[00:13:38.420] Server  LOG      ✓ Compiled in 139ms
+[00:13:47.061] Server  LOG      ✓ Compiled in 115ms
+[00:13:59.344] Server  LOG      ✓ Compiled in 88ms
+[00:14:01.447] Server  LOG      ✓ Compiled in 86ms
+[00:14:03.190] Server  LOG      ✓ Compiled in 92ms
+[00:14:26.466] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:27.042] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:27.042] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:27.042] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763411201145}
+[00:14:32.804] Server  LOG      ✓ Compiled in 158ms
+[00:15:46.235] Server  LOG      ✓ Compiled in 98ms
+[00:16:06.690] Server  LOG      ✓ Compiled in 84ms
+[00:16:17.921] Server  LOG      ✓ Compiled in 292ms
+[00:16:20.736] Server  LOG      ✓ Compiled in 131ms
+[00:16:26.422] Server  LOG      ✓ Compiled in 85ms
+[00:19:19.922] Server  LOG      ✓ Compiled in 103ms
+[00:19:21.772] Server  LOG      ✓ Compiled in 82ms
+[00:28:47.604] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:48.083] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:28:48.083] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:28:48.083] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763412062172}
+[00:30:40.708] Server  LOG      ✓ Compiled in 424ms
+[00:31:08.823] Server  LOG      ✓ Compiled in 142ms
+[00:31:11.385] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:31:11.385] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:31:11.385] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Module not found: Can't resolve '@/components/shop-detail-translations'
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+Import map: aliased to relative './components/shop-detail-translations' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found
+[00:31:11.385] Browser ERROR   ./app/shops/[id]/page.tsx:14:1
+Export ShopDetailTranslations doesn't exist in target module
+  12 | import type { Metadata } from "next"
+  13 | import { ShopDetailBackLink, ShopDetailReviewCount } from "@/components/shop-detail-client"
+> 14 | import { ShopDetailTranslations } from "@/components/shop-detail-translations"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  15 |
+  16 | const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  17 |
+
+The export ShopDetailTranslations was not found in module [project]/components/shop-detail-translations.tsx [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:31:15.160] Server  LOG      ✓ Compiled in 177ms
+[00:40:54.252] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763412788251}
+[00:40:59.086] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/settings color: rgb(120, 120, 120) color: inherit {"dp":"/shop/settings","o":"http://localhost:3000/shop/settings","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763412793022}
+[00:40:59.086] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:40:59.086] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:44:07.832] Server  LOG      ✓ Compiled in 148ms
+[00:44:08.232] Browser ERROR   ./components/shop-settings.tsx:22:26
+Ecmascript file had an error
+  20 | import { useDropzone } from "react-dropzone"
+  21 | import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+> 22 | import { Store, Image as ImageIcon, FileText, Share2, Building2, Calendar } from 'lucide-react'
+     |                          ^^^^^^^^^
+  23 |
+  24 | interface ShopSettingsProps {
+  25 |   user: User
+
+the name `ImageIcon` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:44:13.197] Server  LOG      ✓ Compiled in 169ms
+[00:44:14.232] Browser ERROR   ./components/shop-settings.tsx:1083:20
+Parsing ecmascript source code failed
+  1081 |                 {isLoading ? "Saving..." : shop ? "Update Shop" : "Create Shop"}
+  1082 |               </Button>
+> 1083 |             </form>
+       |                    ^
+> 1084 |           </CardContent>
+       | ^^^^^^^^^^^
+  1085 |         </Card>
+  1086 |       </div>
+  1087 |     </div>
+
+Expected '</', got 'jsx text (
+          )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:44:31.237] Browser ERROR   ./components/shop-settings.tsx:609:31
+Parsing ecmascript source code failed
+  607 |                   ))}
+  608 |                 </div>
+> 609 |                 </TabsContent>
+      |                               ^
+> 610 |
+      | ^
+> 611 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  612 |                 <TabsContent value="profile" className="space-y-6">
+  613 |                   <div>
+  614 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:44:33.439] Browser ERROR   ./components/shop-settings.tsx:609:31
+Parsing ecmascript source code failed
+  607 |                   ))}
+  608 |                 </div>
+> 609 |                 </TabsContent>
+      |                               ^
+> 610 |
+      | ^
+> 611 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  612 |                 <TabsContent value="profile" className="space-y-6">
+  613 |                   <div>
+  614 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:44:46.238] Browser ERROR   ./components/shop-settings.tsx:609:31
+Parsing ecmascript source code failed
+  607 |                   ))}
+  608 |                 </div>
+> 609 |                 </TabsContent>
+      |                               ^
+> 610 |
+      | ^
+> 611 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  612 |                 <TabsContent value="profile" className="space-y-6">
+  613 |                   <div>
+  614 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:10.241] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:21.973] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:37.504] Server  ERROR    ⨯ ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+
+
+[00:45:37.629] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:38.399] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:38.602] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:39.030] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:39.620] Browser ERROR   uncaughtError: Error: ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+
+
+[00:45:40.002] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:45:40.213] Browser ERROR   ./components/shop-settings.tsx:608:31
+Parsing ecmascript source code failed
+  606 |                   ))}
+  607 |                 </div>
+> 608 |                 </TabsContent>
+      |                               ^
+> 609 |
+      | ^
+> 610 |                 {/* Profile & Gallery Tab */}
+      | ^^^^^^^^^^^^^^^^^
+  611 |                 <TabsContent value="profile" className="space-y-6">
+  612 |                   <div>
+  613 |                     <h3 className="mb-2 text-lg font-semibold">Profile & Gallery</h3>
+
+Expected '</', got 'jsx text (
+
+                )'
+
+Import trace:
+  Server Component:
+    ./components/shop-settings.tsx
+    ./app/shop/settings/page.tsx
+[00:46:30.919] Server  LOG      ✓ Compiled in 202ms
+[00:46:33.749] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:35.244] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:46:35.244] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shop/settings","route":"/shop/settings"}
+[00:46:35.244] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/settings color: rgb(120, 120, 120) color: inherit {"dp":"/shop/settings","o":"http://localhost:3000/shop/settings","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413128534}
+[00:46:35.244] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:46:35.244] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:47:01.231] Server  LOG      ✓ Compiled in 179ms
+[00:47:26.454] Server  LOG      ✓ Compiled in 154ms
+[00:47:50.144] Server  LOG      ✓ Compiled in 169ms
+[00:49:22.133] Server  LOG      ✓ Compiled in 305ms
+[00:50:46.666] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413380776}
+[00:50:57.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/products color: rgb(120, 120, 120) color: inherit {"dp":"/shop/products","o":"http://localhost:3000/shop/products","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413391235}
+[00:50:57.166] Browser WARN    Image with src "https://swhu1zpq5z97kigd.public.blob.vercel-storage.com/Ry5KtVyN2SKswVTl.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:51:00.578] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:51:00.578] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:53:35.461] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/product-images/products/1763413547477-9s0dfk.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:53:40.986] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413555110}
+[00:53:45.353] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/products color: rgb(120, 120, 120) color: inherit {"dp":"/shop/products","o":"http://localhost:3000/shop/products","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413559491}
+[00:53:46.340] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413560462}
+[00:53:48.697] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413562821}
+[00:53:52.600] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:53:52.600] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413566606}
+[00:53:57.016] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `ShopDetailPage`.
+[00:54:47.664] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:54:47.668] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:54:47.676] Server  LOG      ✓ Compiled in 143ms
+[00:54:50.245] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:54:50.702] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:51.245] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `ShopDetailPage`.
+[00:55:24.083] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:55:24.464] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:24.904] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `ShopDetailPage`.
+[00:55:49.926] Server  ERROR    ⨯ ReferenceError: ShopDetailTranslations is not defined
+[00:55:49.959] Server  LOG      ✓ Compiled in 0ms
+[00:55:50.203] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:50.427] Browser ERROR   uncaughtError: ReferenceError: ShopDetailTranslations is not defined
+[00:55:50.854] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:55:51.537] Server  ERROR    ⨯ ReferenceError: ShopDetailTranslations is not defined
+[00:55:51.574] Server  LOG      ✓ Compiled in 0ms
+[00:55:51.759] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:52.232] Browser ERROR   uncaughtError: ReferenceError: ShopDetailTranslations is not defined
+[00:55:53.233] Server  ERROR    ⨯ ReferenceError: ShopDetailTranslations is not defined
+[00:55:53.475] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:54.234] Browser ERROR   uncaughtError: ReferenceError: ShopDetailTranslations is not defined
+[00:55:54.304] Server  LOG      ✓ Compiled in 93ms
+[00:55:55.293] Server  ERROR    ⨯ ReferenceError: ShopDetailTranslations is not defined
+[00:55:55.535] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:56.233] Browser ERROR   uncaughtError: ReferenceError: ShopDetailTranslations is not defined
+[00:55:57.800] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:58.233] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:58.233] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","route":"/shops/[id]"}
+[00:55:58.233] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413692288}
+[00:58:41.126] Server  LOG      ✓ Compiled in 243ms
+[00:58:42.241] Browser ERROR   ./app/shops/[id]/page.tsx:534:7
+Parsing ecmascript source code failed
+  532 |         </div>
+  533 |       </div>
+> 534 |     </>
+      |       ^
+  535 |   )
+  536 | }
+  537 |
+
+Expression expected
+[00:58:47.154] Server  LOG      ✓ Compiled in 215ms
+[00:58:48.241] Browser ERROR   ./app/shops/[id]/page.tsx:534:7
+Parsing ecmascript source code failed
+  532 |         </div>
+  533 |       </div>
+> 534 |     </>
+      |       ^
+  535 |   )
+  536 | }
+  537 |
+
+Expression expected
+[00:59:01.375] Server  LOG      ✓ Compiled in 323ms
+[00:59:02.192] Browser ERROR   ./app/shops/[id]/page.tsx:538:7
+Parsing ecmascript source code failed
+  536 |         </div>
+  537 |       </div>
+> 538 |     </>
+      |       ^
+  539 |   )
+  540 | }
+  541 |
+
+Expression expected
+[00:59:06.379] Server  LOG      ✓ Compiled in 207ms
+[00:59:31.395] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413905324}
+[00:59:31.986] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:59:31.986] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:59:35.720] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/62275736-12dc-4aeb-9800-6ab5033a3cf5 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/62275736-12dc-4aeb-9800-6ab5033a3cf5","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413909846}
+[00:59:42.914] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413916967}
+[01:00:01.753] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:02.406] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:00:02.406] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops","route":"/shops"}
+[01:00:02.406] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413936482}
+[01:00:02.406] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:00:02.406] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[01:00:24.949] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763413959080}
+[01:01:44.494] Server  LOG      ✓ Compiled in 186ms
+[01:02:38.591] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763414092638}
+[01:02:42.331] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763414096464}
+[01:04:05.361] Server  LOG      ✓ Compiled in 114ms
+[01:04:09.573] Server  LOG      ✓ Compiled in 111ms
+[01:04:20.579] Server  LOG      ✓ Compiled in 91ms
+[01:04:35.459] Server  LOG      ✓ Compiled in 165ms
+[01:04:37.923] Server  LOG      ✓ Compiled in 101ms
+[01:04:40.547] Server  LOG      ✓ Compiled in 104ms
+[01:05:07.134] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/ui/button.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:05:07.166] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/ui/button.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:05:07.187] Server  LOG      ✓ Compiled in 215ms
+[01:05:09.372] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:10.241] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:05:10.242] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:05:10.242] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763414243998}

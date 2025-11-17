@@ -1,0 +1,12 @@
+{
+  "/api/bookings/available-slots/route": "app/api/bookings/available-slots/route.js",
+  "/api/maps-config/route": "app/api/maps-config/route.js",
+  "/api/products/route": "app/api/products/route.js",
+  "/page": "app/page.js",
+  "/shop/bookings/page": "app/shop/bookings/page.js",
+  "/shop/dashboard/page": "app/shop/dashboard/page.js",
+  "/shop/products/page": "app/shop/products/page.js",
+  "/shop/settings/page": "app/shop/settings/page.js",
+  "/shops/[id]/page": "app/shops/[id]/page.js",
+  "/shops/page": "app/shops/page.js"
+}

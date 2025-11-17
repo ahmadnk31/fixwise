@@ -1,0 +1,3 @@
+{
+  "/api/validate-vat/route": "app/api/validate-vat/route.js"
+}

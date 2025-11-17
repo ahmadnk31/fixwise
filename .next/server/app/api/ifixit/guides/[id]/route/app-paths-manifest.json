@@ -1,0 +1,3 @@
+{
+  "/api/ifixit/guides/[id]/route": "app/api/ifixit/guides/[id]/route.js"
+}

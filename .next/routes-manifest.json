@@ -1,0 +1,255 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/bookings/[id]",
+      "regex": "^/api/bookings/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/bookings/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/bookings/[id]/notify",
+      "regex": "^/api/bookings/([^/]+?)/notify(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/bookings/(?<nxtPid>[^/]+?)/notify(?:/)?$"
+    },
+    {
+      "page": "/api/ifixit/guides/[id]",
+      "regex": "^/api/ifixit/guides/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/ifixit/guides/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/leads/[id]",
+      "regex": "^/api/leads/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/leads/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/products/[id]",
+      "regex": "^/api/products/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/products/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/reviews/[id]",
+      "regex": "^/api/reviews/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/reviews/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/repair-guide/[id]",
+      "regex": "^/repair\\-guide/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/repair\\-guide/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/shop/bookings/[date]",
+      "regex": "^/shop/bookings/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPdate": "nxtPdate"
+      },
+      "namedRegex": "^/shop/bookings/(?<nxtPdate>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/shops/[id]",
+      "regex": "^/shops/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/shops/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/bookings",
+      "regex": "^/api/bookings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/bookings(?:/)?$"
+    },
+    {
+      "page": "/api/bookings/available-slots",
+      "regex": "^/api/bookings/available\\-slots(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/bookings/available\\-slots(?:/)?$"
+    },
+    {
+      "page": "/api/diagnose",
+      "regex": "^/api/diagnose(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/diagnose(?:/)?$"
+    },
+    {
+      "page": "/api/ifixit/search",
+      "regex": "^/api/ifixit/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/ifixit/search(?:/)?$"
+    },
+    {
+      "page": "/api/leads",
+      "regex": "^/api/leads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/leads(?:/)?$"
+    },
+    {
+      "page": "/api/maps-config",
+      "regex": "^/api/maps\\-config(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/maps\\-config(?:/)?$"
+    },
+    {
+      "page": "/api/products",
+      "regex": "^/api/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/products(?:/)?$"
+    },
+    {
+      "page": "/api/reviews",
+      "regex": "^/api/reviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/reviews(?:/)?$"
+    },
+    {
+      "page": "/api/validate-vat",
+      "regex": "^/api/validate\\-vat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/validate\\-vat(?:/)?$"
+    },
+    {
+      "page": "/auth/login",
+      "regex": "^/auth/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/login(?:/)?$"
+    },
+    {
+      "page": "/auth/sign-up",
+      "regex": "^/auth/sign\\-up(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/sign\\-up(?:/)?$"
+    },
+    {
+      "page": "/auth/sign-up-success",
+      "regex": "^/auth/sign\\-up\\-success(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/sign\\-up\\-success(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/shop/bookings",
+      "regex": "^/shop/bookings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shop/bookings(?:/)?$"
+    },
+    {
+      "page": "/shop/dashboard",
+      "regex": "^/shop/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shop/dashboard(?:/)?$"
+    },
+    {
+      "page": "/shop/products",
+      "regex": "^/shop/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shop/products(?:/)?$"
+    },
+    {
+      "page": "/shop/settings",
+      "regex": "^/shop/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shop/settings(?:/)?$"
+    },
+    {
+      "page": "/shops",
+      "regex": "^/shops(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/shops(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/user/diagnosis-history",
+      "regex": "^/user/diagnosis\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user/diagnosis\\-history(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

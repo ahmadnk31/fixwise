@@ -1,0 +1,12 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/bookings/[id]/route.js")
+R.c("server/chunks/0439a_next_5ef1a7b3._.js")
+R.c("server/chunks/4b6e4_@opentelemetry_api_build_esm_9cee443b._.js")
+R.c("server/chunks/bd38b_@supabase_realtime-js_dist_module_4b73b7e6._.js")
+R.c("server/chunks/75320_@supabase_storage-js_dist_module_9b813ac8._.js")
+R.c("server/chunks/f7e70_@supabase_auth-js_dist_module_59cf7f4c._.js")
+R.c("server/chunks/34851_svix_dist_b7c63b06._.js")
+R.c("server/chunks/node_modules__pnpm_552d4e44._.js")
+R.c("server/chunks/[root-of-the-server]__1b8a351f._.js")
+R.c("server/chunks/_next-internal_server_app_api_bookings_[id]_route_actions_b6e76d8c.js")
+R.m("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/bookings/[id]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/bookings/[id]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

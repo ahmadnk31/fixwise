@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///Users/ss/Downloads/ai-repair-diagnosis-saas-main/app/api/maps-config/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\"\n\nexport async function GET() {\n  const apiKey = process.env.GOOGLE_MAPS_API_KEY\n\n  if (!apiKey) {\n    return NextResponse.json(\n      { error: \"Maps API key not configured\" },\n      { status: 500 }\n    )\n  }\n\n  return NextResponse.json({ apiKey })\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe;IACpB,MAAM,SAAS,QAAQ,GAAG,CAAC,mBAAmB;IAE9C,IAAI,CAAC,QAAQ;QACX,OAAO,uTAAY,CAAC,IAAI,CACtB;YAAE,OAAO;QAA8B,GACvC;YAAE,QAAQ;QAAI;IAElB;IAEA,OAAO,uTAAY,CAAC,IAAI,CAAC;QAAE;IAAO;AACpC","debugId":null}}]
+}

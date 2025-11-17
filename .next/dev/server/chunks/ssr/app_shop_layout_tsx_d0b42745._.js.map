@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/ss/Downloads/ai-repair-diagnosis-saas-main/app/shop/layout.tsx"],"sourcesContent":["import type { Metadata } from \"next\"\n\nexport const metadata: Metadata = {\n  title: {\n    default: \"Shop Dashboard - FixWise\",\n    template: \"%s | FixWise Shop Dashboard\"\n  },\n  description: \"Manage your repair shop, view bookings, products, and customer reviews on FixWise.\",\n  robots: {\n    index: false,\n    follow: false,\n  },\n}\n\nexport default function ShopLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return <>{children}</>\n}\n"],"names":[],"mappings":";;;;;;;;AAEO,MAAM,WAAqB;IAChC,OAAO;QACL,SAAS;QACT,UAAU;IACZ;IACA,aAAa;IACb,QAAQ;QACN,OAAO;QACP,QAAQ;IACV;AACF;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,qBAAO;kBAAG;;AACZ","debugId":null}}]
+}

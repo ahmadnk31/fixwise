@@ -1,0 +1,3 @@
+module.exports=[88256,a=>{"use strict";var b=a.i(43392);function c({children:a}){return(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",()=>c,"metadata",0,{title:{default:"Shop Dashboard - FixWise",template:"%s | FixWise Shop Dashboard"},description:"Manage your repair shop, view bookings, products, and customer reviews on FixWise.",robots:{index:!1,follow:!1}}])}];
+
+//# sourceMappingURL=app_shop_layout_tsx_d0b42745._.js.map

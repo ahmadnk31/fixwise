@@ -1,0 +1,11 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/bookings/available-slots/route.js")
+R.c("server/chunks/0439a_next_320d0342._.js")
+R.c("server/chunks/4b6e4_@opentelemetry_api_build_esm_9cee443b._.js")
+R.c("server/chunks/bd38b_@supabase_realtime-js_dist_module_4b73b7e6._.js")
+R.c("server/chunks/75320_@supabase_storage-js_dist_module_9b813ac8._.js")
+R.c("server/chunks/f7e70_@supabase_auth-js_dist_module_59cf7f4c._.js")
+R.c("server/chunks/node_modules__pnpm_56d612be._.js")
+R.c("server/chunks/[root-of-the-server]__ed3f5ed2._.js")
+R.c("server/chunks/_next-internal_server_app_api_bookings_available-slots_route_actions_51b1ba73.js")
+R.m("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/bookings/available-slots/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/bookings/available-slots/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

@@ -1,0 +1,3 @@
+{
+  "/api/bookings/available-slots/route": "app/api/bookings/available-slots/route.js"
+}
