@@ -1,5 +1,11 @@
 .env
-.env.local
+.env*.local
 .env.development.local
-.env.test.local
+.env.local
 .env.production.local
+.env.test.local
+.next
+.next/
+.vercel
+node_modules
+node_modules/
