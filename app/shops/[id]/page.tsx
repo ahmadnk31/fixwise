@@ -127,7 +127,7 @@ export default async function ShopDetailPage({
   }
 
   // Fetch reviews
-  const { data: reviews = [] } = await supabase
+  const { data: reviewsData } = await supabase
     .from("reviews")
     .select(
       `
@@ -137,6 +137,8 @@ export default async function ShopDetailPage({
     )
     .eq("shop_id", id)
     .order("created_at", { ascending: false })
+
+  const reviews = reviewsData || []
 
   // Check if user is authenticated
   const {
@@ -343,7 +345,7 @@ export default async function ShopDetailPage({
                         <p className="text-sm font-semibold text-muted-foreground">Expertise</p>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {shop.expertise.map((skill) => (
+                        {shop.expertise.map((skill: string) => (
                           <Badge key={skill} variant="secondary" className="px-3 py-1.5 text-sm">
                             {skill}
                           </Badge>
