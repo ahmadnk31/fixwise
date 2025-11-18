@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 import { I18nProvider } from "@/lib/i18n/context"
+
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })

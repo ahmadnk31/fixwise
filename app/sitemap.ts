@@ -3,10 +3,15 @@ import type { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = await createClient()
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixwise.be'
 
   // Get all shops for dynamic URLs
-  const { data: shops } = await supabase.from('repair_shops').select('id, created_at, updated_at')
+  const { data: shops, error } = await supabase.from('repair_shops').select('id, created_at, updated_at')
+  
+  // Handle database errors gracefully
+  if (error) {
+    console.error('Error fetching shops for sitemap:', error)
+  }
 
   const shopUrls = (shops || []).map((shop) => ({
     url: `${baseUrl}/shops/${shop.id}`,
