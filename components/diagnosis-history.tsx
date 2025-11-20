@@ -8,25 +8,28 @@ import { format } from "date-fns"
 import Link from "next/link"
 import Image from "next/image"
 import type { Diagnosis } from "@/lib/types"
+import { useI18n } from "@/lib/i18n/context"
 
 interface DiagnosisHistoryProps {
   diagnoses: Diagnosis[]
 }
 
 export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
+  const { t } = useI18n()
+  
   if (diagnoses.length === 0) {
     return (
       <Card>
         <CardContent className="flex flex-col items-center justify-center py-12">
           <Search className="mb-4 h-12 w-12 text-muted-foreground" />
-          <h3 className="mb-2 text-lg font-semibold">No diagnosis history</h3>
+          <h3 className="mb-2 text-lg font-semibold">{t.history.noHistory}</h3>
           <p className="mb-4 text-center text-sm text-muted-foreground">
-            You haven't created any diagnoses yet. Start by diagnosing a device issue.
+            {t.history.noHistoryDescription}
           </p>
           <Link href="/">
             <Button>
               <Search className="mr-2 h-4 w-4" />
-              Start New Diagnosis
+              {t.history.startNew}
             </Button>
           </Link>
         </CardContent>
@@ -75,7 +78,7 @@ export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
             <CardContent className="space-y-4">
               {/* User Input */}
               <div>
-                <h4 className="mb-1 text-sm font-semibold text-muted-foreground">Your Issue</h4>
+                <h4 className="mb-1 text-sm font-semibold text-muted-foreground">{t.diagnosis.issue}</h4>
                 <p className="text-sm">{diagnosis.user_input}</p>
               </div>
 
@@ -97,7 +100,7 @@ export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
               {/* Probable Issue */}
               {result.probable_issue && (
                 <div>
-                  <h4 className="mb-1 text-sm font-semibold">Probable Issue</h4>
+                  <h4 className="mb-1 text-sm font-semibold">{t.diagnosisResult.probableIssue}</h4>
                   <p className="text-sm">{result.probable_issue}</p>
                 </div>
               )}
@@ -106,17 +109,17 @@ export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
               <div className="grid gap-4 md:grid-cols-3">
                 {result.repair_difficulty && (
                   <div>
-                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">Difficulty</h4>
+                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">{t.history.difficulty}</h4>
                     <Badge variant="outline" className={getDifficultyColor(result.repair_difficulty)}>
                       <Wrench className="mr-1 h-3 w-3" />
-                      Level {result.repair_difficulty}/5
+                      {t.diagnosisResult.level} {result.repair_difficulty}/5
                     </Badge>
                   </div>
                 )}
 
                 {result.estimated_cost && (
                   <div>
-                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">Estimated Cost</h4>
+                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">{t.history.estimatedCost}</h4>
                     <p className="text-sm font-semibold flex items-center gap-1">
                       <DollarSign className="h-4 w-4" />
                       {result.estimated_cost}
@@ -126,7 +129,7 @@ export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
 
                 {result.recommended_action && (
                   <div>
-                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">Recommendation</h4>
+                    <h4 className="mb-1 text-xs font-semibold text-muted-foreground">{t.diagnosisResult.recommendedAction}</h4>
                     <p className="text-sm">{result.recommended_action}</p>
                   </div>
                 )}
@@ -137,13 +140,13 @@ export function DiagnosisHistory({ diagnoses }: DiagnosisHistoryProps) {
                 <Link href={`/shops?diagnosis=${diagnosis.id}`} className="flex-1">
                   <Button variant="default" className="w-full">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Find Repair Shops
+                    {t.diagnosis.findShops}
                   </Button>
                 </Link>
                 <Link href="/" className="flex-1">
                   <Button variant="outline" className="w-full">
                     <Search className="mr-2 h-4 w-4" />
-                    New Diagnosis
+                    {t.diagnosis.startNew}
                   </Button>
                 </Link>
               </div>

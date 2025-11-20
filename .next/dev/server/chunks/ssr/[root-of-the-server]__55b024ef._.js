@@ -488,70 +488,39 @@ function sortShopsByRelevance(shops, diagnosis) {
 __turbopack_context__.s([
     "default",
     ()=>ShopsPage,
-    "metadata",
-    ()=>metadata
+    "generateMetadata",
+    ()=>generateMetadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/supabase/server.ts [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shop$2d$directory$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/shop-directory.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2f$shop$2d$matching$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils/shop-matching.ts [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$metadata$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n/metadata.ts [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.0_@opentelemetry+api@1.9.0_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/headers.js [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app';
-const metadata = {
-    title: "Find Local Repair Shops Near You | FixWise",
-    description: "Browse trusted repair shops for phone, laptop, and tablet repairs. Filter by expertise, location, and ratings. Verified repair professionals in your area. Find the best repair shop near you.",
-    keywords: [
-        "repair shops near me",
-        "phone repair shops",
-        "laptop repair near me",
-        "local repair services",
-        "verified repair shops",
-        "device repair",
-        "reparatiezaken",
-        "telefoon reparatie",
-        "laptop reparatie"
-    ],
-    openGraph: {
-        title: "Find Local Repair Shops - FixWise",
-        description: "Browse trusted repair shops for phone, laptop, and tablet repairs near you. Verified professionals with ratings and reviews.",
-        type: "website",
-        locale: "en_US",
-        alternateLocale: [
-            "nl_NL"
-        ],
-        url: `${baseUrl}/shops`,
-        siteName: "FixWise",
-        images: [
-            {
-                url: `${baseUrl}/logo.png`,
-                width: 1200,
-                height: 630,
-                alt: "FixWise - Find Repair Shops"
-            }
-        ]
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Find Local Repair Shops - FixWise",
-        description: "Browse trusted repair shops for phone, laptop, and tablet repairs near you.",
-        images: [
-            `${baseUrl}/logo.png`
-        ]
-    },
-    alternates: {
-        canonical: `${baseUrl}/shops`,
-        languages: {
-            'en': `${baseUrl}/shops`,
-            'nl': `${baseUrl}/shops`
-        }
-    }
-};
+;
+;
+async function generateMetadata() {
+    const headersList = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["headers"])();
+    const locale = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$metadata$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getLocaleFromHeaders"])(headersList);
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$metadata$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getShopsPageMetadata"])(locale);
+}
 async function ShopsPage({ searchParams }) {
     const params = await searchParams;
     const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createClient"])();
+    // Enhanced structured data for shops page
+    const shopsStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Repair Shops Directory",
+        description: "Find trusted local repair shops for phone, laptop, and tablet repairs",
+        url: `${baseUrl}/shops`,
+        numberOfItems: 0,
+        itemListElement: []
+    };
     // Fetch diagnosis if provided
     let diagnosis = null;
     let repairComponent = null;
@@ -621,15 +590,71 @@ async function ShopsPage({ searchParams }) {
         // No diagnosis - just sort by rating
         filteredShops.sort((a, b)=>(b.rating || 0) - (a.rating || 0));
     }
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shop$2d$directory$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ShopDirectory"], {
-        shops: filteredShops,
-        diagnosis: diagnosis,
-        repairComponent: repairComponent
-    }, void 0, false, {
-        fileName: "[project]/app/shops/page.tsx",
-        lineNumber: 167,
-        columnNumber: 10
-    }, this);
+    // Update structured data with shop count
+    shopsStructuredData.numberOfItems = filteredShops.length;
+    shopsStructuredData.itemListElement = filteredShops.slice(0, 10).map((shop, index)=>({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+                "@type": "LocalBusiness",
+                name: shop.name,
+                url: `${baseUrl}/shops/${shop.id}`,
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress: shop.address
+                }
+            }
+        }));
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(shopsStructuredData)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/shops/page.tsx",
+                lineNumber: 156,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        itemListElement: [
+                            {
+                                "@type": "ListItem",
+                                position: 1,
+                                name: "Home",
+                                item: baseUrl
+                            },
+                            {
+                                "@type": "ListItem",
+                                position: 2,
+                                name: "Repair Shops",
+                                item: `${baseUrl}/shops`
+                            }
+                        ]
+                    })
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/shops/page.tsx",
+                lineNumber: 162,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$shop$2d$directory$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ShopDirectory"], {
+                shops: filteredShops,
+                diagnosis: diagnosis,
+                repairComponent: repairComponent
+            }, void 0, false, {
+                fileName: "[project]/app/shops/page.tsx",
+                lineNumber: 185,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
 }
 }),
 "[project]/app/shops/page.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {

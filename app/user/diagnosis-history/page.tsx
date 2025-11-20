@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
 import { DiagnosisHistory } from "@/components/diagnosis-history"
-import { Navbar } from "@/components/navbar"
+import { DiagnosisHistoryHeader } from "@/components/diagnosis-history-header"
 
 export const metadata = {
   title: "My Diagnosis History - FixWise",
@@ -33,14 +33,8 @@ export default async function DiagnosisHistoryPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="mb-2 text-3xl font-bold">My Diagnosis History</h1>
-          <p className="text-muted-foreground">
-            View all your previous device diagnoses
-          </p>
-        </div>
+        <DiagnosisHistoryHeader />
         <DiagnosisHistory diagnoses={diagnoses || []} />
       </div>
     </div>

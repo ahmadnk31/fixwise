@@ -1,0 +1,18 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.2
+2 info using node@v22.16.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/ss/Downloads/ai-repair-diagnosis-saas-main/.npmrc
+5 silly config load:file:/Users/ss/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run build
+8 verbose argv "run" "build" "--loglevel" "verbose"
+9 verbose logfile logs-max:10 dir:/Users/ss/Downloads/ai-repair-diagnosis-saas-main/.npm-cache/_logs/2025-11-20T09_29_14_725Z-
+10 verbose logfile /Users/ss/Downloads/ai-repair-diagnosis-saas-main/.npm-cache/_logs/2025-11-20T09_29_14_725Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /Users/ss/Downloads/ai-repair-diagnosis-saas-main
+13 verbose os Darwin 25.1.0
+14 verbose node v22.16.0
+15 verbose npm  v10.9.2
+16 verbose exit 1
+17 verbose code 1

@@ -19,8 +19,10 @@ import {
   ShopDetailSignInPrompt 
 } from "@/components/shop-detail-translations"
 import { ServiceProductCard } from "@/components/service-product-card"
+import { getShopDetailMetadata, getLocaleFromHeaders } from "@/lib/i18n/metadata"
+import { headers } from "next/headers"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixwise.be'
 
 export async function generateMetadata({
   params,
@@ -29,72 +31,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params
   const supabase = await createClient()
+  const headersList = await headers()
+  const locale = getLocaleFromHeaders(headersList)
   
   const { data: shop } = await supabase.from("repair_shops").select("*").eq("id", id).single()
   
   if (!shop) {
     return {
-      title: "Shop Not Found",
+      title: locale === 'nl' ? "Zaak Niet Gevonden" : "Shop Not Found",
     }
   }
 
-  const expertiseList = shop.expertise?.slice(0, 5).join(", ") || "device repair"
-  const description = `${shop.name} - Professional repair services in ${shop.address}. Specializing in ${expertiseList}. ${shop.rating ? `Rating: ${shop.rating}/5.` : ''} Book your repair appointment today.`
-  const keywords = [
-    ...(shop.expertise || []),
-    "repair shop",
-    "phone repair",
-    "laptop repair",
-    "device repair",
-    shop.name,
-    shop.address,
-    "reparatiezaak",
-    "telefoon reparatie",
-    "laptop reparatie",
-  ]
-
-  return {
-    title: `${shop.name} - Repair Services & Reviews | FixWise`,
-    description,
-    keywords,
-    openGraph: {
-      title: `${shop.name} - Professional Repair Services`,
-      description,
-      type: "website",
-      locale: "en_US",
-      alternateLocale: ["nl_NL"],
-      url: `${baseUrl}/shops/${id}`,
-      siteName: "FixWise",
-      images: shop.photo_url ? [
-        {
-          url: shop.photo_url,
-          width: 1200,
-          height: 630,
-          alt: `${shop.name} - Repair Shop`,
-        }
-      ] : [
-        {
-          url: `${baseUrl}/logo.png`,
-          width: 1200,
-          height: 630,
-          alt: `${shop.name} - Repair Shop`,
-        }
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${shop.name} - Professional Repair Services`,
-      description,
-      images: shop.photo_url ? [shop.photo_url] : [`${baseUrl}/logo.png`],
-    },
-    alternates: {
-      canonical: `${baseUrl}/shops/${id}`,
-      languages: {
-        'en': `${baseUrl}/shops/${id}`,
-        'nl': `${baseUrl}/shops/${id}`,
-      },
-    },
-  }
+  return getShopDetailMetadata(shop, id, locale)
 }
 
 export default async function ShopDetailPage({
@@ -165,9 +113,10 @@ export default async function ShopDetailPage({
     "@type": "LocalBusiness",
     "@id": `${baseUrl}/shops/${id}`,
     name: shop.name,
-    description: `Professional repair services specializing in ${shop.expertise?.join(", ") || "device repair"}`,
+    description: shop.description || `Professional repair services specializing in ${shop.expertise?.join(", ") || "device repair"}`,
     url: `${baseUrl}/shops/${id}`,
-    image: shop.photo_url || `${baseUrl}/logo.png`,
+    image: shop.profile_image || shop.photo_url || `${baseUrl}/logo.png`,
+    logo: shop.profile_image || shop.photo_url || `${baseUrl}/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: shop.address,
@@ -185,8 +134,9 @@ export default async function ShopDetailPage({
     priceRange: shop.price_range || undefined,
     areaServed: {
       "@type": "City",
-      name: shop.address,
+      name: shop.address.split(",")[0] || shop.address,
     },
+    knowsAbout: shop.expertise || [],
     makesOffer: services.map((service) => ({
       "@type": "Offer",
       itemOffered: {
@@ -201,6 +151,14 @@ export default async function ShopDetailPage({
       price: service.price || undefined,
       priceCurrency: "USD",
     })),
+    ...(shop.social_media && {
+      sameAs: [
+        shop.social_media.website,
+        shop.social_media.facebook,
+        shop.social_media.instagram,
+        shop.social_media.twitter,
+      ].filter(Boolean)
+    }),
   }
 
   const breadcrumbData = {
@@ -228,6 +186,24 @@ export default async function ShopDetailPage({
     ],
   }
 
+  // Add Review structured data if reviews exist
+  const reviewStructuredData = reviews.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: shop.name,
+      "@id": `${baseUrl}/shops/${id}`
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: averageRating,
+      bestRating: 5,
+      worstRating: 1
+    },
+    reviewCount: totalReviews
+  } : null
+
   return (
     <>
       <script
@@ -242,6 +218,14 @@ export default async function ShopDetailPage({
           __html: JSON.stringify(breadcrumbData),
         }}
       />
+      {reviewStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(reviewStructuredData),
+          }}
+        />
+      )}
       <div className="min-h-screen bg-background">
         {/* Hero Section with Profile Image */}
         {shop.profile_image && (
@@ -269,7 +253,8 @@ export default async function ShopDetailPage({
                 <CardHeader className="pb-4">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div className="flex-1">
-                      <CardTitle className="text-3xl md:text-4xl font-bold mb-2">{shop.name}</CardTitle>
+                      <h1 className="text-3xl md:text-4xl font-bold mb-2">{shop.name}</h1>
+                      <CardTitle className="sr-only">{shop.name} - Repair Services</CardTitle>
                       {shop.bio && (
                         <p className="text-lg text-muted-foreground mb-4">{shop.bio}</p>
                       )}

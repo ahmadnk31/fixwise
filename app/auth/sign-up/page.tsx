@@ -15,6 +15,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from "react"
 import { CheckCircle2, Loader2 } from 'lucide-react'
 import Image from "next/image"
+import { useI18n } from "@/lib/i18n/context"
 
 const EU_COUNTRIES = [
   { code: "AT", name: "Austria" },
@@ -47,6 +48,7 @@ const EU_COUNTRIES = [
 ]
 
 export default function SignUpPage() {
+  const { t } = useI18n()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -70,7 +72,7 @@ export default function SignUpPage() {
 
   const handleValidateVat = async () => {
     if (!vatNumber || !country) {
-      setVatValidationMessage("Please enter VAT number and select country")
+      setVatValidationMessage(t.auth.validateVatFirst || "Please enter VAT number and select country")
       return
     }
 
@@ -88,16 +90,16 @@ export default function SignUpPage() {
 
       if (data.valid) {
         setVatValidated(true)
-        setVatValidationMessage("VAT number validated successfully!")
+        setVatValidationMessage(t.common.success || "VAT number validated successfully!")
         if (data.companyName && !businessName) {
           setBusinessName(data.companyName)
         }
       } else {
         setVatValidated(false)
-        setVatValidationMessage(data.message || "Invalid VAT number")
+        setVatValidationMessage(data.message || t.common.error || "Invalid VAT number")
       }
     } catch (error) {
-      setVatValidationMessage("Error validating VAT number")
+      setVatValidationMessage(t.common.error || "Error validating VAT number")
     } finally {
       setIsValidatingVat(false)
     }
@@ -110,19 +112,19 @@ export default function SignUpPage() {
     setError(null)
 
     if (password !== repeatPassword) {
-      setError("Passwords do not match")
+      setError(t.auth.passwordsNotMatch)
       setIsLoading(false)
       return
     }
 
     if (isShopOwner && isEUCountry) {
       if (!businessName || !vatNumber || !registrationNumber || !businessAddress) {
-        setError("Please fill in all business details for EU countries")
+        setError(t.auth.fillBusinessDetails)
         setIsLoading(false)
         return
       }
       if (!vatValidated) {
-        setError("Please validate your VAT number before signing up")
+        setError(t.auth.validateVatFirst)
         setIsLoading(false)
         return
       }
@@ -185,14 +187,14 @@ export default function SignUpPage() {
       <div className="w-full max-w-lg">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Sign up</CardTitle>
-            <CardDescription>Create a new account</CardDescription>
+            <CardTitle className="text-2xl">{t.auth.signUpTitle}</CardTitle>
+            <CardDescription>{t.auth.signUpDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSignUp}>
               <div className="flex flex-col gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name">{t.auth.name}</Label>
                   <Input
                     id="name"
                     type="text"
@@ -203,7 +205,7 @@ export default function SignUpPage() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{t.auth.email}</Label>
                   <Input
                     id="email"
                     type="email"
@@ -214,7 +216,7 @@ export default function SignUpPage() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">{t.auth.password}</Label>
                   <Input
                     id="password"
                     type="password"
@@ -224,7 +226,7 @@ export default function SignUpPage() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="repeat-password">Repeat Password</Label>
+                  <Label htmlFor="repeat-password">{t.auth.repeatPassword}</Label>
                   <Input
                     id="repeat-password"
                     type="password"
@@ -240,19 +242,19 @@ export default function SignUpPage() {
                     onCheckedChange={(checked) => setIsShopOwner(checked === true)}
                   />
                   <Label htmlFor="shop-owner" className="text-sm font-normal">
-                    I am a repair shop owner
+                    {t.auth.shopOwner}
                   </Label>
                 </div>
 
                 {isShopOwner && (
                   <div className="space-y-4 rounded-lg border p-4">
-                    <h3 className="font-semibold">Business Details</h3>
+                    <h3 className="font-semibold">{t.auth.businessDetails}</h3>
 
                     <div className="grid gap-2">
-                      <Label htmlFor="country">Country</Label>
+                      <Label htmlFor="country">{t.auth.country}</Label>
                       <Select value={country} onValueChange={setCountry}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select country" />
+                          <SelectValue placeholder={t.auth.selectCountry} />
                         </SelectTrigger>
                         <SelectContent>
                           {EU_COUNTRIES.map((c) => (
@@ -274,7 +276,7 @@ export default function SignUpPage() {
                         </Alert>
 
                         <div className="grid gap-2">
-                          <Label htmlFor="business-name">Legal Business Name *</Label>
+                          <Label htmlFor="business-name">{t.auth.legalBusinessName} *</Label>
                           <Input
                             id="business-name"
                             type="text"
@@ -286,7 +288,7 @@ export default function SignUpPage() {
                         </div>
 
                         <div className="grid gap-2">
-                          <Label htmlFor="vat-number">VAT Number *</Label>
+                          <Label htmlFor="vat-number">{t.auth.vatNumber} *</Label>
                           <div className="flex gap-2">
                             <Input
                               id="vat-number"
@@ -310,7 +312,7 @@ export default function SignUpPage() {
                               ) : vatValidated ? (
                                 <CheckCircle2 className="h-4 w-4 text-green-600" />
                               ) : (
-                                "Validate"
+                                t.auth.validate
                               )}
                             </Button>
                           </div>
@@ -326,7 +328,7 @@ export default function SignUpPage() {
                         </div>
 
                         <div className="grid gap-2">
-                          <Label htmlFor="registration-number">Company Registration Number *</Label>
+                          <Label htmlFor="registration-number">{t.auth.companyRegistration} *</Label>
                           <Input
                             id="registration-number"
                             type="text"
@@ -338,7 +340,7 @@ export default function SignUpPage() {
                         </div>
 
                         <div className="grid gap-2">
-                          <Label htmlFor="business-address">Registered Business Address *</Label>
+                          <Label htmlFor="business-address">{t.auth.registeredAddress} *</Label>
                           <Input
                             id="business-address"
                             type="text"
@@ -355,13 +357,13 @@ export default function SignUpPage() {
 
                 {error && <p className="text-sm text-destructive">{error}</p>}
                 <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? "Creating account..." : "Sign up"}
+                  {isLoading ? t.auth.creatingAccount : t.auth.signUp}
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">
-                Already have an account?{" "}
+                {t.auth.alreadyHaveAccount}{" "}
                 <Link href="/auth/login" className="underline underline-offset-4">
-                  Login
+                  {t.auth.login}
                 </Link>
               </div>
             </form>

@@ -11,7 +11,7 @@ interface I18nContextType {
   t: Translations
 }
 
-const I18nContext = createContext<I18nContextType | undefined>(undefined)
+export const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 export function I18nProvider({ children, initialLocale }: { children: React.ReactNode; initialLocale?: Locale }) {
   const [locale, setLocaleState] = useState<Locale>(defaultLocale)

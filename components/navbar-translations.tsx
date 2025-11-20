@@ -10,11 +10,12 @@ import { LogoutButton } from './logout-button'
 interface NavbarTranslationsProps {
   isLoggedIn: boolean
   isShopOwner: boolean
+  isAdmin?: boolean
   variant?: 'default' | 'minimal'
   showLogoutInMobile?: boolean
 }
 
-export function NavbarTranslations({ isLoggedIn, isShopOwner, variant = 'default', showLogoutInMobile = false }: NavbarTranslationsProps) {
+export function NavbarTranslations({ isLoggedIn, isShopOwner, isAdmin = false, variant = 'default', showLogoutInMobile = false }: NavbarTranslationsProps) {
   const { t } = useI18n()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -51,6 +52,11 @@ export function NavbarTranslations({ isLoggedIn, isShopOwner, variant = 'default
       <>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
+          {isAdmin && (
+            <Link href="/admin">
+              <Button variant="ghost" size="sm">{t.nav.admin ?? "Admin"}</Button>
+            </Link>
+          )}
           <Link href="/shops">
             <Button variant="ghost" size="sm">{t.nav.shops}</Button>
           </Link>
@@ -96,6 +102,11 @@ export function NavbarTranslations({ isLoggedIn, isShopOwner, variant = 'default
         {mobileMenuOpen && (
           <div ref={menuRef} className="absolute top-16 left-0 right-0 bg-background border-b shadow-lg md:hidden z-50">
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+              {isAdmin && (
+                <Link href="/admin" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">{t.nav.admin ?? "Admin"}</Button>
+                </Link>
+              )}
               <Link href="/shops" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start">{t.nav.shops}</Button>
               </Link>
@@ -136,6 +147,11 @@ export function NavbarTranslations({ isLoggedIn, isShopOwner, variant = 'default
     <>
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex items-center gap-2">
+        {isAdmin && (
+          <Link href="/admin">
+            <Button variant="ghost" size="sm">{t.nav.admin ?? "Admin"}</Button>
+          </Link>
+        )}
         <Link href="/">
           <Button variant="ghost" size="sm">{t.nav.home}</Button>
         </Link>
@@ -184,6 +200,11 @@ export function NavbarTranslations({ isLoggedIn, isShopOwner, variant = 'default
       {mobileMenuOpen && (
         <div ref={menuRef} className="absolute top-16 left-0 right-0 bg-background border-b shadow-lg lg:hidden z-50">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+            {isAdmin && (
+              <Link href="/admin" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start">{t.nav.admin ?? "Admin"}</Button>
+              </Link>
+            )}
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="ghost" className="w-full justify-start">{t.nav.home}</Button>
             </Link>

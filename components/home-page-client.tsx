@@ -8,16 +8,22 @@ export function HomePageClient() {
   return <p className="text-lg text-muted-foreground">{t.home.tagline}</p>
 }
 
-export function HomePageLinks() {
+interface HomePageLinksProps {
+  showRegisterLink?: boolean
+}
+
+export function HomePageLinks({ showRegisterLink = true }: HomePageLinksProps) {
   const { t } = useI18n()
   return (
     <div className="flex justify-center gap-6 text-sm">
       <Link href="/shops" className="text-muted-foreground hover:underline">
         {t.home.browseShops}
       </Link>
-      <Link href="/auth/sign-up" className="text-muted-foreground hover:underline">
-        {t.home.registerShop}
-      </Link>
+      {showRegisterLink && (
+        <Link href="/auth/sign-up" className="text-muted-foreground hover:underline">
+          {t.home.registerShop}
+        </Link>
+      )}
     </div>
   )
 }

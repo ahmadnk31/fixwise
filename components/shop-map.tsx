@@ -35,10 +35,10 @@ export function ShopMap({ shops, selectedShop, hoveredShop, onSelectShop, userLo
 
   useEffect(() => {
     if (mapsLoaded && window.google?.maps && !mapInitializedRef.current) {
-      initializeMap()
+          initializeMap()
       mapInitializedRef.current = true
     } else if (mapsError) {
-      setIsLoading(false)
+        setIsLoading(false)
     }
   }, [mapsLoaded, mapsError])
 
@@ -445,9 +445,9 @@ export function ShopMap({ shops, selectedShop, hoveredShop, onSelectShop, userLo
                 </div>
               </div>
               {selectedShop && (
-                <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => onSelectShop(null as any)}>
-                  <X className="h-4 w-4" />
-                </Button>
+              <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => onSelectShop(null as any)}>
+                <X className="h-4 w-4" />
+              </Button>
               )}
             </div>
           </div>

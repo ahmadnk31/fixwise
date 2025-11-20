@@ -2,53 +2,15 @@ import { createClient } from "@/lib/supabase/server"
 import { ShopDirectory } from "@/components/shop-directory"
 import type { Metadata } from "next"
 import { shopMatchesDiagnosis, sortShopsByRelevance } from "@/lib/utils/shop-matching"
+import { getShopsPageMetadata, getLocaleFromHeaders } from "@/lib/i18n/metadata"
+import { headers } from "next/headers"
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixwise.be'
 
-export const metadata: Metadata = {
-  title: "Find Local Repair Shops Near You | FixWise",
-  description: "Browse trusted repair shops for phone, laptop, and tablet repairs. Filter by expertise, location, and ratings. Verified repair professionals in your area. Find the best repair shop near you.",
-  keywords: [
-    "repair shops near me",
-    "phone repair shops",
-    "laptop repair near me",
-    "local repair services",
-    "verified repair shops",
-    "device repair",
-    "reparatiezaken",
-    "telefoon reparatie",
-    "laptop reparatie",
-  ],
-  openGraph: {
-    title: "Find Local Repair Shops - FixWise",
-    description: "Browse trusted repair shops for phone, laptop, and tablet repairs near you. Verified professionals with ratings and reviews.",
-    type: "website",
-    locale: "en_US",
-    alternateLocale: ["nl_NL"],
-    url: `${baseUrl}/shops`,
-    siteName: "FixWise",
-    images: [
-      {
-        url: `${baseUrl}/logo.png`,
-        width: 1200,
-        height: 630,
-        alt: "FixWise - Find Repair Shops",
-      }
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Find Local Repair Shops - FixWise",
-    description: "Browse trusted repair shops for phone, laptop, and tablet repairs near you.",
-    images: [`${baseUrl}/logo.png`],
-  },
-  alternates: {
-    canonical: `${baseUrl}/shops`,
-    languages: {
-      'en': `${baseUrl}/shops`,
-      'nl': `${baseUrl}/shops`,
-    },
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers()
+  const locale = getLocaleFromHeaders(headersList)
+  return getShopsPageMetadata(locale)
 }
 
 export default async function ShopsPage({
@@ -58,6 +20,17 @@ export default async function ShopsPage({
 }) {
   const params = await searchParams
   const supabase = await createClient()
+  
+  // Enhanced structured data for shops page
+  const shopsStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Repair Shops Directory",
+    description: "Find trusted local repair shops for phone, laptop, and tablet repairs",
+    url: `${baseUrl}/shops`,
+    numberOfItems: 0, // Will be updated dynamically
+    itemListElement: [] as any[]
+  }
 
   // Fetch diagnosis if provided
   let diagnosis = null
@@ -164,5 +137,54 @@ export default async function ShopsPage({
     filteredShops.sort((a, b) => (b.rating || 0) - (a.rating || 0))
   }
 
-  return <ShopDirectory shops={filteredShops} diagnosis={diagnosis} repairComponent={repairComponent} />
+  // Update structured data with shop count
+  shopsStructuredData.numberOfItems = filteredShops.length
+  shopsStructuredData.itemListElement = filteredShops.slice(0, 10).map((shop, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "LocalBusiness",
+      name: shop.name,
+      url: `${baseUrl}/shops/${shop.id}`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: shop.address
+      }
+    }
+  }))
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(shopsStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: baseUrl
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Repair Shops",
+                item: `${baseUrl}/shops`
+              }
+            ]
+          }),
+        }}
+      />
+      <ShopDirectory shops={filteredShops} diagnosis={diagnosis} repairComponent={repairComponent} />
+    </>
+  )
 }

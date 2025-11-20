@@ -337,7 +337,7 @@ async function PATCH(request, { params }) {
             });
         }
         const body = await request.json();
-        const { status, notes } = body;
+        const { status, notes, appointment_date, appointment_time } = body;
         // Validate status if provided
         if (status && ![
             "pending",
@@ -347,6 +347,22 @@ async function PATCH(request, { params }) {
         ].includes(status)) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: "Invalid status"
+            }, {
+                status: 400
+            });
+        }
+        // Validate date format if provided
+        if (appointment_date && !/^\d{4}-\d{2}-\d{2}$/.test(appointment_date)) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: "Invalid date format. Use YYYY-MM-DD"
+            }, {
+                status: 400
+            });
+        }
+        // Validate time format if provided
+        if (appointment_time && !/^\d{2}:\d{2}$/.test(appointment_time)) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: "Invalid time format. Use HH:MM"
             }, {
                 status: 400
             });
@@ -363,6 +379,29 @@ async function PATCH(request, { params }) {
                 status: 404
             });
         }
+        const shopId = currentBooking.shop_id;
+        // If date/time is being updated, check for conflicts
+        if (appointment_date || appointment_time) {
+            const newDate = appointment_date || currentBooking.appointment_date;
+            const newTime = appointment_time || currentBooking.appointment_time;
+            // Check for existing bookings at the same time slot
+            const { data: conflictingBookings } = await supabase.from("bookings").select("id").eq("shop_id", shopId).eq("appointment_date", newDate).eq("appointment_time", newTime).neq("id", id);
+            if (conflictingBookings && conflictingBookings.length > 0) {
+                // Check shop preferences for max bookings per slot
+                const { data: shop } = await supabase.from("repair_shops").select("booking_preferences").eq("id", shopId).single();
+                const prefs = shop?.booking_preferences || {
+                    max_bookings_per_slot: 1
+                };
+                const maxPerSlot = prefs.max_bookings_per_slot || 1;
+                if (conflictingBookings.length >= maxPerSlot) {
+                    return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                        error: `This time slot is already full (max ${maxPerSlot} booking${maxPerSlot > 1 ? 's' : ''} per slot)`
+                    }, {
+                        status: 400
+                    });
+                }
+            }
+        }
         // Update booking (RLS will ensure proper permissions)
         const { data: booking, error } = await supabase.from("bookings").update({
             ...status && {
@@ -370,6 +409,12 @@ async function PATCH(request, { params }) {
             },
             ...notes !== undefined && {
                 notes
+            },
+            ...appointment_date && {
+                appointment_date
+            },
+            ...appointment_time && {
+                appointment_time
             }
         }).eq("id", id).select().single();
         if (error) throw error;

@@ -9,19 +9,35 @@ import type { User } from "@supabase/supabase-js"
 import { LogoutButton } from "./logout-button"
 import { ArrowLeft, Menu, X } from "lucide-react"
 import { LanguageSwitcher } from "./language-switcher"
-import { useI18n } from "@/lib/i18n/context"
+import { useContext } from "react"
+import { I18nContext } from "@/lib/i18n/context"
+import { getTranslations, defaultLocale } from "@/lib/i18n/translations"
 
 interface NavbarClientProps {
   variant?: "default" | "minimal"
   showBackButton?: boolean
   onBack?: () => void
+  isLoggedIn?: boolean
+  isShopOwner?: boolean
+  isAdmin?: boolean
 }
 
-export function NavbarClient({ variant = "default", showBackButton = false, onBack }: NavbarClientProps) {
-  const { t } = useI18n()
+export function NavbarClient({ 
+  variant = "default", 
+  showBackButton = false, 
+  onBack,
+  isLoggedIn: initialIsLoggedIn,
+  isShopOwner: initialIsShopOwner,
+  isAdmin: initialIsAdmin
+}: NavbarClientProps) {
+  // Safely get i18n context with fallback
+  const i18nContext = useContext(I18nContext)
+  const t = i18nContext?.t || getTranslations(defaultLocale)
+  
   const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [isShopOwner, setIsShopOwner] = useState(false)
+  const [loading, setLoading] = useState(initialIsLoggedIn === undefined)
+  const [isShopOwner, setIsShopOwner] = useState(initialIsShopOwner || false)
+  const [isAdmin, setIsAdmin] = useState(initialIsAdmin || false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
@@ -53,6 +69,12 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
   }, [mobileMenuOpen])
 
   useEffect(() => {
+    // If props are provided, use them and skip client-side fetching
+    if (initialIsLoggedIn !== undefined) {
+      setLoading(false)
+      return
+    }
+
     const checkUser = async () => {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
@@ -60,12 +82,17 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
       
       // Check if user is a shop owner
       if (user) {
+        const { data: profile } = await supabase.from("users").select("role").eq("id", user.id).maybeSingle()
+        setIsAdmin(profile?.role === "admin")
+
         const { data: shop } = await supabase
           .from("repair_shops")
           .select("id")
           .eq("owner_id", user.id)
           .maybeSingle()
         setIsShopOwner(!!shop)
+      } else {
+        setIsAdmin(false)
       }
       
       setLoading(false)
@@ -73,30 +100,40 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
 
     checkUser()
 
-    // Listen for auth changes
-    const supabase = createClient()
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (_event, session) => {
-      setUser(session?.user ?? null)
-      
-      // Check shop ownership when auth state changes
-      if (session?.user) {
-        const { data: shop } = await supabase
-          .from("repair_shops")
-          .select("id")
-          .eq("owner_id", session.user.id)
-          .maybeSingle()
-        setIsShopOwner(!!shop)
-      } else {
-        setIsShopOwner(false)
-      }
-    })
+    // Listen for auth changes (only if not using server props)
+    let subscription: { unsubscribe: () => void } | null = null
+    if (initialIsLoggedIn === undefined) {
+      const supabase = createClient()
+      const { data: { subscription: sub } } = supabase.auth.onAuthStateChange(async (_event, session) => {
+        setUser(session?.user ?? null)
+        
+        // Check shop ownership when auth state changes
+        if (session?.user) {
+          const { data: profile } = await supabase.from("users").select("role").eq("id", session.user.id).maybeSingle()
+          setIsAdmin(profile?.role === "admin")
+
+          const { data: shop } = await supabase
+            .from("repair_shops")
+            .select("id")
+            .eq("owner_id", session.user.id)
+            .maybeSingle()
+          setIsShopOwner(!!shop)
+        } else {
+          setIsShopOwner(false)
+          setIsAdmin(false)
+        }
+      })
+      subscription = sub
+    }
 
     return () => {
-      subscription.unsubscribe()
+      if (subscription) {
+        subscription.unsubscribe()
+      }
     }
-  }, [])
+  }, [initialIsLoggedIn])
 
-  const isLoggedIn = !!user
+  const isLoggedIn = initialIsLoggedIn !== undefined ? initialIsLoggedIn : !!user
 
   if (variant === "minimal") {
     return (
@@ -115,6 +152,11 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
             <LanguageSwitcher />
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-2">
+              {isAdmin && (
+                <Link href="/admin">
+                  <Button variant="ghost" size="sm">{t.nav.admin ?? "Admin"}</Button>
+                </Link>
+              )}
               <Link href="/shops">
                 <Button variant="ghost" size="sm">{t.nav.shops}</Button>
               </Link>
@@ -163,6 +205,11 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
         {mobileMenuOpen && (
           <div ref={menuRef} className="absolute top-16 left-0 right-0 bg-background border-b shadow-lg md:hidden z-50">
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+              {isAdmin && (
+                <Link href="/admin" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">{t.nav.admin ?? "Admin"}</Button>
+                </Link>
+              )}
               <Link href="/shops" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start">{t.nav.shops}</Button>
               </Link>
@@ -228,6 +275,11 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
           <LanguageSwitcher />
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
+            {isAdmin && (
+              <Link href="/admin">
+                <Button variant="ghost" size="sm">{t.nav.admin ?? "Admin"}</Button>
+              </Link>
+            )}
             <Link href="/">
               <Button variant="ghost" size="sm">{t.nav.home}</Button>
             </Link>
@@ -279,6 +331,11 @@ export function NavbarClient({ variant = "default", showBackButton = false, onBa
       {mobileMenuOpen && (
         <div ref={menuRef} className="absolute top-16 left-0 right-0 bg-background border-b shadow-lg lg:hidden z-50">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+            {isAdmin && (
+              <Link href="/admin" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start">{t.nav.admin ?? "Admin"}</Button>
+              </Link>
+            )}
             <Link href="/" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="ghost" className="w-full justify-start">{t.nav.home}</Button>
             </Link>

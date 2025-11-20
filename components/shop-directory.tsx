@@ -160,7 +160,7 @@ export function ShopDirectory({ shops, diagnosis, repairComponent }: ShopDirecto
 
         <div className="mb-6 flex items-center justify-between">
           <div>
-            <h1 className="mb-2 text-3xl font-bold">{t.shops.findShops}</h1>
+            <h1 className="mb-2 text-3xl font-bold">{t.shops.title}</h1>
             <p className="text-muted-foreground">{t.shops.findShops}</p>
           </div>
           <Button

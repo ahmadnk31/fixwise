@@ -121,14 +121,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2f$context$2e$ts
 ;
 ;
 ;
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fixwise.vercel.app';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.fixwise.be';
 const metadata = {
     metadataBase: new URL(baseUrl),
     title: {
         default: "FixWise - AI-Powered Repair Diagnosis & Local Repair Shop Directory",
         template: "%s | FixWise"
     },
-    description: "Get instant AI-powered repair diagnosis for your phone, laptop, or tablet. Connect with trusted local repair shops near you. Free diagnosis, expert recommendations, and verified repair professionals.",
+    description: "Free AI-powered repair diagnosis for phones, laptops, and tablets. Connect with verified local repair shops. Get instant expert recommendations and book appointments online.",
     keywords: [
         "phone repair",
         "laptop repair",
@@ -230,7 +230,7 @@ function RootLayout({ children }) {
                         href: `${baseUrl}/`
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 97,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -239,7 +239,7 @@ function RootLayout({ children }) {
                         href: `${baseUrl}/`
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 98,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -248,7 +248,7 @@ function RootLayout({ children }) {
                         href: `${baseUrl}/`
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 99,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -260,7 +260,12 @@ function RootLayout({ children }) {
                                 name: "FixWise",
                                 description: "AI-Powered Repair Diagnosis and Local Repair Shop Directory",
                                 url: baseUrl,
-                                logo: `${baseUrl}/logo.png`,
+                                logo: {
+                                    "@type": "ImageObject",
+                                    url: `${baseUrl}/logo.png`,
+                                    width: 1200,
+                                    height: 630
+                                },
                                 sameAs: [],
                                 contactPoint: {
                                     "@type": "ContactPoint",
@@ -274,12 +279,20 @@ function RootLayout({ children }) {
                                 areaServed: {
                                     "@type": "Country",
                                     name: "Worldwide"
-                                }
+                                },
+                                knowsAbout: [
+                                    "Phone Repair",
+                                    "Laptop Repair",
+                                    "Tablet Repair",
+                                    "Device Diagnosis",
+                                    "Screen Replacement",
+                                    "Battery Replacement"
+                                ]
                             })
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 100,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -290,6 +303,7 @@ function RootLayout({ children }) {
                                 "@type": "WebSite",
                                 name: "FixWise",
                                 url: baseUrl,
+                                alternateName: "FixWise Repair Diagnosis",
                                 potentialAction: {
                                     "@type": "SearchAction",
                                     target: {
@@ -302,13 +316,88 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 123,
+                        lineNumber: 137,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                        type: "application/ld+json",
+                        dangerouslySetInnerHTML: {
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "Service",
+                                serviceType: "Device Repair Diagnosis",
+                                provider: {
+                                    "@type": "Organization",
+                                    name: "FixWise"
+                                },
+                                areaServed: {
+                                    "@type": "Country",
+                                    name: "Worldwide"
+                                },
+                                description: "Free AI-powered repair diagnosis for phones, laptops, and tablets. Get instant expert recommendations and connect with verified local repair shops.",
+                                offers: {
+                                    "@type": "Offer",
+                                    price: "0",
+                                    priceCurrency: "USD"
+                                }
+                            })
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/app/layout.tsx",
+                        lineNumber: 157,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                        type: "application/ld+json",
+                        dangerouslySetInnerHTML: {
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "FAQPage",
+                                mainEntity: [
+                                    {
+                                        "@type": "Question",
+                                        name: "How does AI repair diagnosis work?",
+                                        acceptedAnswer: {
+                                            "@type": "Answer",
+                                            text: "Simply describe your device issue or upload a photo. Our AI analyzes the problem and provides instant diagnosis with repair recommendations, estimated costs, and connects you with verified local repair shops."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        name: "Is the repair diagnosis free?",
+                                        acceptedAnswer: {
+                                            "@type": "Answer",
+                                            text: "Yes, our AI-powered repair diagnosis is completely free. You can get instant analysis for your phone, laptop, or tablet without any cost."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        name: "What devices can be diagnosed?",
+                                        acceptedAnswer: {
+                                            "@type": "Answer",
+                                            text: "We support diagnosis for iPhones, Android phones, MacBooks, Windows laptops, tablets, and other electronic devices. Our AI can help with screen repairs, battery replacements, software issues, and more."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        name: "How do I find a repair shop near me?",
+                                        acceptedAnswer: {
+                                            "@type": "Answer",
+                                            text: "After getting your diagnosis, we'll show you verified repair shops in your area that specialize in your specific repair needs. You can filter by location, ratings, and expertise, then book an appointment directly."
+                                        }
+                                    }
+                                ]
+                            })
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/app/layout.tsx",
+                        lineNumber: 181,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 96,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -318,24 +407,24 @@ function RootLayout({ children }) {
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 144,
+                        lineNumber: 226,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$vercel$2b$analytics$40$1$2e$5$2e$0_next$40$16$2e$0$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 147,
+                        lineNumber: 229,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 143,
+                lineNumber: 225,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 95,
+        lineNumber: 96,
         columnNumber: 5
     }, this);
 }

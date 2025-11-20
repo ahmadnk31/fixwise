@@ -441,29 +441,7 @@ export function ShopSettings({ user, shop }: ShopSettingsProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <Image 
-              src="/logo.png" 
-              alt="FixWise Logo" 
-              width={180} 
-              height={60}
-              className="h-12 w-auto"
-            />
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link href="/shop/dashboard">
-              <Button variant="ghost">Dashboard</Button>
-            </Link>
-            <Button variant="ghost" size="icon" onClick={handleLogout}>
-              <LogOut className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </header>
-
+      
       <div className="container mx-auto max-w-2xl px-4 py-8">
         <div className="mb-8">
           <h1 className="mb-2 text-3xl font-bold">Shop Settings</h1>

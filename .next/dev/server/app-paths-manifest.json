@@ -1,12 +1,19 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/admin/shops/[id]/route": "app/api/admin/shops/[id]/route.js",
+  "/api/bookings/[id]/route": "app/api/bookings/[id]/route.js",
   "/api/bookings/available-slots/route": "app/api/bookings/available-slots/route.js",
+  "/api/diagnose/route": "app/api/diagnose/route.js",
+  "/api/ifixit/search/route": "app/api/ifixit/search/route.js",
   "/api/maps-config/route": "app/api/maps-config/route.js",
-  "/api/products/route": "app/api/products/route.js",
   "/page": "app/page.js",
+  "/shop/bookings/[date]/page": "app/shop/bookings/[date]/page.js",
   "/shop/bookings/page": "app/shop/bookings/page.js",
   "/shop/dashboard/page": "app/shop/dashboard/page.js",
   "/shop/products/page": "app/shop/products/page.js",
   "/shop/settings/page": "app/shop/settings/page.js",
   "/shops/[id]/page": "app/shops/[id]/page.js",
-  "/shops/page": "app/shops/page.js"
+  "/shops/page": "app/shops/page.js",
+  "/user/diagnosis-history/page": "app/user/diagnosis-history/page.js"
 }

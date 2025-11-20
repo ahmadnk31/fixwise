@@ -47,7 +47,8 @@ const translations = {
             login: 'Login',
             logout: 'Logout',
             signUp: 'Sign Up',
-            settings: 'Settings'
+            settings: 'Settings',
+            admin: 'Admin'
         },
         // Homepage
         home: {
@@ -94,7 +95,6 @@ const translations = {
             productsAvailable: 'Products Available',
             priceRange: 'Price Range',
             review: 'review',
-            reviews: 'reviews',
             getDirections: 'Get Directions',
             contactShop: 'Contact Shop',
             locationNotSupported: 'Geolocation is not supported by your browser',
@@ -195,7 +195,8 @@ const translations = {
             login: 'Inloggen',
             logout: 'Uitloggen',
             signUp: 'Registreren',
-            settings: 'Instellingen'
+            settings: 'Instellingen',
+            admin: 'Beheer'
         },
         // Homepage
         home: {
@@ -242,7 +243,6 @@ const translations = {
             productsAvailable: 'Beschikbare Producten',
             priceRange: 'Prijsklasse',
             review: 'beoordeling',
-            reviews: 'beoordelingen',
             getDirections: 'Routebeschrijving',
             contactShop: 'Neem Contact Op',
             locationNotSupported: 'Geolocatie wordt niet ondersteund door uw browser',

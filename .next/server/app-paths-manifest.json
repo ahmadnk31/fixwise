@@ -1,6 +1,10 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/api/admin/bookings/[id]/route": "app/api/admin/bookings/[id]/route.js",
+  "/api/admin/shops/[id]/route": "app/api/admin/shops/[id]/route.js",
+  "/api/admin/shops/route": "app/api/admin/shops/route.js",
   "/api/bookings/[id]/notify/route": "app/api/bookings/[id]/notify/route.js",
   "/api/bookings/[id]/route": "app/api/bookings/[id]/route.js",
   "/api/bookings/available-slots/route": "app/api/bookings/available-slots/route.js",

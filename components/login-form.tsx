@@ -11,8 +11,10 @@ import Link from "next/link"
 import { useRouter } from 'next/navigation'
 import { useState } from "react"
 import Image from "next/image"
+import { useI18n } from "@/lib/i18n/context"
 
 export default function LoginForm() {
+  const { t } = useI18n()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState<string | null>(null)
@@ -55,14 +57,14 @@ export default function LoginForm() {
       <div className="w-full max-w-sm">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Login</CardTitle>
-            <CardDescription>Enter your email below to login to your account</CardDescription>
+            <CardTitle className="text-2xl">{t.auth.login}</CardTitle>
+            <CardDescription>{t.auth.loginDescription}</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin}>
               <div className="flex flex-col gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{t.auth.email}</Label>
                   <Input
                     id="email"
                     type="email"
@@ -73,7 +75,7 @@ export default function LoginForm() {
                   />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">{t.auth.password}</Label>
                   <Input
                     id="password"
                     type="password"
@@ -84,13 +86,13 @@ export default function LoginForm() {
                 </div>
                 {error && <p className="text-sm text-destructive">{error}</p>}
                 <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? "Logging in..." : "Login"}
+                  {isLoading ? t.auth.loggingIn : t.auth.login}
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">
-                Don&apos;t have an account?{" "}
+                {t.auth.dontHaveAccount}{" "}
                 <Link href="/auth/sign-up" className="underline underline-offset-4">
-                  Sign up
+                  {t.auth.signUp}
                 </Link>
               </div>
             </form>

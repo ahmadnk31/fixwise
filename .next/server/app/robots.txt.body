@@ -6,4 +6,4 @@ Disallow: /shop/bookings
 Disallow: /shop/products
 Disallow: /shop/settings
 
-Sitemap: https://fixwise.vercel.app/sitemap.xml
+Sitemap: https://www.fixwise.be/sitemap.xml

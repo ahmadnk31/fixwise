@@ -1,6 +1,10 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/api/admin/bookings/[id]/route": "/api/admin/bookings/[id]",
+  "/api/admin/shops/[id]/route": "/api/admin/shops/[id]",
+  "/api/admin/shops/route": "/api/admin/shops",
   "/api/bookings/[id]/notify/route": "/api/bookings/[id]/notify",
   "/api/bookings/[id]/route": "/api/bookings/[id]",
   "/api/bookings/available-slots/route": "/api/bookings/available-slots",

@@ -1,13 +1,11 @@
 "use client"
 
 import type React from "react"
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useRef, useCallback } from "react"
 import { useDropzone } from "react-dropzone"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Loader2, Upload, X, Image as ImageIcon } from 'lucide-react'
+import { Input } from "@/components/ui/input"
+import { Loader2, Image as ImageIcon, X, Search, Upload } from 'lucide-react'
 import { DiagnosisResult } from "./diagnosis-result"
 import type { DiagnosisResult as DiagnosisResultType } from "@/lib/types"
 import { useI18n } from "@/lib/i18n/context"
@@ -21,6 +19,40 @@ export function DiagnosisForm() {
   const [result, setResult] = useState<DiagnosisResultType | null>(null)
   const [diagnosisId, setDiagnosisId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const [isFocused, setIsFocused] = useState(false)
+
+  const handleImageFile = useCallback((file: File) => {
+    if (file.size > 5 * 1024 * 1024) {
+      setError("Image size must be less than 5MB")
+      return
+    }
+    setImage(file)
+    setError(null)
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setImagePreview(reader.result as string)
+    }
+    reader.readAsDataURL(file)
+  }, [])
+
+  const onDrop = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0]
+    if (file) {
+      handleImageFile(file)
+    }
+  }, [handleImageFile])
+
+  const { getRootProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: {
+      'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp']
+    },
+    maxFiles: 1,
+    maxSize: 5 * 1024 * 1024, // 5MB
+    noClick: true, // Don't open file dialog on click
+    noKeyboard: true, // Don't open file dialog on keyboard
+  })
 
   useEffect(() => {
     const savedDiagnosis = localStorage.getItem("fixwise_diagnosis")
@@ -37,34 +69,25 @@ export function DiagnosisForm() {
     }
   }, [])
 
-  const onDrop = useCallback((acceptedFiles: File[]) => {
-    const file = acceptedFiles[0]
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
     if (file) {
-      setImage(file)
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)
-      }
-      reader.readAsDataURL(file)
+      handleImageFile(file)
     }
-  }, [])
-
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
-    accept: {
-      'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp']
-    },
-    maxFiles: 1,
-    maxSize: 5 * 1024 * 1024, // 5MB
-  })
+  }
 
   const removeImage = () => {
     setImage(null)
     setImagePreview(null)
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ""
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!issue.trim()) return
+    
     setIsLoading(true)
     setError(null)
     setResult(null)
@@ -101,6 +124,13 @@ export function DiagnosisForm() {
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      handleSubmit(e as any)
+    }
+  }
+
   if (result && diagnosisId) {
     return (
       <DiagnosisResult
@@ -119,85 +149,114 @@ export function DiagnosisForm() {
   }
 
   return (
-    <div className="space-y-4">
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="relative">
-          <Textarea
-            id="issue"
-            placeholder={t.diagnosis.describeIssue}
-            value={issue}
-            onChange={(e) => setIssue(e.target.value)}
-            required
-            rows={3}
-            className="resize-none rounded-full border-2 px-6 py-4 text-base shadow-lg focus-visible:ring-2"
-          />
-        </div>
-
-        <div className="flex items-center justify-center gap-4">
-          <Button type="submit" size="lg" disabled={isLoading || !issue.trim()}>
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                {t.diagnosis.analyzing}
-              </>
-            ) : (
-              t.diagnosis.getDiagnosis
-            )}
-          </Button>
-        </div>
-
-        {!imagePreview ? (
+    <div className="w-full" {...getRootProps()}>
+      <form onSubmit={handleSubmit} className="w-full">
+        {/* Google-style search input */}
+        <div className="relative mx-auto max-w-2xl">
           <div
-            {...getRootProps()}
-            className={`cursor-pointer rounded-lg border-2 border-dashed p-6 transition-colors ${
+            className={`relative flex items-center rounded-full border-2 bg-background shadow-lg transition-all ${
               isDragActive
-                ? "border-primary bg-primary/5"
-                : "border-muted-foreground/25 hover:border-primary/50 hover:bg-muted/50"
+                ? "border-primary bg-primary/5 shadow-xl ring-2 ring-primary/20"
+                : isFocused
+                ? "border-primary shadow-xl"
+                : "border-border hover:shadow-xl"
             }`}
           >
-            <input {...getInputProps()} />
-            <div className="flex flex-col items-center justify-center gap-2 text-center">
-              <div className="rounded-full bg-primary/10 p-3">
-                {isDragActive ? (
-                  <Upload className="h-6 w-6 text-primary" />
-                ) : (
-                  <ImageIcon className="h-6 w-6 text-primary" />
-                )}
-              </div>
+            {/* Search icon on the left */}
+            <div className="pl-5 pr-3">
               {isDragActive ? (
-                <p className="text-sm font-medium text-primary">{t.diagnosis.uploadPhoto}</p>
+                <Upload className="h-5 w-5 text-primary animate-pulse" />
               ) : (
-                <>
-                  <p className="text-sm font-medium">
-                    <span className="text-primary underline">{t.diagnosis.uploadPhoto}</span>
-                  </p>
-                  <p className="text-xs text-muted-foreground">PNG, JPG, GIF up to 5MB</p>
-                </>
+                <Search className="h-5 w-5 text-muted-foreground" />
+              )}
+            </div>
+
+            {/* Main input */}
+            <Input
+              type="text"
+              value={issue}
+              onChange={(e) => setIssue(e.target.value)}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+              onKeyDown={handleKeyDown}
+              placeholder={isDragActive ? t.diagnosis.uploadPhoto : t.diagnosis.describeIssue}
+              className="flex-1 border-0 bg-transparent py-4 text-base focus-visible:ring-0 focus-visible:ring-offset-0"
+              disabled={isLoading}
+            />
+
+            {/* Image upload button */}
+            <div className="flex items-center gap-2 pr-2">
+              {imagePreview ? (
+                <div className="relative group">
+                  <img
+                    src={imagePreview}
+                    alt="Preview"
+                    className="h-8 w-8 rounded-full object-cover"
+                  />
+                  <button
+                    type="button"
+                    onClick={removeImage}
+                    className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-destructive-foreground opacity-0 transition-opacity group-hover:opacity-100"
+                  >
+                    <X className="h-3 w-3" />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  title={t.diagnosis.uploadPhoto}
+                >
+                  <ImageIcon className="h-5 w-5" />
+                </button>
+              )}
+
+              {/* Hidden file input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleImageSelect}
+                className="hidden"
+              />
+
+              {/* Submit button (shows when focused or has text) */}
+              {(isFocused || issue.trim()) && (
+                <Button
+                  type="submit"
+                  size="sm"
+                  disabled={isLoading || !issue.trim()}
+                  className="rounded-full"
+                >
+                  {isLoading ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Search className="h-4 w-4" />
+                  )}
+                </Button>
               )}
             </div>
           </div>
-        ) : (
-          <div className="relative flex justify-center">
-            <div className="relative">
-              <img
-                src={imagePreview}
-                alt="Preview"
-                className="h-48 w-auto max-w-full rounded-lg object-cover shadow-md"
-              />
-              <Button
-                type="button"
-                variant="destructive"
-                size="icon"
-                className="absolute right-2 top-2"
-                onClick={removeImage}
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        )}
 
-        {error && <p className="text-center text-sm text-destructive">{error}</p>}
+          {/* Image preview below input (if exists) */}
+          {imagePreview && (
+            <div className="mt-3 flex justify-center">
+              <div className="relative inline-block">
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="h-20 w-auto rounded-lg object-cover shadow-md"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Error message */}
+          {error && (
+            <p className="mt-2 text-center text-sm text-destructive">{error}</p>
+          )}
+        </div>
       </form>
     </div>
   )
