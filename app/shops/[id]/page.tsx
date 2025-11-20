@@ -7,6 +7,7 @@ import Link from "next/link"
 import { ReviewList } from "@/components/review-list"
 import { ReviewForm } from "@/components/review-form"
 import { BookingForm } from "@/components/booking-form"
+import { ShopGallery } from "@/components/shop-gallery"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import type { Metadata } from "next"
@@ -408,25 +409,7 @@ export default async function ShopDetailPage({
 
               {/* Gallery */}
               {shop.gallery_images && shop.gallery_images.length > 0 && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Gallery</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                      {shop.gallery_images.map((imageUrl: string, index: number) => (
-                        <div key={index} className="relative aspect-square rounded-lg overflow-hidden border group cursor-pointer">
-                          <Image
-                            src={imageUrl}
-                            alt={`${shop.name} gallery image ${index + 1}`}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                <ShopGallery images={shop.gallery_images} shopName={shop.name} />
               )}
 
               {/* Services */}

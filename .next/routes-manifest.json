@@ -21,6 +21,14 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/admin/shops/[id]/edit",
+      "regex": "^/admin/shops/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
       "page": "/api/admin/bookings/[id]",
       "regex": "^/api/admin/bookings/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -133,6 +141,12 @@
       "regex": "^/admin(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/shops/new",
+      "regex": "^/admin/shops/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/shops/new(?:/)?$"
     },
     {
       "page": "/api/admin/shops",

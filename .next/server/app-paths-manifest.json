@@ -2,6 +2,8 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/admin/page": "app/admin/page.js",
+  "/admin/shops/[id]/edit/page": "app/admin/shops/[id]/edit/page.js",
+  "/admin/shops/new/page": "app/admin/shops/new/page.js",
   "/api/admin/bookings/[id]/route": "app/api/admin/bookings/[id]/route.js",
   "/api/admin/shops/[id]/route": "app/api/admin/shops/[id]/route.js",
   "/api/admin/shops/route": "app/api/admin/shops/route.js",

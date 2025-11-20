@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useState, useTransition } from "react"
+import { useState, useTransition, useRef, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +15,13 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Switch } from "@/components/ui/switch"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useI18n } from "@/lib/i18n/context"
+import { useGoogleMaps } from "@/lib/hooks/use-google-maps"
+
+declare global {
+  interface Window {
+    google: any
+  }
+}
 
 type StatKey = "shops" | "users" | "bookings" | "diagnoses"
 
@@ -88,11 +95,21 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
   const [isCreateShopOpen, setIsCreateShopOpen] = useState(false)
   const [editingShop, setEditingShop] = useState<any | null>(null)
   const [isEditShopOpen, setIsEditShopOpen] = useState(false)
+  const { isLoaded: mapsLoaded } = useGoogleMaps()
+  
+  // Address autocomplete refs
+  const createAddressInputRef = useRef<HTMLInputElement>(null)
+  const editAddressInputRef = useRef<HTMLInputElement>(null)
+  const createAutocompleteRef = useRef<any>(null)
+  const editAutocompleteRef = useRef<any>(null)
+  
   const [newShop, setNewShop] = useState({
     name: "",
     email: "",
     phone: "",
     address: "",
+    latitude: null as number | null,
+    longitude: null as number | null,
     owner_id: "",
     price_range: "$$",
     country: "",
@@ -123,6 +140,177 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
   const [newExpertise, setNewExpertise] = useState("")
   const [isValidatingVat, setIsValidatingVat] = useState(false)
   const [vatValidationMessage, setVatValidationMessage] = useState("")
+  
+  // Initialize autocomplete for create dialog
+  const initializeCreateAutocomplete = () => {
+    if (!createAddressInputRef.current || !window.google?.maps?.places) {
+      return false
+    }
+
+    // Check if element is actually in the DOM
+    if (!document.contains(createAddressInputRef.current)) {
+      return false
+    }
+
+    // Clean up existing autocomplete if any
+    if (createAutocompleteRef.current) {
+      window.google.maps.event.clearInstanceListeners(createAutocompleteRef.current)
+      createAutocompleteRef.current = null
+    }
+
+    try {
+      createAutocompleteRef.current = new window.google.maps.places.Autocomplete(createAddressInputRef.current, {
+        types: ["address"],
+        fields: ["formatted_address", "geometry"],
+      })
+
+      createAutocompleteRef.current.addListener("place_changed", () => {
+        const place = createAutocompleteRef.current.getPlace()
+
+        if (place.geometry && place.geometry.location) {
+          const lat = place.geometry.location.lat()
+          const lng = place.geometry.location.lng()
+
+          setNewShop((prev) => ({
+            ...prev,
+            address: place.formatted_address || "",
+            latitude: lat,
+            longitude: lng,
+          }))
+        }
+      })
+      return true
+    } catch (error) {
+      console.error("Error initializing autocomplete:", error)
+      return false
+    }
+  }
+
+  useEffect(() => {
+    if (mapsLoaded && isCreateShopOpen) {
+      // Try to initialize immediately, then retry with delays if needed
+      let attempts = 0
+      const maxAttempts = 5
+      
+      const tryInitialize = () => {
+        if (initializeCreateAutocomplete()) {
+          return // Success
+        }
+        
+        attempts++
+        if (attempts < maxAttempts) {
+          setTimeout(tryInitialize, 100)
+        }
+      }
+      
+      const timer = setTimeout(tryInitialize, 50)
+      return () => clearTimeout(timer)
+    } else if (!isCreateShopOpen && createAutocompleteRef.current) {
+      // Cleanup when dialog closes
+      try {
+        // Disconnect observer if it exists
+        if ((createAutocompleteRef.current as any)._observer) {
+          (createAutocompleteRef.current as any)._observer.disconnect()
+        }
+        window.google.maps.event.clearInstanceListeners(createAutocompleteRef.current)
+      } catch (e) {
+        // Ignore cleanup errors
+      }
+      createAutocompleteRef.current = null
+    }
+  }, [mapsLoaded, isCreateShopOpen])
+  
+  // Initialize autocomplete for edit dialog
+  const initializeEditAutocomplete = () => {
+    if (!editAddressInputRef.current || !window.google?.maps?.places) {
+      return false
+    }
+
+    // Check if element is actually in the DOM
+    if (!document.contains(editAddressInputRef.current)) {
+      return false
+    }
+
+    // Clean up existing autocomplete if any
+    if (editAutocompleteRef.current) {
+      window.google.maps.event.clearInstanceListeners(editAutocompleteRef.current)
+      editAutocompleteRef.current = null
+    }
+
+    try {
+      editAutocompleteRef.current = new window.google.maps.places.Autocomplete(editAddressInputRef.current, {
+        types: ["address"],
+        fields: ["formatted_address", "geometry"],
+      })
+
+      editAutocompleteRef.current.addListener("place_changed", () => {
+        const place = editAutocompleteRef.current.getPlace()
+
+        if (place.geometry && place.geometry.location) {
+          const lat = place.geometry.location.lat()
+          const lng = place.geometry.location.lng()
+
+          setNewShop((prev) => ({
+            ...prev,
+            address: place.formatted_address || "",
+            latitude: lat,
+            longitude: lng,
+          }))
+        }
+      })
+      
+      // Monitor for pac-container creation and update z-index
+      const observer = new MutationObserver(() => {
+        const pacContainer = document.querySelector('.pac-container') as HTMLElement
+        if (pacContainer) {
+          pacContainer.style.zIndex = '10000'
+          pacContainer.style.pointerEvents = 'auto'
+        }
+      })
+      observer.observe(document.body, { childList: true, subtree: true })
+      
+      // Store observer for cleanup
+      ;(editAutocompleteRef.current as any)._observer = observer
+      return true
+    } catch (error) {
+      console.error("Error initializing autocomplete:", error)
+      return false
+    }
+  }
+
+  useEffect(() => {
+    if (mapsLoaded && isEditShopOpen) {
+      // Try to initialize immediately, then retry with delays if needed
+      let attempts = 0
+      const maxAttempts = 5
+      
+      const tryInitialize = () => {
+        if (initializeEditAutocomplete()) {
+          return // Success
+        }
+        
+        attempts++
+        if (attempts < maxAttempts) {
+          setTimeout(tryInitialize, 100)
+        }
+      }
+      
+      const timer = setTimeout(tryInitialize, 50)
+      return () => clearTimeout(timer)
+    } else if (!isEditShopOpen && editAutocompleteRef.current) {
+      // Cleanup when dialog closes
+      try {
+        // Disconnect observer if it exists
+        if ((editAutocompleteRef.current as any)._observer) {
+          (editAutocompleteRef.current as any)._observer.disconnect()
+        }
+        window.google.maps.event.clearInstanceListeners(editAutocompleteRef.current)
+      } catch (e) {
+        // Ignore cleanup errors
+      }
+      editAutocompleteRef.current = null
+    }
+  }, [mapsLoaded, isEditShopOpen])
 
   const handleDeleteShop = (shopId: string) => {
     startTransition(async () => {
@@ -224,6 +412,8 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
       email: shop.email || "",
       phone: shop.phone || "",
       address: shop.address || "",
+      latitude: shop.latitude || null,
+      longitude: shop.longitude || null,
       owner_id: shop.owner_id || "",
       price_range: shop.price_range || "$$",
       country: shop.business_country || "",
@@ -280,6 +470,8 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
         email: newShop.email,
         phone: newShop.phone,
         address: newShop.address,
+        latitude: newShop.latitude,
+        longitude: newShop.longitude,
         owner_id: newShop.owner_id === "none" ? null : newShop.owner_id,
         price_range: newShop.price_range,
         country: newShop.country,
@@ -359,6 +551,8 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
         email: newShop.email,
         phone: newShop.phone,
         address: newShop.address,
+        latitude: newShop.latitude,
+        longitude: newShop.longitude,
         owner_id: newShop.owner_id === "none" ? null : newShop.owner_id,
         price_range: newShop.price_range,
         country: newShop.country,
@@ -483,9 +677,11 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
         <CardHeader>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <CardTitle className="text-lg sm:text-xl">{t.admin.shops}</CardTitle>
-            <Button onClick={() => setIsCreateShopOpen(true)} size="sm" className="w-full sm:w-auto">
-              <Plus className="mr-2 h-4 w-4" />
-              {t.admin.createShop}
+            <Button asChild size="sm" className="w-full sm:w-auto">
+              <a href="/admin/shops/new">
+                <Plus className="mr-2 h-4 w-4" />
+                {t.admin.createShop}
+              </a>
             </Button>
           </div>
         </CardHeader>
@@ -503,12 +699,13 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
                 <Button
                   variant="outline"
                   size="sm"
-                  disabled={isPending}
-                  onClick={() => handleEditShop(shop)}
+                  asChild
                   className="text-xs sm:text-sm flex-1 sm:flex-initial"
                 >
-                  <Edit className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
-                  {t.common.edit}
+                  <a href={`/admin/shops/${shop.id}/edit`}>
+                    <Edit className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
+                    {t.common.edit}
+                  </a>
                 </Button>
                 <Button
                   variant="destructive"
@@ -640,7 +837,7 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
           setNewExpertise("")
         }
       }}>
-        <DialogContent className="max-w-[95vw] sm:max-w-[900px] max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-[95vw] sm:max-w-[900px] max-h-[90vh] overflow-y-auto" style={{ zIndex: 1000 }}>
           <DialogHeader>
             <DialogTitle>{t.admin.createNewShop}</DialogTitle>
             <DialogDescription>
@@ -689,12 +886,12 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="shop-address">Address *</Label>
-                  <Textarea
+                  <Input
                     id="shop-address"
+                    ref={createAddressInputRef}
                     value={newShop.address}
                     onChange={(e) => setNewShop({ ...newShop, address: e.target.value })}
-                    placeholder="Street address, City, Country"
-                    rows={2}
+                    placeholder="Start typing an address..."
                   />
                 </div>
                 <div className="grid gap-2">
@@ -1099,7 +1296,7 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
           setNewExpertise("")
         }
       }}>
-        <DialogContent className="max-w-[95vw] sm:max-w-[900px] max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-[95vw] sm:max-w-[900px] max-h-[90vh] overflow-y-auto" style={{ zIndex: 1000 }}>
           <DialogHeader>
             <DialogTitle>{t.admin.editShop}</DialogTitle>
             <DialogDescription>
@@ -1148,12 +1345,12 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="edit-shop-address">Address *</Label>
-                  <Textarea
+                  <Input
                     id="edit-shop-address"
+                    ref={editAddressInputRef}
                     value={newShop.address}
                     onChange={(e) => setNewShop({ ...newShop, address: e.target.value })}
-                    placeholder="Street address, City, Country"
-                    rows={2}
+                    placeholder="Start typing an address..."
                   />
                 </div>
                 <div className="grid gap-2">

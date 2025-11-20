@@ -29,10 +29,18 @@ export function ReviewList({ reviews }: ReviewListProps) {
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <Avatar>
-                  <AvatarFallback>{review.user?.name?.[0]?.toUpperCase() || "U"}</AvatarFallback>
+                  <AvatarFallback>
+                    {review.user?.name?.[0]?.toUpperCase() || 
+                     review.user?.email?.[0]?.toUpperCase() || 
+                     "?"}
+                  </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-medium">{review.user?.name || "Anonymous"}</p>
+                  <p className="font-medium">
+                    {review.user?.name || 
+                     (review.user?.email ? review.user.email.split("@")[0] : null) ||
+                     "Verified Customer"}
+                  </p>
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {Array.from({ length: 5 }).map((_, i) => (

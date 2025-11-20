@@ -2,6 +2,8 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/admin/page": "/admin",
+  "/admin/shops/[id]/edit/page": "/admin/shops/[id]/edit",
+  "/admin/shops/new/page": "/admin/shops/new",
   "/api/admin/bookings/[id]/route": "/api/admin/bookings/[id]",
   "/api/admin/shops/[id]/route": "/api/admin/shops/[id]",
   "/api/admin/shops/route": "/api/admin/shops",
