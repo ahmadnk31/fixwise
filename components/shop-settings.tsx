@@ -23,6 +23,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 interface ShopSettingsProps {
   user: User
   shop: any
+  isAdmin?: boolean // Allow admin access to edit any shop
 }
 
 declare global {
@@ -61,7 +62,7 @@ const EU_COUNTRIES = [
   { code: "SE", name: "Sweden" },
 ]
 
-export function ShopSettings({ user, shop }: ShopSettingsProps) {
+export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps) {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -420,7 +421,11 @@ export function ShopSettings({ user, shop }: ShopSettingsProps) {
 
       setSuccess(true)
       setTimeout(() => {
-        router.push("/shop/dashboard")
+        if (isAdmin) {
+          router.push("/admin")
+        } else {
+          router.push("/shop/dashboard")
+        }
         router.refresh()
       }, 1500)
     } catch (err) {
@@ -450,8 +455,21 @@ export function ShopSettings({ user, shop }: ShopSettingsProps) {
 
         <Card>
           <CardHeader>
-            <CardTitle>{shop ? "Edit Shop" : "Create Shop"}</CardTitle>
-            <CardDescription>Manage your repair shop listing</CardDescription>
+            <div className="flex items-center justify-between">
+              <div>
+                <CardTitle>{shop ? "Edit Shop" : "Create Shop"}</CardTitle>
+                <CardDescription>
+                  {isAdmin ? `Managing settings for ${shop?.name || "shop"}` : "Manage your repair shop listing"}
+                </CardDescription>
+              </div>
+              {isAdmin && (
+                <Link href="/admin">
+                  <Button variant="outline" size="sm">
+                    Back to Admin
+                  </Button>
+                </Link>
+              )}
+            </div>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit}>

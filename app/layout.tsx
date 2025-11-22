@@ -6,6 +6,7 @@ import { I18nProvider } from "@/lib/i18n/context"
 import { getMetadataForLocale, getLocaleFromHeaders } from "@/lib/i18n/metadata"
 import { headers } from "next/headers"
 import { Navbar } from "@/components/navbar"
+import { Toaster } from "sonner"
 
 import "./globals.css"
 
@@ -242,6 +243,7 @@ export default async function RootLayout({
           {children}
         </I18nProvider>
         <Analytics />
+        <Toaster />
       </body>
     </html>
   )

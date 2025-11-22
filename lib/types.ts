@@ -1,6 +1,7 @@
 export interface DiagnosisResult {
   device_brand?: string // Device brand (e.g., "OnePlus", "iPhone", "Samsung")
-  device_type?: string // Full device model (e.g., "OnePlus 12", "iPhone 12")
+  device_type?: string // Full device model (e.g., "OnePlus 12", "iPhone 12", "Samsung A35")
+  device_category?: string // Device category (e.g., "smartphone", "tablet", "laptop", "desktop", "smartwatch")
   repair_component?: string // Specific part needing repair (e.g., "screen", "battery")
   repair_keywords?: string[] // Alternative keywords for matching (e.g., ["screen", "display", "LCD"])
   probable_issue: string

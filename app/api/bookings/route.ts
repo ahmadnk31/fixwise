@@ -106,6 +106,48 @@ export async function POST(request: NextRequest) {
       data: { user },
     } = await supabase.auth.getUser()
 
+    // Check if user already has a booking at the same time slot
+    if (user?.id) {
+      const { data: existingBooking } = await supabase
+        .from("bookings")
+        .select("id, appointment_date, appointment_time, shop_id")
+        .eq("user_id", user.id)
+        .eq("appointment_date", appointment_date)
+        .eq("appointment_time", appointment_time)
+        .in("status", ["pending", "confirmed"])
+        .maybeSingle()
+
+      if (existingBooking) {
+        return NextResponse.json(
+          {
+            error: "You already have an appointment at this time slot. Please choose a different time.",
+          },
+          { status: 409 } // 409 Conflict
+        )
+      }
+    }
+
+    // Also check by email if user is not authenticated
+    if (!user?.id) {
+      const { data: existingBookingByEmail } = await supabase
+        .from("bookings")
+        .select("id, appointment_date, appointment_time")
+        .eq("user_email", user_email)
+        .eq("appointment_date", appointment_date)
+        .eq("appointment_time", appointment_time)
+        .in("status", ["pending", "confirmed"])
+        .maybeSingle()
+
+      if (existingBookingByEmail) {
+        return NextResponse.json(
+          {
+            error: "You already have an appointment at this time slot. Please choose a different time.",
+          },
+          { status: 409 } // 409 Conflict
+        )
+      }
+    }
+
     // Fetch shop with booking preferences
     const { data: shop, error: shopError } = await supabase
       .from("repair_shops")

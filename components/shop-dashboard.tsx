@@ -18,9 +18,10 @@ interface ShopDashboardProps {
   shop: any
   leads: any[]
   bookingsCount?: number
+  isAdmin?: boolean // Allow admin access to view any shop's dashboard
 }
 
-export function ShopDashboard({ user, profile, shop, leads: initialLeads, bookingsCount = 0 }: ShopDashboardProps) {
+export function ShopDashboard({ user, profile, shop, leads: initialLeads, bookingsCount = 0, isAdmin = false }: ShopDashboardProps) {
   const { t } = useI18n()
   const router = useRouter()
   const [isLoggingOut, setIsLoggingOut] = useState(false)
@@ -65,8 +66,23 @@ export function ShopDashboard({ user, profile, shop, leads: initialLeads, bookin
 
       <div className="container mx-auto px-4 py-4 sm:py-8">
         <div className="mb-6 sm:mb-8">
-          <h1 className="mb-2 text-2xl sm:text-3xl font-bold">{t.dashboard.title}</h1>
-          <p className="text-sm sm:text-base text-muted-foreground">{t.dashboard.welcomeBack}, {profile?.name || user.email}</p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="mb-2 text-2xl sm:text-3xl font-bold">
+                {isAdmin ? `Shop Dashboard - ${shop?.name || ""}` : t.dashboard.title}
+              </h1>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                {isAdmin ? `Viewing dashboard for ${shop?.name || "shop"}` : `${t.dashboard.welcomeBack}, ${profile?.name || user.email}`}
+              </p>
+            </div>
+            {isAdmin && (
+              <Link href="/admin">
+                <Button variant="outline" size="sm">
+                  Back to Admin
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
 
         {!shop ? (
@@ -104,20 +120,41 @@ export function ShopDashboard({ user, profile, shop, leads: initialLeads, bookin
                     <CardDescription className="mt-1 text-xs sm:text-sm break-words">{shop.address}</CardDescription>
                   </div>
                   <div className="flex gap-2 flex-shrink-0">
-                    <Link href="/shop/products">
-                      <Button variant="outline" size="sm" className="text-xs sm:text-sm">
-                        <Package className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                        <span className="hidden sm:inline">{t.dashboard.edit}</span>
-                        <span className="sm:hidden">{t.dashboard.edit}</span>
-                      </Button>
-                    </Link>
-                    <Link href="/shop/settings">
-                      <Button variant="outline" size="sm" className="text-xs sm:text-sm">
-                        <Settings className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                        <span className="hidden sm:inline">{t.dashboard.settings}</span>
-                        <span className="sm:hidden">{t.dashboard.settings.substring(0, 3)}</span>
-                      </Button>
-                    </Link>
+                    {isAdmin ? (
+                      <>
+                        <Link href={`/admin/shops/${shop.id}/products`}>
+                          <Button variant="outline" size="sm" className="text-xs sm:text-sm">
+                            <Package className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="hidden sm:inline">Products</span>
+                            <span className="sm:hidden">Products</span>
+                          </Button>
+                        </Link>
+                        <Link href={`/admin/shops/${shop.id}/settings`}>
+                          <Button variant="outline" size="sm" className="text-xs sm:text-sm">
+                            <Settings className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="hidden sm:inline">Settings</span>
+                            <span className="sm:hidden">Settings</span>
+                          </Button>
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        <Link href="/shop/products">
+                          <Button variant="outline" size="sm" className="text-xs sm:text-sm">
+                            <Package className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="hidden sm:inline">{t.dashboard.edit}</span>
+                            <span className="sm:hidden">{t.dashboard.edit}</span>
+                          </Button>
+                        </Link>
+                        <Link href="/shop/settings">
+                          <Button variant="outline" size="sm" className="text-xs sm:text-sm">
+                            <Settings className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                            <span className="hidden sm:inline">{t.dashboard.settings}</span>
+                            <span className="sm:hidden">{t.dashboard.settings.substring(0, 3)}</span>
+                          </Button>
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </div>
               </CardHeader>
@@ -145,20 +182,41 @@ export function ShopDashboard({ user, profile, shop, leads: initialLeads, bookin
                   </div>
                 </div>
                 <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-2">
-                  <Link href="/shop/products" className="flex-1">
-                    <Button variant="outline" className="w-full text-xs sm:text-sm">
-                      <Package className="mr-2 h-4 w-4" />
-                      <span className="hidden sm:inline">{t.dashboard.productsServices}</span>
-                      <span className="sm:hidden">{t.dashboard.productsServices.split(' & ')[0]}</span>
-                    </Button>
-                  </Link>
-                  <Link href="/shop/bookings" className="flex-1">
-                    <Button variant="outline" className="w-full text-xs sm:text-sm">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      <span className="hidden sm:inline">{t.dashboard.viewCalendar}</span>
-                      <span className="sm:hidden">{t.nav.bookings}</span>
-                    </Button>
-                  </Link>
+                  {isAdmin ? (
+                    <>
+                      <Link href={`/admin/shops/${shop.id}/products`} className="flex-1">
+                        <Button variant="outline" className="w-full text-xs sm:text-sm">
+                          <Package className="mr-2 h-4 w-4" />
+                          <span className="hidden sm:inline">Products & Services</span>
+                          <span className="sm:hidden">Products</span>
+                        </Button>
+                      </Link>
+                      <Link href={`/admin/shops/${shop.id}/bookings`} className="flex-1">
+                        <Button variant="outline" className="w-full text-xs sm:text-sm">
+                          <Calendar className="mr-2 h-4 w-4" />
+                          <span className="hidden sm:inline">View Calendar</span>
+                          <span className="sm:hidden">Bookings</span>
+                        </Button>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link href="/shop/products" className="flex-1">
+                        <Button variant="outline" className="w-full text-xs sm:text-sm">
+                          <Package className="mr-2 h-4 w-4" />
+                          <span className="hidden sm:inline">{t.dashboard.productsServices}</span>
+                          <span className="sm:hidden">{t.dashboard.productsServices.split(' & ')[0]}</span>
+                        </Button>
+                      </Link>
+                      <Link href="/shop/bookings" className="flex-1">
+                        <Button variant="outline" className="w-full text-xs sm:text-sm">
+                          <Calendar className="mr-2 h-4 w-4" />
+                          <span className="hidden sm:inline">{t.dashboard.viewCalendar}</span>
+                          <span className="sm:hidden">{t.nav.bookings}</span>
+                        </Button>
+                      </Link>
+                    </>
+                  )}
                 </div>
               </CardContent>
             </Card>

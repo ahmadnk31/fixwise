@@ -123,11 +123,7 @@ export function ShopDirectory({ shops, diagnosis, repairComponent }: ShopDirecto
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <NavbarClient 
-        showBackButton 
-        onBack={() => router.push('/')}
-      />
-
+      
       <div className="container mx-auto px-4 py-8">
         {diagnosis && (
           <Card className="mb-6 border-primary/20 bg-primary/5">

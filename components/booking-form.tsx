@@ -9,13 +9,14 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { BookingTimetable } from "@/components/booking-timetable"
 import { CalendarIcon, Clock, Loader2 } from "lucide-react"
 import { format, addDays, isBefore, startOfDay } from "date-fns"
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { createClient } from "@/lib/supabase/client"
 import { useI18n } from "@/lib/i18n/context"
+import { toast } from "sonner"
 
 interface BookingFormProps {
   shopId: string
@@ -23,9 +24,10 @@ interface BookingFormProps {
   diagnosisId?: string
   userEmail?: string
   userName?: string
+  onSuccess?: () => void
 }
 
-export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName }: BookingFormProps) {
+export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName, onSuccess }: BookingFormProps) {
   const { t } = useI18n()
   const router = useRouter()
   const [date, setDate] = useState<Date>()
@@ -42,6 +44,9 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
   const [requirePhone, setRequirePhone] = useState(false)
   const [alternativeTimes, setAlternativeTimes] = useState<string[]>([])
   const [alternativeDates, setAlternativeDates] = useState<string[]>([])
+  const [workingHours, setWorkingHours] = useState({ start: "09:00", end: "17:00" })
+  const [slotDuration, setSlotDuration] = useState(30)
+  const [maxBookingsPerSlot, setMaxBookingsPerSlot] = useState(1)
 
   const fetchAvailableSlots = useCallback(async (selectedDate: Date) => {
     setLoadingSlots(true)
@@ -59,6 +64,15 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
         }
         if (typeof data.require_phone === "boolean") {
           setRequirePhone(data.require_phone)
+        }
+        if (data.workingHours) {
+          setWorkingHours(data.workingHours)
+        }
+        if (data.slotDuration) {
+          setSlotDuration(data.slotDuration)
+        }
+        if (data.maxBookingsPerSlot) {
+          setMaxBookingsPerSlot(data.maxBookingsPerSlot)
         }
         // Clear error if slots are available
         if (data.availableSlots.length > 0) {
@@ -92,6 +106,15 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
         }
         if (typeof data.require_phone === "boolean") {
           setRequirePhone(data.require_phone)
+        }
+        if (data.workingHours) {
+          setWorkingHours(data.workingHours)
+        }
+        if (data.slotDuration) {
+          setSlotDuration(data.slotDuration)
+        }
+        if (data.maxBookingsPerSlot) {
+          setMaxBookingsPerSlot(data.maxBookingsPerSlot)
         }
       } catch (err) {
         console.error("Error fetching shop preferences:", err)
@@ -196,12 +219,21 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
         // Handle alternative suggestions
         if (data.alternativeTimes && data.alternativeTimes.length > 0) {
           setAlternativeTimes(data.alternativeTimes)
-          setError(`${data.error} ${t.booking.alternativeTimes} ${data.alternativeTimes.join(", ")}`)
+          const errorMsg = `${data.error} ${t.booking.alternativeTimes} ${data.alternativeTimes.join(", ")}`
+          setError(errorMsg)
+          toast.error(data.error || t.booking.bookingError, {
+            description: t.booking.alternativeTimes + " " + data.alternativeTimes.join(", "),
+          })
         } else if (data.alternativeDates && data.alternativeDates.length > 0) {
           setAlternativeDates(data.alternativeDates)
-          setError(`${data.error} ${t.booking.alternativeDates} ${data.alternativeDates.map((d: string) => format(new Date(d), "PPP")).join(", ")}`)
+          const errorMsg = `${data.error} ${t.booking.alternativeDates} ${data.alternativeDates.map((d: string) => format(new Date(d), "PPP")).join(", ")}`
+          setError(errorMsg)
+          toast.error(data.error || t.booking.bookingError, {
+            description: t.booking.alternativeDates + " " + data.alternativeDates.map((d: string) => format(new Date(d), "PPP")).join(", "),
+          })
         } else {
           setError(data.error || t.booking.bookingError)
+          toast.error(data.error || t.booking.bookingError)
         }
         setIsSubmitting(false)
         return
@@ -219,10 +251,20 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
       // Real-time subscription will automatically refresh available slots
       // Keep the date selected so user can see the slot is no longer available
       
-      alert(successMessage)
+      toast.success(successMessage, {
+        duration: 3000,
+      })
+      
+      // Call onSuccess callback if provided (e.g., to close dialog)
+      if (onSuccess) {
+        onSuccess()
+      }
+      
       router.refresh()
     } catch (err) {
-      setError(err instanceof Error ? err.message : t.booking.bookingError)
+      const errorMessage = err instanceof Error ? err.message : t.booking.bookingError
+      setError(errorMessage)
+      toast.error(errorMessage)
     } finally {
       setIsSubmitting(false)
     }
@@ -280,7 +322,7 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
                   {date ? format(date, "PPP") : t.booking.selectDate}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
+              <PopoverContent className="w-auto p-0 z-[102]">
                 <Calendar
                   mode="single"
                   selected={date}
@@ -297,54 +339,19 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="time">{t.booking.time} *</Label>
-            {loadingSlots ? (
-              <div className="flex h-10 w-full items-center justify-center rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground">
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                {t.booking.loadingSlots}
-              </div>
-            ) : (
-              <Select
-                value={time || undefined}
-                onValueChange={setTime}
-                disabled={!date || timeSlots.length === 0}
-                required
-              >
-                <SelectTrigger className="w-full">
-                  <div className="flex items-center">
-                    <Clock className="mr-2 h-4 w-4 text-muted-foreground" />
-                    <SelectValue placeholder={
-                      !date 
-                        ? t.booking.selectDateFirst
-                        : timeSlots.length === 0 
-                          ? t.booking.noSlots
-                          : t.booking.selectTime
-                    } />
-                  </div>
-                </SelectTrigger>
-                <SelectContent>
-                  {timeSlots.length === 0 ? (
-                    <div className="px-2 py-1.5 text-sm text-muted-foreground">
-                      {!date ? t.booking.selectDateFirst : t.booking.noSlots}
-                    </div>
-                  ) : (
-                    timeSlots.map((slot) => (
-                      <SelectItem key={slot} value={slot}>
-                    {slot}
-                      </SelectItem>
-                    ))
-                  )}
-                </SelectContent>
-              </Select>
-            )}
-            {date && timeSlots.length > 0 && (
+            <Label>{t.booking.time} *</Label>
+            <BookingTimetable
+              shopId={shopId}
+              date={date}
+              selectedTime={time}
+              onTimeSelect={setTime}
+              workingHours={workingHours}
+              slotDuration={slotDuration}
+              maxBookingsPerSlot={maxBookingsPerSlot}
+            />
+            {!date && (
               <p className="text-xs text-muted-foreground">
-                {timeSlots.length} {t.booking.booking}{timeSlots.length !== 1 ? "s" : ""}
-              </p>
-            )}
-            {date && !loadingSlots && timeSlots.length === 0 && (
-              <p className="text-xs text-muted-foreground">
-                {t.booking.noSlots}
+                {t.booking.selectDateFirst}
               </p>
             )}
           </div>

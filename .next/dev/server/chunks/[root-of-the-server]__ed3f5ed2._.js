@@ -179,7 +179,13 @@ async function GET(request) {
             remainingDailyCapacity: (prefs.max_bookings_per_day || 10) - bookingsCount,
             advance_booking_days: prefs.advance_booking_days,
             same_day_booking_allowed: prefs.same_day_booking_allowed,
-            require_phone: prefs.require_phone || false
+            require_phone: prefs.require_phone || false,
+            workingHours: prefs.working_hours || {
+                start: "09:00",
+                end: "17:00"
+            },
+            slotDuration: prefs.slot_duration_minutes || 30,
+            maxBookingsPerSlot: prefs.max_bookings_per_slot || 1
         });
     } catch (error) {
         console.error("Error fetching available slots:", error);

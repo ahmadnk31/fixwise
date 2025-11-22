@@ -8,7 +8,7 @@
   "static/chunks/75320_@supabase_storage-js_dist_module_23bf0980._.js",
   "static/chunks/f7e70_@supabase_auth-js_dist_module_b35dff58._.js",
   "static/chunks/0f6ca_@radix-ui_react-select_dist_index_mjs_a4d7e307._.js",
-  "static/chunks/node_modules__pnpm_eff6c06e._.js"
+  "static/chunks/node_modules__pnpm_78f7fead._.js"
 ],
     source: "dynamic"
 });

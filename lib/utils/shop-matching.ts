@@ -1,11 +1,15 @@
 /**
  * Smart shop matching utility
  * Matches shops based on device brand, model, and repair component
+ * Now includes vector-based semantic matching for better accuracy
  */
+
+import { calculateSemanticSimilarity, buildSemanticQuery } from "./vector-matching"
 
 export interface DiagnosisMatch {
   device_brand?: string
   device_type?: string
+  device_category?: string // Device category (e.g., "smartphone", "tablet", "laptop")
   repair_component?: string
   repair_keywords?: string[]
 }
@@ -114,12 +118,13 @@ function getRepairComponentVariations(component: string): string[] {
 
 /**
  * Check if shop expertise matches diagnosis
+ * Now includes vector-based semantic matching for better accuracy
  */
-export function shopMatchesDiagnosis(
+export async function shopMatchesDiagnosis(
   shopExpertise: string[],
   diagnosis: DiagnosisMatch,
   services?: Array<{ name: string; description?: string | null; type?: string | null }>
-): { matches: boolean; score: number; matchedTerms: string[] } {
+): Promise<{ matches: boolean; score: number; matchedTerms: string[]; semanticScore?: number }> {
   const matchedTerms: string[] = []
   let score = 0
   
@@ -147,6 +152,72 @@ export function shopMatchesDiagnosis(
     : diagnosis.device_type 
       ? extractBrand(diagnosis.device_type)
       : ''
+  
+  // Check device category match (HIGHEST priority) - this is critical for matching
+  // For example: "Samsung A35" should match shops with "smartphone", "mobile phone", "phone" expertise
+  if (diagnosis.device_category) {
+    const category = normalizeText(diagnosis.device_category)
+    
+    // Map categories to common shop expertise terms
+    const categoryMappings: Record<string, string[]> = {
+      'smartphone': ['smartphone', 'mobile phone', 'phone', 'cell phone', 'android phone', 'iphone', 'iphone repair', 'mobile', 'smartphone repair'],
+      'mobile phone': ['smartphone', 'mobile phone', 'phone', 'cell phone', 'android phone', 'iphone', 'iphone repair', 'mobile', 'smartphone repair'],
+      'phone': ['smartphone', 'mobile phone', 'phone', 'cell phone', 'android phone', 'iphone', 'iphone repair', 'mobile', 'smartphone repair'],
+      'tablet': ['tablet', 'ipad', 'ipad repair', 'tablet repair', 'android tablet'],
+      'ipad': ['tablet', 'ipad', 'ipad repair', 'tablet repair'],
+      'laptop': ['laptop', 'notebook', 'macbook', 'laptop repair', 'notebook repair', 'computer repair'],
+      'notebook': ['laptop', 'notebook', 'macbook', 'laptop repair', 'notebook repair', 'computer repair'],
+      'desktop': ['desktop', 'pc', 'computer', 'desktop repair', 'pc repair', 'computer repair'],
+      'pc': ['desktop', 'pc', 'computer', 'desktop repair', 'pc repair', 'computer repair'],
+      'smartwatch': ['smartwatch', 'watch', 'apple watch', 'smartwatch repair', 'watch repair'],
+      'watch': ['smartwatch', 'watch', 'apple watch', 'smartwatch repair', 'watch repair'],
+      'gaming console': ['gaming console', 'playstation', 'xbox', 'nintendo', 'console repair', 'gaming'],
+      'headphones': ['headphones', 'earbuds', 'earphones', 'audio repair', 'headphone repair'],
+      'camera': ['camera', 'dslr', 'camera repair', 'photography'],
+    }
+    
+    const categoryTerms = categoryMappings[category] || [category]
+    
+    // Check expertise - be very lenient with matching
+    const categoryMatchExpertise = normalizedExpertise.some(exp => {
+      const expLower = normalizeText(exp)
+      // Direct match
+      if (categoryTerms.some(term => {
+        const termNorm = normalizeText(term)
+        return expLower === termNorm || 
+          expLower.includes(termNorm) || 
+          termNorm.includes(expLower) ||
+          expLower.startsWith(termNorm) ||
+          termNorm.startsWith(expLower) ||
+          expLower.split(/\s+/).includes(termNorm) ||
+          termNorm.split(/\s+/).includes(expLower) ||
+          expLower.split(/\s+/).some(word => termNorm.split(/\s+/).includes(word)) ||
+          termNorm.split(/\s+/).some(word => expLower.split(/\s+/).includes(word))
+      })) {
+        return true
+      }
+      // Also check if category itself matches expertise directly
+      return expLower.includes(category) || category.includes(expLower)
+    })
+    
+    // Check services
+    const categoryMatchServices = normalizedServices.some(service => {
+      return categoryTerms.some(term => {
+        const termNorm = normalizeText(term)
+        return service.fullText.includes(termNorm) ||
+          service.name.includes(termNorm) ||
+          service.description.includes(termNorm) ||
+          service.type.includes(termNorm) ||
+          termNorm.includes(service.name) ||
+          termNorm.includes(service.description)
+      })
+    })
+    
+    if (categoryMatchExpertise || categoryMatchServices) {
+      score += 4 // Higher priority than brand match
+      matchedTerms.push(diagnosis.device_category)
+    }
+  }
   
   // Check brand match (high priority) - check both expertise and services
   if (brand) {
@@ -269,41 +340,72 @@ export function shopMatchesDiagnosis(
     })
   }
   
-  // Match if score >= 3 (either brand+component, or strong component match)
-  const matches = score >= 3
+  // Calculate semantic similarity as additional matching signal
+  let semanticScore = 0
+  try {
+    const semanticQuery = buildSemanticQuery(diagnosis)
+    if (semanticQuery.trim()) {
+      semanticScore = await calculateSemanticSimilarity(semanticQuery, shopExpertise, services)
+      // Add semantic score to total (weighted)
+      if (semanticScore > 0.7) {
+        score += 3 // High semantic similarity
+      } else if (semanticScore > 0.5) {
+        score += 2 // Medium semantic similarity
+      } else if (semanticScore > 0.3) {
+        score += 1 // Low semantic similarity
+      }
+    }
+  } catch (error) {
+    // If semantic matching fails, continue with keyword-based matching
+    console.warn("Semantic matching failed, using keyword-based matching:", error)
+  }
   
-  return { matches, score, matchedTerms: [...new Set(matchedTerms)] }
+  // Match if:
+  // 1. Score >= 2 (keyword-based matching)
+  // 2. Semantic similarity >= 0.5 (strong semantic match)
+  // 3. Category match alone (score 4) should always match
+  const matches = score >= 2 || semanticScore >= 0.5 || (diagnosis.device_category && score >= 1)
+  
+  return { matches, score, matchedTerms: [...new Set(matchedTerms)], semanticScore }
 }
 
 /**
  * Sort shops by match relevance
  */
-export function sortShopsByRelevance(
+export async function sortShopsByRelevance(
   shops: any[],
   diagnosis: DiagnosisMatch
-): any[] {
-  return shops
-    .map(shop => {
+): Promise<any[]> {
+  const shopsWithMatches = await Promise.all(
+    shops.map(async (shop) => {
       const services = (shop.shop_products || []).filter((p: any) => p.category === "service" && p.in_stock !== false)
       return {
         ...shop,
-        matchResult: shopMatchesDiagnosis(shop.expertise || [], diagnosis, services),
+        matchResult: await shopMatchesDiagnosis(shop.expertise || [], diagnosis, services),
       }
     })
-    .sort((a, b) => {
-      // First sort by match score (higher is better)
-      if (b.matchResult.score !== a.matchResult.score) {
-        return b.matchResult.score - a.matchResult.score
+  )
+  
+  return shopsWithMatches.sort((a, b) => {
+    // First sort by semantic score if available (higher is better)
+    if (a.matchResult.semanticScore !== undefined && b.matchResult.semanticScore !== undefined) {
+      if (b.matchResult.semanticScore !== a.matchResult.semanticScore) {
+        return b.matchResult.semanticScore - a.matchResult.semanticScore
       }
-      // Then by rating (higher is better)
-      if (b.rating !== a.rating) {
-        return (b.rating || 0) - (a.rating || 0)
-      }
-      // Then by distance if available
-      if (a.distance !== undefined && b.distance !== undefined) {
-        return a.distance - b.distance
-      }
-      return 0
-    })
+    }
+    // Then by match score (higher is better)
+    if (b.matchResult.score !== a.matchResult.score) {
+      return b.matchResult.score - a.matchResult.score
+    }
+    // Then by rating (higher is better)
+    if (b.rating !== a.rating) {
+      return (b.rating || 0) - (a.rating || 0)
+    }
+    // Then by distance if available
+    if (a.distance !== undefined && b.distance !== undefined) {
+      return a.distance - b.distance
+    }
+    return 0
+  })
 }
 

@@ -21,12 +21,44 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/admin/shops/[id]/bookings",
+      "regex": "^/admin/shops/([^/]+?)/bookings(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/bookings(?:/)?$"
+    },
+    {
+      "page": "/admin/shops/[id]/dashboard",
+      "regex": "^/admin/shops/([^/]+?)/dashboard(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/dashboard(?:/)?$"
+    },
+    {
       "page": "/admin/shops/[id]/edit",
       "regex": "^/admin/shops/([^/]+?)/edit(?:/)?$",
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
       "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/admin/shops/[id]/products",
+      "regex": "^/admin/shops/([^/]+?)/products(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/products(?:/)?$"
+    },
+    {
+      "page": "/admin/shops/[id]/settings",
+      "regex": "^/admin/shops/([^/]+?)/settings(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/shops/(?<nxtPid>[^/]+?)/settings(?:/)?$"
     },
     {
       "page": "/api/admin/bookings/[id]",

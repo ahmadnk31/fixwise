@@ -84,23 +84,32 @@ export default async function ShopsPage({
     const diagnosisMatch = {
       device_brand: diagnosis.ai_response.device_brand,
       device_type: diagnosis.ai_response.device_type,
+      device_category: diagnosis.ai_response.device_category,
       repair_component: diagnosis.ai_response.repair_component,
       repair_keywords: diagnosis.ai_response.repair_keywords,
     }
     
     // Filter shops that match the diagnosis (checking both expertise and services)
-    filteredShops = filteredShops.filter(shop => {
-      const services = (shop.shop_products || []).filter((p: any) => p.category === "service" && p.in_stock !== false)
-      const matchResult = shopMatchesDiagnosis(
-        shop.expertise || [], 
-        diagnosisMatch,
-        services
-      )
-      return matchResult.matches
-    })
+    // Use async filtering with semantic matching
+    const shopsWithMatches = await Promise.all(
+      filteredShops.map(async (shop) => {
+        const services = (shop.shop_products || []).filter((p: any) => p.category === "service" && p.in_stock !== false)
+        const matchResult = await shopMatchesDiagnosis(
+          shop.expertise || [], 
+          diagnosisMatch,
+          services
+        )
+        return { shop, matchResult }
+      })
+    )
     
-    // Sort by relevance (match score, then rating, then distance)
-    filteredShops = sortShopsByRelevance(filteredShops, diagnosisMatch)
+    // Filter shops that match
+    filteredShops = shopsWithMatches
+      .filter(({ matchResult }) => matchResult.matches)
+      .map(({ shop }) => shop)
+    
+    // Sort by relevance (semantic score, match score, then rating, then distance)
+    filteredShops = await sortShopsByRelevance(filteredShops, diagnosisMatch)
     
     // If no matches found, fall back to broader matching
     if (filteredShops.length === 0 && repairComponent) {

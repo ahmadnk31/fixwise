@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Plus, CheckCircle2, Loader2, AlertCircle, X, Globe, Facebook, Instagram, Twitter, Edit } from "lucide-react"
+import { Plus, CheckCircle2, Loader2, AlertCircle, X, Globe, Facebook, Instagram, Twitter, Edit, FileText, Store } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Switch } from "@/components/ui/switch"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -705,6 +705,28 @@ export function AdminDashboard({ stats, shops, users, bookings, diagnoses }: Adm
                   <a href={`/admin/shops/${shop.id}/edit`}>
                     <Edit className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
                     {t.common.edit}
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="text-xs sm:text-sm flex-1 sm:flex-initial"
+                >
+                  <a href={`/admin/shops/${shop.id}/dashboard`}>
+                    <Store className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
+                    Dashboard
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="text-xs sm:text-sm flex-1 sm:flex-initial"
+                >
+                  <a href={`/admin/shops/${shop.id}/settings`}>
+                    <FileText className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
+                    Settings
                   </a>
                 </Button>
                 <Button
