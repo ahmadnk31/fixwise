@@ -10,13 +10,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { BookingTimetable } from "@/components/booking-timetable"
-import { CalendarIcon, Clock, Loader2 } from "lucide-react"
+import { CalendarIcon, Clock, Loader2, Package, Home, Mail } from "lucide-react"
 import { format, addDays, isBefore, startOfDay } from "date-fns"
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { createClient } from "@/lib/supabase/client"
 import { useI18n } from "@/lib/i18n/context"
 import { toast } from "sonner"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 interface BookingFormProps {
   shopId: string
@@ -47,6 +48,10 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
   const [workingHours, setWorkingHours] = useState({ start: "09:00", end: "17:00" })
   const [slotDuration, setSlotDuration] = useState(30)
   const [maxBookingsPerSlot, setMaxBookingsPerSlot] = useState(1)
+  const [deliveryOption, setDeliveryOption] = useState<"pickup" | "delivery" | "mail">("pickup")
+  const [deliveryAddress, setDeliveryAddress] = useState("")
+  const [paymentAmount, setPaymentAmount] = useState<number>(0)
+  const [deliveryPricing, setDeliveryPricing] = useState({ pickup: 0, home: 15, mail: 25 })
 
   const fetchAvailableSlots = useCallback(async (selectedDate: Date) => {
     setLoadingSlots(true)
@@ -73,6 +78,9 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
         }
         if (data.maxBookingsPerSlot) {
           setMaxBookingsPerSlot(data.maxBookingsPerSlot)
+        }
+        if (data.deliveryPricing) {
+          setDeliveryPricing(data.deliveryPricing)
         }
         // Clear error if slots are available
         if (data.availableSlots.length > 0) {
@@ -115,6 +123,9 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
         }
         if (data.maxBookingsPerSlot) {
           setMaxBookingsPerSlot(data.maxBookingsPerSlot)
+        }
+        if (data.deliveryPricing) {
+          setDeliveryPricing(data.deliveryPricing)
         }
       } catch (err) {
         console.error("Error fetching shop preferences:", err)
@@ -179,6 +190,27 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
     }
   }, [date, shopId, fetchAvailableSlots])
 
+  // Calculate payment based on delivery option
+  useEffect(() => {
+    // Base service price (can be fetched from shop or diagnosis)
+    const basePrice = 0
+    let deliveryFee = 0
+    
+    switch (deliveryOption) {
+      case "pickup":
+        deliveryFee = deliveryPricing.pickup || 0
+        break
+      case "delivery":
+        deliveryFee = deliveryPricing.home || 15
+        break
+      case "mail":
+        deliveryFee = deliveryPricing.mail || 25
+        break
+    }
+    
+    setPaymentAmount(basePrice + deliveryFee)
+  }, [deliveryOption, deliveryPricing])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
@@ -192,6 +224,16 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
 
     if (requirePhone && !phone.trim()) {
       setError(t.booking.phoneRequired)
+      return
+    }
+
+    if (deliveryOption === "delivery" && !deliveryAddress.trim()) {
+      setError("Please provide a delivery address")
+      return
+    }
+
+    if (deliveryOption === "mail" && !deliveryAddress.trim()) {
+      setError("Please provide a shipping address")
       return
     }
 
@@ -210,6 +252,9 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
           user_email: email,
           user_phone: phone || null,
           notes: notes.trim() || null,
+          delivery_option: deliveryOption,
+          delivery_address: deliveryOption !== "pickup" ? deliveryAddress.trim() : null,
+          payment_amount: paymentAmount,
         }),
       })
 
@@ -352,6 +397,66 @@ export function BookingForm({ shopId, shopName, diagnosisId, userEmail, userName
             {!date && (
               <p className="text-xs text-muted-foreground">
                 {t.booking.selectDateFirst}
+              </p>
+            )}
+          </div>
+
+          <div className="space-y-2">
+            <Label>Delivery Option *</Label>
+            <RadioGroup value={deliveryOption} onValueChange={(value) => setDeliveryOption(value as "pickup" | "delivery" | "mail")}>
+              <div className="flex items-center space-x-2 rounded-lg border p-3 hover:bg-accent">
+                <RadioGroupItem value="pickup" id="pickup" />
+                <Label htmlFor="pickup" className="flex-1 cursor-pointer flex items-center gap-2">
+                  <Package className="h-4 w-4" />
+                  <span className="flex-1">Pick up at store</span>
+                  <span className="text-sm text-muted-foreground">
+                    {deliveryPricing.pickup === 0 ? "Free" : `$${deliveryPricing.pickup.toFixed(2)}`}
+                  </span>
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2 rounded-lg border p-3 hover:bg-accent">
+                <RadioGroupItem value="delivery" id="delivery" />
+                <Label htmlFor="delivery" className="flex-1 cursor-pointer flex items-center gap-2">
+                  <Home className="h-4 w-4" />
+                  <span className="flex-1">Home delivery</span>
+                  <span className="text-sm text-muted-foreground">+${deliveryPricing.home.toFixed(2)}</span>
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2 rounded-lg border p-3 hover:bg-accent">
+                <RadioGroupItem value="mail" id="mail" />
+                <Label htmlFor="mail" className="flex-1 cursor-pointer flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  <span className="flex-1">Send by mail</span>
+                  <span className="text-sm text-muted-foreground">+${deliveryPricing.mail.toFixed(2)}</span>
+                </Label>
+              </div>
+            </RadioGroup>
+          </div>
+
+          {(deliveryOption === "delivery" || deliveryOption === "mail") && (
+            <div className="space-y-2">
+              <Label htmlFor="deliveryAddress">
+                {deliveryOption === "delivery" ? "Delivery Address" : "Shipping Address"} *
+              </Label>
+              <Textarea
+                id="deliveryAddress"
+                value={deliveryAddress}
+                onChange={(e) => setDeliveryAddress(e.target.value)}
+                placeholder={deliveryOption === "delivery" ? "Enter your delivery address" : "Enter your shipping address"}
+                rows={3}
+                required
+              />
+            </div>
+          )}
+
+          <div className="space-y-2 rounded-lg border bg-muted/50 p-4">
+            <div className="flex items-center justify-between">
+              <Label className="text-base font-semibold">Total Payment</Label>
+              <span className="text-2xl font-bold">${paymentAmount.toFixed(2)}</span>
+            </div>
+            {deliveryOption !== "pickup" && (
+              <p className="text-xs text-muted-foreground mt-1">
+                Includes {deliveryOption === "delivery" ? "home delivery fee" : "shipping fee"}
               </p>
             )}
           </div>

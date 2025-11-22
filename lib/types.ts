@@ -132,6 +132,9 @@ export interface Booking {
   user_name: string
   user_email: string
   user_phone: string | null
+  delivery_option: "pickup" | "delivery" | "mail" | null
+  payment_amount: number | null
+  delivery_address: string | null
   created_at: string
   updated_at: string
   shop?: RepairShop

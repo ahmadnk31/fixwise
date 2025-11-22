@@ -108,6 +108,11 @@ export async function GET(request: NextRequest) {
       workingHours: prefs.working_hours || { start: "09:00", end: "17:00" },
       slotDuration: prefs.slot_duration_minutes || 30,
       maxBookingsPerSlot: prefs.max_bookings_per_slot || 1,
+      deliveryPricing: prefs.delivery_pricing || {
+        pickup: 0,
+        home: 15,
+        mail: 25,
+      },
     })
   } catch (error) {
     console.error("Error fetching available slots:", error)

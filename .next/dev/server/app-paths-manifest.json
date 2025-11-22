@@ -1,17 +1,9 @@
 {
   "/admin/page": "app/admin/page.js",
-  "/admin/shops/[id]/bookings/page": "app/admin/shops/[id]/bookings/page.js",
-  "/admin/shops/[id]/dashboard/page": "app/admin/shops/[id]/dashboard/page.js",
-  "/admin/shops/[id]/edit/page": "app/admin/shops/[id]/edit/page.js",
   "/admin/shops/[id]/settings/page": "app/admin/shops/[id]/settings/page.js",
-  "/admin/shops/new/page": "app/admin/shops/new/page.js",
   "/api/bookings/available-slots/route": "app/api/bookings/available-slots/route.js",
-  "/api/bookings/route": "app/api/bookings/route.js",
-  "/api/diagnose/route": "app/api/diagnose/route.js",
   "/api/ifixit/search/route": "app/api/ifixit/search/route.js",
   "/api/maps-config/route": "app/api/maps-config/route.js",
   "/page": "app/page.js",
-  "/shops/[id]/page": "app/shops/[id]/page.js",
-  "/shops/page": "app/shops/page.js",
-  "/user/diagnosis-history/page": "app/user/diagnosis-history/page.js"
+  "/shops/[id]/page": "app/shops/[id]/page.js"
 }

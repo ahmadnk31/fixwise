@@ -136,6 +136,9 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
     same_day_booking_allowed: shop?.booking_preferences?.same_day_booking_allowed ?? true,
     auto_confirm: shop?.booking_preferences?.auto_confirm ?? false,
     require_phone: shop?.booking_preferences?.require_phone ?? false,
+    delivery_pickup_fee: shop?.booking_preferences?.delivery_pricing?.pickup || 0,
+    delivery_home_fee: shop?.booking_preferences?.delivery_pricing?.home || 15,
+    delivery_mail_fee: shop?.booking_preferences?.delivery_pricing?.mail || 25,
   })
 
   useEffect(() => {
@@ -406,6 +409,11 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
           same_day_booking_allowed: bookingPrefs.same_day_booking_allowed,
           auto_confirm: bookingPrefs.auto_confirm,
           require_phone: bookingPrefs.require_phone,
+          delivery_pricing: {
+            pickup: bookingPrefs.delivery_pickup_fee || 0,
+            home: bookingPrefs.delivery_home_fee || 15,
+            mail: bookingPrefs.delivery_mail_fee || 25,
+          },
         },
       }
 
@@ -1071,6 +1079,60 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
                           setBookingPrefs({ ...bookingPrefs, require_phone: checked })
                         }
                       />
+                    </div>
+                  </div>
+
+                  <div className="mt-6 space-y-4 rounded-lg border p-4">
+                    <div>
+                      <h4 className="mb-1 text-base font-semibold">Delivery & Shipping Pricing</h4>
+                      <p className="text-xs text-muted-foreground">Set pricing for different delivery options</p>
+                    </div>
+
+                    <div className="grid gap-4 md:grid-cols-3">
+                      <div className="space-y-2">
+                        <Label htmlFor="pickupFee">Pickup at Store Fee ($)</Label>
+                        <Input
+                          id="pickupFee"
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          value={bookingPrefs.delivery_pickup_fee}
+                          onChange={(e) =>
+                            setBookingPrefs({ ...bookingPrefs, delivery_pickup_fee: parseFloat(e.target.value) || 0 })
+                          }
+                        />
+                        <p className="text-xs text-muted-foreground">Usually $0 (free)</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="homeDeliveryFee">Home Delivery Fee ($)</Label>
+                        <Input
+                          id="homeDeliveryFee"
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          value={bookingPrefs.delivery_home_fee}
+                          onChange={(e) =>
+                            setBookingPrefs({ ...bookingPrefs, delivery_home_fee: parseFloat(e.target.value) || 15 })
+                          }
+                        />
+                        <p className="text-xs text-muted-foreground">Fee for home delivery service</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="mailFee">Mail/Shipping Fee ($)</Label>
+                        <Input
+                          id="mailFee"
+                          type="number"
+                          min="0"
+                          step="0.01"
+                          value={bookingPrefs.delivery_mail_fee}
+                          onChange={(e) =>
+                            setBookingPrefs({ ...bookingPrefs, delivery_mail_fee: parseFloat(e.target.value) || 25 })
+                          }
+                        />
+                        <p className="text-xs text-muted-foreground">Fee for shipping by mail</p>
+                      </div>
                     </div>
                   </div>
                 </TabsContent>

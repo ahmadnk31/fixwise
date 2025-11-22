@@ -94,11 +94,21 @@ export async function POST(request: NextRequest) {
   try {
     const supabase = await createServerClient()
     const body = await request.json()
-    const { shop_id, diagnosis_id, appointment_date, appointment_time, notes, user_name, user_email, user_phone } = body
+    const { shop_id, diagnosis_id, appointment_date, appointment_time, notes, user_name, user_email, user_phone, delivery_option, delivery_address, payment_amount } = body
 
     // Validate required fields
     if (!shop_id || !appointment_date || !appointment_time || !user_name || !user_email) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
+    }
+
+    // Validate delivery option
+    if (delivery_option && !["pickup", "delivery", "mail"].includes(delivery_option)) {
+      return NextResponse.json({ error: "Invalid delivery option" }, { status: 400 })
+    }
+
+    // Validate delivery address for delivery/mail options
+    if ((delivery_option === "delivery" || delivery_option === "mail") && !delivery_address?.trim()) {
+      return NextResponse.json({ error: "Delivery address is required for this delivery option" }, { status: 400 })
     }
 
     // Check if user is authenticated
@@ -338,6 +348,9 @@ export async function POST(request: NextRequest) {
         user_name,
         user_email,
         user_phone,
+        delivery_option: delivery_option || "pickup",
+        delivery_address: delivery_address || null,
+        payment_amount: payment_amount || 0,
         status: bookingStatus,
       })
       .select()
