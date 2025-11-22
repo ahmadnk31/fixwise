@@ -26,9 +26,9 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-[calc(100vh-4rem)] flex-col">
       {/* Centered Content - Google Style */}
-      <main className="flex flex-1 items-center justify-center px-4 pt-20">
+      <main className="flex flex-1 items-center justify-center px-4 py-8">
         <div className="w-full max-w-2xl space-y-8">
           {/* Logo and Tagline */}
           <div className="text-center">

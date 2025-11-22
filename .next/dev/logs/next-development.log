@@ -1,38 +1,32 @@
-[00:00:02.825] Server  LOG      ✓ Ready in 2.1s
-[00:02:40.247] Server  LOG      ○ Compiling /shops/[id] ...
-[00:02:45.786] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:47.096] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:47.096] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","route":"/shops/[id]"}
-[00:02:47.096] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763810315809}
-[00:06:56.855] Server  LOG      ✓ Compiled in 112ms
-[00:07:03.974] Server  LOG      ✓ Compiled in 98ms
-[00:07:10.662] Server  LOG      ✓ Compiled in 94ms
-[00:07:17.340] Server  LOG      ✓ Compiled in 104ms
-[00:07:18.103] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
-
-Previous: %s
-Incoming: %s useEffect [pickup] [pickup, [object Object]]
-[00:07:24.052] Server  LOG      ✓ Compiled in 94ms
-[00:07:30.760] Server  LOG      ✓ Compiled in 95ms
-[00:07:37.355] Server  LOG      ✓ Compiled in 92ms
-[00:34:44.543] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763812233412}
-[00:34:44.976] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:34:51.226] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:34:52.013] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:34:52.013] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b/settings","route":"/admin/shops/[id]/settings"}
-[00:34:52.013] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b/settings color: rgb(120, 120, 120) color: inherit {"dp":"/admin/shops/[id]/settings","o":"http://localhost:3000/admin/shops/6d9f8916-dc3c-4660-915c-326f7a1cbe0b/settings","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763812241127}
-[00:34:52.013] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:34:52.013] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
-[00:35:13.848] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
-[00:35:13.848] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
-[00:35:13.848] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763812263078}
-[00:35:13.984] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
-[00:35:13.984] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
-[00:35:14.386] Server  LOG     [v0] iFixit API status: 200
-[00:35:14.389] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
-[00:35:14.408] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
-[00:35:14.408] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
-[00:35:14.436] Server  LOG     [v0] iFixit API status: 200
-[00:35:14.439] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
-[00:35:14.546] Browser LOG     [v0] Search attempt 1 - Results: 26
-[00:35:14.546] Browser LOG     [v0] Search attempt 1 - Results: 26
+[00:00:02.291] Server  LOG      ✓ Ready in 1574ms
+[00:00:09.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.650] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
+[00:00:09.650] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
+[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815532351}
+[00:00:10.008] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
+[00:00:10.009] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
+[00:00:10.412] Server  LOG     [v0] iFixit API status: 200
+[00:00:10.415] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
+[00:00:10.459] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
+[00:00:10.459] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
+[00:00:10.490] Server  LOG     [v0] iFixit API status: 200
+[00:00:10.492] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
+[00:00:10.598] Browser LOG     [v0] Search attempt 1 - Results: 26
+[00:00:10.598] Browser LOG     [v0] Search attempt 1 - Results: 26
+[00:01:26.009] Server  LOG      ✓ Compiled in 158ms
+[00:01:42.431] Server  LOG      ✓ Compiled in 249ms
+[00:02:03.088] Server  LOG      ✓ Compiled in 126ms
+[00:02:24.719] Server  LOG      ✓ Compiled in 206ms
+[00:02:46.393] Server  LOG      ✓ Compiled in 126ms
+[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815810282}
+[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815815145}
+[00:04:57.410] Server  LOG      ✓ Compiled in 225ms
+[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815957111}
