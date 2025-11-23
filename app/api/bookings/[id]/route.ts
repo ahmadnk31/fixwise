@@ -107,8 +107,8 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
     if (status && status !== currentBooking.status) {
       const shop = currentBooking.shop as any
       
-      if (status === "pending") {
-        // New booking notification
+      if (status === "confirmed") {
+        // Send confirmation email when booking is confirmed
         sendBookingConfirmationEmail({
           bookingId: booking.id,
           userName: booking.user_name,
@@ -122,10 +122,10 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
           status: booking.status,
           notes: booking.notes || null,
         }).catch((err) => {
-          console.error("Failed to send booking email:", err)
+          console.error("Failed to send booking confirmation email:", err)
         })
       } else {
-        // Status update notification
+        // Status update notification for all other status changes
         sendBookingStatusUpdateEmail({
           bookingId: booking.id,
           userName: booking.user_name,

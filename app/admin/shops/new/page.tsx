@@ -16,7 +16,7 @@ export default async function NewShopPage() {
   const { data: profile } = await supabase.from("users").select("role").eq("id", user.id).maybeSingle()
 
   if (profile?.role !== "admin") {
-    redirect("/")
+    redirect("/admin")
   }
 
   const { data: users = [] } = await supabase

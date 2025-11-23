@@ -212,6 +212,45 @@ export default function SignUpPage() {
       return
     }
 
+    // Validate username format
+    const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/
+    if (!usernameRegex.test(username)) {
+      setError("Username must be 3-30 characters (letters, numbers, _, -)")
+      setIsLoading(false)
+      return
+    }
+
+    // If status is "taken" or "invalid", block immediately
+    if (usernameStatus === "taken" || usernameStatus === "invalid") {
+      setError("Please choose an available username")
+      setIsLoading(false)
+      return
+    }
+
+    // If status is "checking" or "idle", trigger an immediate check and wait for result
+    if (usernameStatus === "checking" || usernameStatus === "idle") {
+      setUsernameStatus("checking")
+      try {
+        const response = await fetch(`/api/username/check?username=${encodeURIComponent(username)}`)
+        const data = await response.json()
+
+        if (!data.available) {
+          setError("Please choose an available username")
+          setUsernameStatus("taken")
+          setIsLoading(false)
+          return
+        }
+        setUsernameStatus("available")
+        // Continue with sign-up after successful verification
+      } catch (error) {
+        console.error("Error checking username:", error)
+        setError("Failed to verify username availability. Please try again.")
+        setIsLoading(false)
+        return
+      }
+    }
+
+    // Final check - should be "available" at this point
     if (usernameStatus !== "available") {
       setError("Please choose an available username")
       setIsLoading(false)
