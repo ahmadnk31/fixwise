@@ -32,6 +32,13 @@ export interface RepairShop {
   business_country?: string | null
   vat_validated?: boolean
   business_type?: string | null
+  opening_hours?: {
+    [key: string]: {
+      open: string
+      close: string
+      closed: boolean
+    }
+  } | null
 }
 
 export interface Diagnosis {

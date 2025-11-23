@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Wrench, LogOut, X, CheckCircle2, AlertCircle, Upload, Image as ImageIcon, Facebook, Instagram, Twitter, Globe, Store, FileText, Share2, Building2, Calendar } from 'lucide-react'
+import { Wrench, LogOut, X, CheckCircle2, AlertCircle, Upload, Image as ImageIcon, Facebook, Instagram, Twitter, Globe, Store, FileText, Share2, Building2, Calendar, Clock } from 'lucide-react'
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from 'next/navigation'
@@ -140,6 +140,20 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
     delivery_home_fee: shop?.booking_preferences?.delivery_pricing?.home || 15,
     delivery_mail_fee: shop?.booking_preferences?.delivery_pricing?.mail || 25,
   })
+
+  const defaultOpeningHours = {
+    monday: { open: "09:00", close: "17:00", closed: false },
+    tuesday: { open: "09:00", close: "17:00", closed: false },
+    wednesday: { open: "09:00", close: "17:00", closed: false },
+    thursday: { open: "09:00", close: "17:00", closed: false },
+    friday: { open: "09:00", close: "17:00", closed: false },
+    saturday: { open: "09:00", close: "17:00", closed: false },
+    sunday: { open: "09:00", close: "17:00", closed: false },
+  }
+
+  const [openingHours, setOpeningHours] = useState(
+    shop?.opening_hours || defaultOpeningHours
+  )
 
   useEffect(() => {
     if (mapsLoaded && window.google?.maps && !autocompleteRef.current) {
@@ -415,6 +429,7 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
             mail: bookingPrefs.delivery_mail_fee || 25,
           },
         },
+        opening_hours: openingHours,
       }
 
       if (shop) {
@@ -432,7 +447,7 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
         if (isAdmin) {
           router.push("/admin")
         } else {
-          router.push("/shop/dashboard")
+        router.push("/shop/dashboard")
         }
         router.refresh()
       }, 1500)
@@ -454,7 +469,7 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
 
   return (
     <div className="min-h-screen bg-background">
-      
+
       <div className="container mx-auto max-w-2xl px-4 py-8">
         <div className="mb-8">
           <h1 className="mb-2 text-3xl font-bold">Shop Settings</h1>
@@ -465,7 +480,7 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
-                <CardTitle>{shop ? "Edit Shop" : "Create Shop"}</CardTitle>
+            <CardTitle>{shop ? "Edit Shop" : "Create Shop"}</CardTitle>
                 <CardDescription>
                   {isAdmin ? `Managing settings for ${shop?.name || "shop"}` : "Manage your repair shop listing"}
                 </CardDescription>
@@ -507,6 +522,10 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
                     <TabsTrigger value="booking" className="flex items-center gap-2 whitespace-nowrap">
                       <Calendar className="h-4 w-4" />
                       <span>Booking</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="hours" className="flex items-center gap-2 whitespace-nowrap">
+                      <Clock className="h-4 w-4" />
+                      <span>Hours</span>
                     </TabsTrigger>
                   </TabsList>
                 </div>
@@ -1134,6 +1153,77 @@ export function ShopSettings({ user, shop, isAdmin = false }: ShopSettingsProps)
                         <p className="text-xs text-muted-foreground">Fee for shipping by mail</p>
                       </div>
                     </div>
+                  </div>
+                </TabsContent>
+
+                {/* Opening Hours Tab */}
+                <TabsContent value="hours" className="space-y-6">
+                  <div>
+                    <h3 className="mb-2 text-lg font-semibold">Opening & Closing Hours</h3>
+                    <p className="text-sm text-muted-foreground">Set your shop's operating hours for each day of the week</p>
+                  </div>
+
+                  <div className="space-y-4">
+                    {(["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const).map((day) => {
+                      const dayHours = openingHours[day]
+                      const dayLabel = day.charAt(0).toUpperCase() + day.slice(1)
+                      
+                      return (
+                        <div key={day} className="flex items-center gap-4 rounded-lg border p-4">
+                          <div className="w-24 flex-shrink-0">
+                            <Label className="font-medium">{dayLabel}</Label>
+                          </div>
+                          <div className="flex items-center gap-2 flex-1">
+                            <Switch
+                              checked={!dayHours.closed}
+                              onCheckedChange={(checked) => {
+                                setOpeningHours({
+                                  ...openingHours,
+                                  [day]: { ...dayHours, closed: !checked },
+                                })
+                              }}
+                            />
+                            <span className="text-sm text-muted-foreground w-16">
+                              {dayHours.closed ? "Closed" : "Open"}
+                            </span>
+                          </div>
+                          {!dayHours.closed && (
+                            <>
+                              <div className="flex items-center gap-2">
+                                <Label htmlFor={`${day}-open`} className="text-sm">Open</Label>
+                                <Input
+                                  id={`${day}-open`}
+                                  type="time"
+                                  value={dayHours.open}
+                                  onChange={(e) => {
+                                    setOpeningHours({
+                                      ...openingHours,
+                                      [day]: { ...dayHours, open: e.target.value },
+                                    })
+                                  }}
+                                  className="w-32"
+                                />
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <Label htmlFor={`${day}-close`} className="text-sm">Close</Label>
+                                <Input
+                                  id={`${day}-close`}
+                                  type="time"
+                                  value={dayHours.close}
+                                  onChange={(e) => {
+                                    setOpeningHours({
+                                      ...openingHours,
+                                      [day]: { ...dayHours, close: e.target.value },
+                                    })
+                                  }}
+                                  className="w-32"
+                                />
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      )
+                    })}
                   </div>
                 </TabsContent>
               </Tabs>

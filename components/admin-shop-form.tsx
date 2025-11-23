@@ -13,7 +13,7 @@ import { Switch } from "@/components/ui/switch"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useI18n } from "@/lib/i18n/context"
 import { useGoogleMaps } from "@/lib/hooks/use-google-maps"
-import { ArrowLeft, X, Loader2, CheckCircle2, Upload, Image as ImageIcon } from "lucide-react"
+import { ArrowLeft, X, Loader2, CheckCircle2, Upload, Image as ImageIcon, Clock } from "lucide-react"
 import Link from "next/link"
 import { useDropzone } from "react-dropzone"
 import { useCallback } from "react"
@@ -111,6 +111,20 @@ export function AdminShopForm({ shop, users, mode }: AdminShopFormProps) {
     auto_confirm: shop?.booking_preferences?.auto_confirm ?? false,
     require_phone: shop?.booking_preferences?.require_phone ?? false,
   })
+
+  const defaultOpeningHours = {
+    monday: { open: "09:00", close: "17:00", closed: false },
+    tuesday: { open: "09:00", close: "17:00", closed: false },
+    wednesday: { open: "09:00", close: "17:00", closed: false },
+    thursday: { open: "09:00", close: "17:00", closed: false },
+    friday: { open: "09:00", close: "17:00", closed: false },
+    saturday: { open: "09:00", close: "17:00", closed: false },
+    sunday: { open: "09:00", close: "17:00", closed: false },
+  }
+
+  const [openingHours, setOpeningHours] = useState(
+    shop?.opening_hours || defaultOpeningHours
+  )
   
   const [newExpertise, setNewExpertise] = useState("")
   const [isValidatingVat, setIsValidatingVat] = useState(false)
@@ -397,6 +411,7 @@ export function AdminShopForm({ shop, users, mode }: AdminShopFormProps) {
           auto_confirm: formData.auto_confirm,
           require_phone: formData.require_phone,
         },
+        opening_hours: openingHours,
       }
 
         const url = mode === "create" ? "/api/admin/shops" : `/api/admin/shops/${shop.id}`
@@ -453,13 +468,17 @@ export function AdminShopForm({ shop, users, mode }: AdminShopFormProps) {
       )}
 
       <Tabs defaultValue="basic" className="w-full">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="basic">Basic</TabsTrigger>
           <TabsTrigger value="profile">Profile</TabsTrigger>
           <TabsTrigger value="about">About</TabsTrigger>
           <TabsTrigger value="business">Business</TabsTrigger>
           <TabsTrigger value="social">Social</TabsTrigger>
           <TabsTrigger value="booking">Booking</TabsTrigger>
+          <TabsTrigger value="hours" className="flex items-center gap-1">
+            <Clock className="h-3 w-3" />
+            <span>Hours</span>
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="basic" className="space-y-4 mt-6">
@@ -968,6 +987,77 @@ export function AdminShopForm({ shop, users, mode }: AdminShopFormProps) {
                 onCheckedChange={(checked) => setFormData({ ...formData, require_phone: checked })}
               />
             </div>
+          </div>
+        </TabsContent>
+
+        {/* Opening Hours Tab */}
+        <TabsContent value="hours" className="space-y-6 mt-6">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold">Opening & Closing Hours</h3>
+            <p className="text-sm text-muted-foreground">Set the shop's operating hours for each day of the week</p>
+          </div>
+
+          <div className="space-y-4">
+            {(["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const).map((day) => {
+              const dayHours = openingHours[day]
+              const dayLabel = day.charAt(0).toUpperCase() + day.slice(1)
+              
+              return (
+                <div key={day} className="flex items-center gap-4 rounded-lg border p-4">
+                  <div className="w-24 flex-shrink-0">
+                    <Label className="font-medium">{dayLabel}</Label>
+                  </div>
+                  <div className="flex items-center gap-2 flex-1">
+                    <Switch
+                      checked={!dayHours.closed}
+                      onCheckedChange={(checked) => {
+                        setOpeningHours({
+                          ...openingHours,
+                          [day]: { ...dayHours, closed: !checked },
+                        })
+                      }}
+                    />
+                    <span className="text-sm text-muted-foreground w-16">
+                      {dayHours.closed ? "Closed" : "Open"}
+                    </span>
+                  </div>
+                  {!dayHours.closed && (
+                    <>
+                      <div className="flex items-center gap-2">
+                        <Label htmlFor={`${day}-open`} className="text-sm">Open</Label>
+                        <Input
+                          id={`${day}-open`}
+                          type="time"
+                          value={dayHours.open}
+                          onChange={(e) => {
+                            setOpeningHours({
+                              ...openingHours,
+                              [day]: { ...dayHours, open: e.target.value },
+                            })
+                          }}
+                          className="w-32"
+                        />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Label htmlFor={`${day}-close`} className="text-sm">Close</Label>
+                        <Input
+                          id={`${day}-close`}
+                          type="time"
+                          value={dayHours.close}
+                          onChange={(e) => {
+                            setOpeningHours({
+                              ...openingHours,
+                              [day]: { ...dayHours, close: e.target.value },
+                            })
+                          }}
+                          className="w-32"
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </TabsContent>
       </Tabs>

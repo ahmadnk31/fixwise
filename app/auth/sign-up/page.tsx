@@ -12,8 +12,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
-import { useState } from "react"
-import { CheckCircle2, Loader2 } from 'lucide-react'
+import { useState, useEffect, useCallback } from "react"
+import { CheckCircle2, Loader2, XCircle, Sparkles } from 'lucide-react'
 import Image from "next/image"
 import { useI18n } from "@/lib/i18n/context"
 
@@ -50,6 +50,7 @@ const EU_COUNTRIES = [
 export default function SignUpPage() {
   const { t } = useI18n()
   const [name, setName] = useState("")
+  const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [repeatPassword, setRepeatPassword] = useState("")
@@ -64,11 +65,99 @@ export default function SignUpPage() {
   const [isValidatingVat, setIsValidatingVat] = useState(false)
   const [vatValidationMessage, setVatValidationMessage] = useState("")
   
+  // Username validation states
+  const [usernameStatus, setUsernameStatus] = useState<"idle" | "checking" | "available" | "taken" | "invalid">("idle")
+  const [usernameSuggestions, setUsernameSuggestions] = useState<string[]>([])
+  const [showSuggestions, setShowSuggestions] = useState(false)
+  const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false)
+  
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
   const isEUCountry = EU_COUNTRIES.some((c) => c.code === country)
+
+  // Debounced username availability check
+  const checkUsernameAvailability = useCallback(async (value: string) => {
+    if (!value || value.length < 3) {
+      setUsernameStatus("idle")
+      return
+    }
+
+    // Validate format
+    const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/
+    if (!usernameRegex.test(value)) {
+      setUsernameStatus("invalid")
+      return
+    }
+
+    setUsernameStatus("checking")
+
+    try {
+      const response = await fetch(`/api/username/check?username=${encodeURIComponent(value)}`)
+      const data = await response.json()
+
+      if (data.available) {
+        setUsernameStatus("available")
+      } else {
+        setUsernameStatus("taken")
+      }
+    } catch (error) {
+      console.error("Error checking username:", error)
+      setUsernameStatus("idle")
+    }
+  }, [])
+
+  // Debounce username check
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (username) {
+        checkUsernameAvailability(username)
+      } else {
+        setUsernameStatus("idle")
+      }
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [username, checkUsernameAvailability])
+
+  // Fetch username suggestions
+  const fetchUsernameSuggestions = useCallback(async () => {
+    if (!name && !email && !businessName) return
+
+    setIsLoadingSuggestions(true)
+    try {
+      const response = await fetch("/api/username/suggest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: isShopOwner ? businessName || name : name,
+          email,
+          shopName: isShopOwner ? businessName : null,
+        }),
+      })
+
+      const data = await response.json()
+      if (data.suggestions) {
+        setUsernameSuggestions(data.suggestions)
+        setShowSuggestions(true)
+      }
+    } catch (error) {
+      console.error("Error fetching suggestions:", error)
+    } finally {
+      setIsLoadingSuggestions(false)
+    }
+  }, [name, email, businessName, isShopOwner])
+
+  // Auto-fetch suggestions when name/email changes
+  useEffect(() => {
+    if ((name || email || businessName) && !username) {
+      const timer = setTimeout(() => {
+        fetchUsernameSuggestions()
+      }, 1000)
+      return () => clearTimeout(timer)
+    }
+  }, [name, email, businessName, username, fetchUsernameSuggestions])
 
   const handleValidateVat = async () => {
     if (!vatNumber || !country) {
@@ -117,6 +206,18 @@ export default function SignUpPage() {
       return
     }
 
+    if (!username || username.trim().length < 3) {
+      setError("Please enter a username (3-30 characters)")
+      setIsLoading(false)
+      return
+    }
+
+    if (usernameStatus !== "available") {
+      setError("Please choose an available username")
+      setIsLoading(false)
+      return
+    }
+
     if (isShopOwner && isEUCountry) {
       if (!businessName || !vatNumber || !registrationNumber || !businessAddress) {
         setError(t.auth.fillBusinessDetails)
@@ -139,6 +240,7 @@ export default function SignUpPage() {
             process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/shop/dashboard`,
           data: {
             name,
+            username: username.toLowerCase().trim(),
             role: isShopOwner ? "shop" : "user",
           },
         },
@@ -203,6 +305,85 @@ export default function SignUpPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="username">Username *</Label>
+                  <div className="relative">
+                    <Input
+                      id="username"
+                      type="text"
+                      placeholder="johndoe"
+                      required
+                      value={username}
+                      onChange={(e) => {
+                        setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_-]/g, ""))
+                        setShowSuggestions(false)
+                      }}
+                      className={usernameStatus === "available" ? "border-green-500" : usernameStatus === "taken" || usernameStatus === "invalid" ? "border-red-500" : ""}
+                    />
+                    {username && (
+                      <div className="absolute right-2 top-1/2 -translate-y-1/2">
+                        {usernameStatus === "checking" && (
+                          <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                        )}
+                        {usernameStatus === "available" && (
+                          <CheckCircle2 className="h-4 w-4 text-green-500" />
+                        )}
+                        {(usernameStatus === "taken" || usernameStatus === "invalid") && (
+                          <XCircle className="h-4 w-4 text-red-500" />
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  {username && (
+                    <div className="text-xs">
+                      {usernameStatus === "available" && (
+                        <p className="text-green-600">✓ Username available</p>
+                      )}
+                      {usernameStatus === "taken" && (
+                        <p className="text-red-600">✗ Username already taken</p>
+                      )}
+                      {usernameStatus === "invalid" && (
+                        <p className="text-red-600">✗ Username must be 3-30 characters (letters, numbers, _, -)</p>
+                      )}
+                      {usernameStatus === "idle" && username.length < 3 && (
+                        <p className="text-muted-foreground">Minimum 3 characters</p>
+                      )}
+                    </div>
+                  )}
+                  {!username && (name || email || businessName) && (
+                    <div className="space-y-2">
+                      <button
+                        type="button"
+                        onClick={fetchUsernameSuggestions}
+                        className="flex items-center gap-2 text-xs text-primary hover:underline"
+                        disabled={isLoadingSuggestions}
+                      >
+                        <Sparkles className="h-3 w-3" />
+                        {isLoadingSuggestions ? "Generating suggestions..." : "Get username suggestions"}
+                      </button>
+                      {showSuggestions && usernameSuggestions.length > 0 && (
+                        <div className="rounded-lg border bg-muted/50 p-2 space-y-1">
+                          <p className="text-xs font-medium mb-1">Suggestions:</p>
+                          <div className="flex flex-wrap gap-1">
+                            {usernameSuggestions.map((suggestion) => (
+                              <button
+                                key={suggestion}
+                                type="button"
+                                onClick={() => {
+                                  setUsername(suggestion)
+                                  setShowSuggestions(false)
+                                }}
+                                className="text-xs px-2 py-1 rounded bg-background border hover:bg-accent transition-colors"
+                              >
+                                {suggestion}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="email">{t.auth.email}</Label>

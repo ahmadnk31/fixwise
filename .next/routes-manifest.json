@@ -235,6 +235,18 @@
       "namedRegex": "^/api/reviews(?:/)?$"
     },
     {
+      "page": "/api/username/check",
+      "regex": "^/api/username/check(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/username/check(?:/)?$"
+    },
+    {
+      "page": "/api/username/suggest",
+      "regex": "^/api/username/suggest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/username/suggest(?:/)?$"
+    },
+    {
       "page": "/api/validate-vat",
       "regex": "^/api/validate\\-vat(?:/)?$",
       "routeKeys": {},

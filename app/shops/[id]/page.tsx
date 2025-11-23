@@ -3,12 +3,14 @@ import { notFound } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MapPin, Phone, Mail, Star, Wrench, Package, Facebook, Instagram, Twitter, Globe, Info, Image as ImageIcon, ShoppingBag, MessageSquare, ArrowLeft, Calendar } from 'lucide-react'
+import { MapPin, Phone, Mail, Star, Wrench, Package, Facebook, Instagram, Twitter, Globe, Info, Image as ImageIcon, ShoppingBag, MessageSquare, ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 import Link from "next/link"
 import { ReviewList } from "@/components/review-list"
 import { ReviewForm } from "@/components/review-form"
 import { BookingDialog } from "@/components/booking-dialog"
 import { ShopGallery } from "@/components/shop-gallery"
+import { ShopStatus } from "@/components/shop-status"
+import { NightOverlay } from "@/components/night-overlay"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import type { Metadata } from "next"
@@ -59,6 +61,17 @@ export default async function ShopDetailPage({
 
   if (shopError || !shop) {
     notFound()
+  }
+
+  // Fetch shop owner's username
+  let ownerUsername = null
+  if (shop.owner_id) {
+    const { data: owner } = await supabase
+      .from("users")
+      .select("username")
+      .eq("id", shop.owner_id)
+      .maybeSingle()
+    ownerUsername = owner?.username || null
   }
 
   let products: any[] = []
@@ -269,7 +282,15 @@ export default async function ShopDetailPage({
                 <CardHeader className="pb-4">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div className="flex-1">
-                      <h1 className="text-3xl md:text-4xl font-bold mb-2">{shop.name}</h1>
+                      <div className="flex items-start gap-3 mb-2">
+                        <h1 className="text-3xl md:text-4xl font-bold">{shop.name}</h1>
+                        {ownerUsername && (
+                          <Badge variant="outline" className="mt-2">
+                            <User className="h-3 w-3 mr-1" />
+                            @{ownerUsername}
+                          </Badge>
+                        )}
+                      </div>
                       <CardTitle className="sr-only">{shop.name} - Repair Services</CardTitle>
                       {shop.bio && (
                         <p className="text-lg text-muted-foreground mb-4">{shop.bio}</p>
@@ -337,6 +358,40 @@ export default async function ShopDetailPage({
                       </div>
                     )}
                   </div>
+
+                  {/* Opening Hours */}
+                  {shop.opening_hours && (
+                    <div className="border-t pt-6 mt-6 relative">
+                      {/* Night overlay */}
+                      <NightOverlay />
+                      <div className="relative flex items-start gap-3 mb-4">
+                        <div className="rounded-lg bg-primary/10 p-2">
+                          <Clock className="h-5 w-5 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-3">
+                            <p className="text-sm font-medium text-muted-foreground">Opening Hours</p>
+                            <ShopStatus openingHours={shop.opening_hours} />
+                          </div>
+                          <div className="grid gap-2 sm:grid-cols-2">
+                            {(["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const).map((day) => {
+                              const dayHours = shop.opening_hours[day]
+                              const dayLabel = day.charAt(0).toUpperCase() + day.slice(1)
+                              
+                              return (
+                                <div key={day} className="flex items-center justify-between text-sm">
+                                  <span className="font-medium">{dayLabel}</span>
+                                  <span className={dayHours?.closed ? "text-muted-foreground" : ""}>
+                                    {dayHours?.closed ? "Closed" : `${dayHours?.open || "09:00"} - ${dayHours?.close || "17:00"}`}
+                                  </span>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 

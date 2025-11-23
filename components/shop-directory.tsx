@@ -15,6 +15,7 @@ import { useRouter } from 'next/navigation'
 import Image from "next/image"
 import { NavbarClient } from "./navbar-client"
 import { useI18n } from "@/lib/i18n/context"
+import { ShopStatus } from "./shop-status"
 
 interface ShopDirectoryProps {
   shops: RepairShop[]
@@ -217,9 +218,14 @@ export function ShopDirectory({ shops, diagnosis, repairComponent }: ShopDirecto
                           )}
                         </CardDescription>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                        <span className="font-semibold">{shop.rating.toFixed(1)}</span>
+                      <div className="flex flex-col items-end gap-2">
+                        <div className="flex items-center gap-1">
+                          <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          <span className="font-semibold">{shop.rating.toFixed(1)}</span>
+                        </div>
+                        {shop.opening_hours && (
+                          <ShopStatus openingHours={shop.opening_hours} />
+                        )}
                       </div>
                     </div>
                   </CardHeader>

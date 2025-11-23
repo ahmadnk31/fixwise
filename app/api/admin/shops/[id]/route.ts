@@ -45,6 +45,7 @@ export async function PATCH(
     description,
     social_media,
     booking_preferences,
+    opening_hours,
   } = body
 
   // Validate required fields
@@ -111,6 +112,15 @@ export async function PATCH(
         same_day_booking_allowed: true,
         auto_confirm: false,
         require_phone: false,
+      },
+      opening_hours: opening_hours || {
+        monday: { open: "09:00", close: "17:00", closed: false },
+        tuesday: { open: "09:00", close: "17:00", closed: false },
+        wednesday: { open: "09:00", close: "17:00", closed: false },
+        thursday: { open: "09:00", close: "17:00", closed: false },
+        friday: { open: "09:00", close: "17:00", closed: false },
+        saturday: { open: "09:00", close: "17:00", closed: false },
+        sunday: { open: "09:00", close: "17:00", closed: false },
       },
     })
     .eq("id", id)

@@ -25,6 +25,8 @@
   "/api/products/route": "/api/products",
   "/api/reviews/[id]/route": "/api/reviews/[id]",
   "/api/reviews/route": "/api/reviews",
+  "/api/username/check/route": "/api/username/check",
+  "/api/username/suggest/route": "/api/username/suggest",
   "/api/validate-vat/route": "/api/validate-vat",
   "/auth/login/page": "/auth/login",
   "/auth/sign-up-success/page": "/auth/sign-up-success",

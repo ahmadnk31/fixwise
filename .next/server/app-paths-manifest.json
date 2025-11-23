@@ -25,6 +25,8 @@
   "/api/products/route": "app/api/products/route.js",
   "/api/reviews/[id]/route": "app/api/reviews/[id]/route.js",
   "/api/reviews/route": "app/api/reviews/route.js",
+  "/api/username/check/route": "app/api/username/check/route.js",
+  "/api/username/suggest/route": "app/api/username/suggest/route.js",
   "/api/validate-vat/route": "app/api/validate-vat/route.js",
   "/auth/login/page": "app/auth/login/page.js",
   "/auth/sign-up-success/page": "app/auth/sign-up-success/page.js",

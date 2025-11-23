@@ -1,32 +1,143 @@
-[00:00:02.291] Server  LOG      ✓ Ready in 1574ms
-[00:00:09.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:09.650] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
-[00:00:09.650] Browser LOG     [v0] Search attempt 1 - Query: iPhone 11 battery
-[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:09.777] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815532351}
-[00:00:10.008] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
-[00:00:10.009] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
-[00:00:10.412] Server  LOG     [v0] iFixit API status: 200
-[00:00:10.415] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
-[00:00:10.459] Server  LOG     [v0] iFixit search query: "iPhone 11 battery"
-[00:00:10.459] Server  LOG     [v0] iFixit API URL: "https://www.ifixit.com/api/2.0/search/iPhone%2011%20battery?doctypes=guide"
-[00:00:10.490] Server  LOG     [v0] iFixit API status: 200
-[00:00:10.492] Server  LOG     [v0] iFixit API response: "{\"search\":\"iPhone 11 battery\",\"offset\":0,\"limit\":100,\"totalResults\":26,\"moreResults\":false,\"results\":[{\"dataType\":\"wiki\",\"wikiid\":404848,\"langid\":\"en\",\"title\":\"iPhone 11 Battery Adhesive Strips\",\"display_title\":\"iPhone 11 Battery Adhesive Strips\",\"namespace\":\"ITEM\",\"summary\":\"\",\"url\":\"https://www.ifixit.com/Item/iPhone_11_Battery_Adhesive_Strips\",\"text\":\"Replace the adhesive film that secures the battery to the rear case compatible with the A2111, A2221, A2223 model iPhone 11 smartphone.\",\"image"
-[00:00:10.598] Browser LOG     [v0] Search attempt 1 - Results: 26
-[00:00:10.598] Browser LOG     [v0] Search attempt 1 - Results: 26
-[00:01:26.009] Server  LOG      ✓ Compiled in 158ms
-[00:01:42.431] Server  LOG      ✓ Compiled in 249ms
-[00:02:03.088] Server  LOG      ✓ Compiled in 126ms
-[00:02:24.719] Server  LOG      ✓ Compiled in 206ms
-[00:02:46.393] Server  LOG      ✓ Compiled in 126ms
-[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:04:47.731] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815810282}
-[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:04:52.594] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815815145}
-[00:04:57.410] Server  LOG      ✓ Compiled in 225ms
-[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:07:14.557] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763815957111}
+[00:00:05.325] Server  LOG      ✓ Ready in 4.6s
+[00:05:49.641] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:49.972] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:49.972] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:49.972] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889903785}
+[00:05:53.836] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889907637}
+[00:05:54.935] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:05:54.935] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:05:57.234] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889910941}
+[00:06:01.524] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:01.769] Browser WARN    Image with src "/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:06:01.939] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:06:01.939] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:06:01.939] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:01.939] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/shops/128868b1-a190-48f8-bead-322ecfe2495e/edit","route":"/admin/shops/[id]/edit"}
+[00:06:01.939] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/shops/128868b1-a190-48f8-bead-322ecfe2495e/edit color: rgb(120, 120, 120) color: inherit {"dp":"/admin/shops/[id]/edit","o":"http://localhost:3000/admin/shops/128868b1-a190-48f8-bead-322ecfe2495e/edit","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889915751}
+[00:06:41.043] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889954855}
+[00:06:43.981] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/login color: rgb(120, 120, 120) color: inherit {"dp":"/auth/login","o":"http://localhost:3000/auth/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889957793}
+[00:06:46.217] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/auth/sign-up","o":"http://localhost:3000/auth/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889960026}
+[00:07:06.273] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/login color: rgb(120, 120, 120) color: inherit {"dp":"/auth/login","o":"http://localhost:3000/auth/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889980085}
+[00:07:07.452] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763889981265}
+[00:08:02.055] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/auth/login color: rgb(120, 120, 120) color: inherit {"dp":"/auth/login","o":"http://localhost:3000/auth/login","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890035867}
+[00:08:13.796] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/shop/dashboard","o":"http://localhost:3000/shop/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890047605}
+[00:08:23.839] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:08:23.839] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shop/settings color: rgb(120, 120, 120) color: inherit {"dp":"/shop/settings","o":"http://localhost:3000/shop/settings","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890057629}
+[00:08:59.226] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:08:59.227] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890092864}
+[00:09:01.186] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/user/diagnosis-history color: rgb(120, 120, 120) color: inherit {"dp":"/user/diagnosis-history","o":"http://localhost:3000/user/diagnosis-history","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890094996}
+[00:09:07.441] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890101232}
+[00:12:22.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890296655}
+[00:12:35.889] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890309584}
+[00:12:44.605] Server  LOG      ✓ Compiled in 127ms
+[00:15:15.771] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890469614}
+[00:15:47.302] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890501031}
+[00:15:53.395] Server  LOG      ✓ Compiled in 168ms
+[00:16:05.425] Server  LOG      ✓ Compiled in 120ms
+[00:16:13.732] Server  LOG      ✓ Compiled in 262ms
+[00:16:22.455] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890536208}
+[00:16:27.738] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:28.307] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:28.307] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","route":"/admin/shops/[id]/edit"}
+[00:16:28.307] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit color: rgb(120, 120, 120) color: inherit {"dp":"/admin/shops/[id]/edit","o":"http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890542081}
+[00:16:28.307] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:16:28.307] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:16:39.874] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890553621}
+[00:16:44.994] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:16:44.995] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890558765}
+[00:16:55.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:55.946] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SelectProvider required={undefined} scope={undefined} trigger={null} ...>
+      <SelectCollectionProvider scope={undefined}>
+        <SelectCollectionProviderProvider scope={undefined} itemMap={Map} collectionRef={{current:null}}>
+          <SelectProvider scope={undefined} onNativeOptionAdd={function Select.useCallback} ...>
+            <SelectTrigger className="w-[100px] ...">
+              <SelectTrigger data-slot="select-tri..." data-size="default" className={"border-i..."}>
+                <PopperAnchor asChild={true} __scopePopper={{Popper:[...]}}>
+                  <Primitive.div asChild={true} ref={function}>
+                    <Slot ref={function}>
+                      <SlotClone ref={function}>
+                        <Primitive.button type="button" role="combobox" aria-controls="radix-_R_2..." ...>
+                          <button
+                            type="button"
+                            role="combobox"
++                           aria-controls="radix-_R_2cmlb_"
+-                           aria-controls="radix-_R_9imlb_"
+                            aria-expanded={false}
+                            aria-required={undefined}
+                            aria-autocomplete="none"
+                            dir="ltr"
+                            data-state="closed"
+                            disabled={false}
+                            data-disabled={undefined}
+                            data-placeholder={undefined}
+                            data-slot="select-trigger"
+                            data-size="default"
+                            className={"border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='tex..."}
+                            onClick={function handleEvent}
+                            onPointerDown={function handleEvent}
+                            onKeyDown={function handleEvent}
+                            ref={function}
+                          >
+            ...
+      ...
+
+[00:16:56.261] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:16:56.261] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:16:56.261] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:56.261] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops","route":"/shops"}
+[00:16:56.261] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890570111}
+[00:17:09.025] Server  LOG      ✓ Compiled in 212ms
+[00:17:32.942] Server  LOG      ✓ Compiled in 138ms
+[00:17:48.756] Server  LOG      ✓ Compiled in 228ms
+[00:17:49.505] Server  ERROR    ⨯ ReferenceError: NightOverlay is not defined
+[00:17:49.656] Browser ERROR   uncaughtError: ReferenceError: NightOverlay is not defined
+[00:17:55.024] Server  ERROR    ⨯ ReferenceError: NightOverlay is not defined
+[00:17:55.351] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:55.597] Browser ERROR   uncaughtError: ReferenceError: NightOverlay is not defined
+[00:18:26.126] Server  LOG      ✓ Compiled in 149ms
+[00:18:28.521] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:29.332] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:18:29.332] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","route":"/shops/[id]"}
+[00:18:29.332] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890662856}
+[00:18:49.836] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890683668}
+[00:18:50.100] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:18:50.100] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:18:56.563] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890690313}
+[00:19:04.536] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:04.764] Browser WARN    Image with src "/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:19:04.935] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:19:04.935] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:19:04.935] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:04.935] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","route":"/admin/shops/[id]/edit"}
+[00:19:04.935] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit color: rgb(120, 120, 120) color: inherit {"dp":"/admin/shops/[id]/edit","o":"http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890698791}
+[00:19:14.200] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890707957}
+[00:19:17.127] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:17.378] Browser WARN    Image with src "/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:19:17.552] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:19:17.552] Browser WARN    As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+[00:19:17.552] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:17.552] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","route":"/admin/shops/[id]/edit"}
+[00:19:17.552] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit color: rgb(120, 120, 120) color: inherit {"dp":"/admin/shops/[id]/edit","o":"http://localhost:3000/admin/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950/edit","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890711408}
+[00:21:31.357] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890845085}
+[00:21:36.312] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:21:36.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890850109}
+[00:21:39.566] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890853418}
+[00:21:44.917] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763890858698}
+[00:23:05.830] Server  LOG      ✓ Compiled in 103ms
+[00:23:25.406] Server  LOG      ✓ Compiled in 243ms
