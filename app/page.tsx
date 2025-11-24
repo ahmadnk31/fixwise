@@ -43,6 +43,10 @@ export default async function HomePage() {
               />
             </div>
             <h1 className="sr-only">FixWise - Free AI Repair Diagnosis for Phone & Laptop</h1>
+            {/* Visible brand mention for SEO - helps Google recognize correct spelling */}
+            <div className="mb-2 text-sm text-muted-foreground">
+              Welcome to <strong className="text-foreground">FixWise</strong> - Your trusted AI repair diagnosis platform
+            </div>
             <HomePageClient />
           </div>
 

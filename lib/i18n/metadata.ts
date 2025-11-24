@@ -18,6 +18,8 @@ export function getMetadataForLocale(locale: Locale = 'en'): Metadata {
       : "Free AI repair diagnosis for iPhone, Android, MacBook, and Windows devices. Describe your issue and get instant expert recommendations. Connect with verified local repair shops near you.",
     keywords: locale === 'nl'
       ? [
+          "FixWise",
+          "fixwise",
           "AI reparatiediagnose",
           "telefoon diagnose",
           "laptop reparatie",
@@ -31,6 +33,8 @@ export function getMetadataForLocale(locale: Locale = 'en'): Metadata {
           "laptop reparatie",
         ]
       : [
+          "FixWise",
+          "fixwise",
           "AI repair diagnosis",
           "phone diagnosis",
           "laptop repair",

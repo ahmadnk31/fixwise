@@ -169,13 +169,18 @@ export default async function RootLayout({
         <link rel="alternate" hrefLang="nl" href={`${baseUrl}/`} />
         <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/`} />
         <link rel="canonical" href={baseUrl} />
+        {/* Brand name meta tag to reinforce correct spelling */}
+        <meta name="brand" content="FixWise" />
+        <meta name="application-name" content="FixWise" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": `${baseUrl}#organization`,
               name: "FixWise",
+              alternateName: ["fixwise", "FixWise Repair Diagnosis", "FixWise AI"],
               description: "AI-Powered Repair Diagnosis and Local Repair Shop Directory",
               url: baseUrl,
               logo: {
@@ -183,6 +188,17 @@ export default async function RootLayout({
                 url: `${baseUrl}/logo.png`,
                 width: 1200,
                 height: 630
+              },
+              brand: {
+                "@type": "Brand",
+                name: "FixWise",
+                alternateName: "fixwise",
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${baseUrl}/logo.png`,
+                  width: 1200,
+                  height: 630
+                }
               },
               sameAs: [],
               contactPoint: {
@@ -200,8 +216,29 @@ export default async function RootLayout({
                 "Tablet Repair",
                 "Device Diagnosis",
                 "Screen Replacement",
-                "Battery Replacement"
+                "Battery Replacement",
+                "FixWise",
+                "AI Repair Diagnosis"
               ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Brand",
+              name: "FixWise",
+              alternateName: "fixwise",
+              url: baseUrl,
+              logo: {
+                "@type": "ImageObject",
+                url: `${baseUrl}/logo.png`,
+                width: 1200,
+                height: 630
+              },
+              description: "FixWise - AI-Powered Repair Diagnosis Platform for phones, laptops, and tablets"
             })
           }}
         />
