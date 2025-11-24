@@ -43,8 +43,19 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     icons: {
-      icon: '/favicon.png',
-      apple: '/favicon.png',
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon.png', sizes: 'any' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        { rel: 'mask-icon', url: '/icon.svg', color: '#000000' },
+      ],
     },
     generator: "Next.js",
     applicationName: "FixWise",
@@ -143,9 +154,21 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Favicons */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/icon.svg" color="#000000" />
+        
+        {/* Language and Canonical */}
         <link rel="alternate" hrefLang="en" href={`${baseUrl}/`} />
         <link rel="alternate" hrefLang="nl" href={`${baseUrl}/`} />
         <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/`} />
+        <link rel="canonical" href={baseUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -127,7 +127,7 @@ export function getShopsPageMetadata(locale: Locale = 'en'): Metadata {
       siteName: "FixWise",
       images: [
         {
-          url: `${baseUrl}/logo.png`,
+          url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: locale === 'nl' 
@@ -144,7 +144,7 @@ export function getShopsPageMetadata(locale: Locale = 'en'): Metadata {
       description: locale === 'nl'
         ? "Blader door vertrouwde reparatiezaken voor telefoon-, laptop- en tabletreparaties bij u in de buurt."
         : "Browse trusted repair shops for phone, laptop, and tablet repairs near you.",
-      images: [`${baseUrl}/logo.png`],
+      images: [`${baseUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: `${baseUrl}/shops`,
