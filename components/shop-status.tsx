@@ -82,21 +82,21 @@ export function ShopStatus({ openingHours, showNightOverlay = false }: ShopStatu
       {showNightOverlay && nightTime && (
         <div className="absolute -inset-2 bg-gradient-to-br from-blue-900/30 via-purple-900/30 to-indigo-900/30 rounded-lg pointer-events-none blur-sm" />
       )}
-      <div className="relative flex items-center gap-2">
+      <div className="relative flex items-center gap-1.5 flex-wrap">
         {nightTime ? (
-          <Moon className="h-4 w-4 text-blue-400" />
+          <Moon className="h-4 w-4 text-blue-400 flex-shrink-0" />
         ) : (
-          <Sun className="h-4 w-4 text-yellow-500" />
+          <Sun className="h-4 w-4 text-yellow-500 flex-shrink-0" />
         )}
         <Badge
           variant={isOpen ? "default" : "secondary"}
-          className={isOpen ? "bg-green-500 hover:bg-green-600" : "bg-red-500 hover:bg-red-600"}
+          className={`${isOpen ? "bg-green-500 hover:bg-green-600" : "bg-red-500 hover:bg-red-600"} flex-shrink-0`}
         >
-          <Clock className="h-3 w-3 mr-1" />
-          {isOpen ? "Open Now" : "Closed"}
+          <Clock className="h-3 w-3 mr-1 flex-shrink-0" />
+          <span className="whitespace-nowrap text-xs">{isOpen ? "Open Now" : "Closed"}</span>
         </Badge>
         {currentTime && (
-          <span className="text-xs text-muted-foreground">({currentTime})</span>
+          <span className="text-xs text-white/80 whitespace-nowrap flex-shrink-0">({currentTime})</span>
         )}
       </div>
     </div>

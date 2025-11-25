@@ -1,10 +1,105 @@
-[00:00:02.661] Server  LOG      ✓ Ready in 1954ms
-[00:00:08.706] Server  LOG      ○ Compiling /_not-found/page ...
-[00:00:10.518] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.175] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:11.175] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/documents/c419c616-edb0-434c-9fd2-dae422454662","route":"/dashboard/documents/c419c616-edb0-434c-9fd2-dae422454662"}
-[00:00:11.175] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/documents/c419c616-edb0-434c-9fd2-dae422454662 color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/documents/c419c616-edb0-434c-9fd2-dae422454662","o":"http://localhost:3000/dashboard/documents/c419c616-edb0-434c-9fd2-dae422454662","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764024672542}
-[00:00:13.497] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:14.116] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:14.116] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:14.116] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764024675483}
+[00:00:03.755] Server  LOG      ✓ Ready in 2.8s
+[00:00:17.425] Server  LOG      ○ Compiling / ...
+[00:00:19.932] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:20.492] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:20.492] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:20.492] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764056115364}
+[00:00:25.665] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764056120309}
+[00:00:26.839] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:00:26.839] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:00:38.336] Server  LOG      ✓ Compiled in 111ms
+[00:01:09.854] Server  LOG      ✓ Compiled in 146ms
+[00:01:51.689] Server  LOG      ✓ Compiled in 136ms
+[00:02:31.745] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:32.844] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:02:32.844] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:02:32.844] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:32.844] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops","route":"/shops"}
+[00:02:32.844] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764056243086}
+[00:03:10.891] Server  LOG      ✓ Compiled in 93ms
+[00:03:45.444] Server  LOG      ✓ Compiled in 96ms
+[00:04:03.107] Server  LOG      ✓ Compiled in 235ms
+[00:08:10.018] Server  LOG      ✓ Compiled in 120ms
+[00:10:06.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950 color: rgb(120, 120, 120) color: inherit {"dp":"/shops/[id]","o":"http://localhost:3000/shops/5f1e6633-6e3f-49e8-aecd-f877e4b40950","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764056696665}
+[00:10:12.918] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764056702933}
+[00:13:07.093] Server  LOG      ✓ Compiled in 104ms
+[00:13:24.141] Server  LOG      ✓ Compiled in 181ms
+[00:13:38.610] Server  LOG      ✓ Compiled in 143ms
+[00:13:59.942] Server  LOG      ✓ Compiled in 177ms
+[00:14:21.441] Server  LOG      ✓ Compiled in 94ms
+[00:16:43.253] Server  LOG      ✓ Compiled in 222ms
+[00:16:43.662] Browser ERROR   ./components/shop-directory.tsx:331:13
+Parsing ecmascript source code failed
+  329 |                 </Card>
+  330 |               ))
+> 331 |             )}
+      |             ^
+  332 |           </div>
+  333 |
+  334 |           {/* Map */}
+
+Expected '</', got ')'
+
+Import trace:
+  Server Component:
+    ./components/shop-directory.tsx
+    ./app/shops/page.tsx
+[00:17:01.963] Server  LOG      ✓ Compiled in 195ms
+[00:17:02.662] Browser ERROR   ./components/shop-directory.tsx:331:13
+Parsing ecmascript source code failed
+  329 |                 </Card>
+  330 |               ))
+> 331 |             )}
+      |             ^
+  332 |           </div>
+  333 |
+  334 |           {/* Map */}
+
+Expected '</', got ')'
+
+Import trace:
+  Server Component:
+    ./components/shop-directory.tsx
+    ./app/shops/page.tsx
+[00:17:49.662] Browser ERROR   ./components/shop-directory.tsx:331:13
+Parsing ecmascript source code failed
+  329 |                 </Card>
+  330 |               ))
+> 331 |             )}
+      |             ^
+  332 |           </div>
+  333 |
+  334 |           {/* Map */}
+
+Expected '</', got ')'
+
+Import trace:
+  Server Component:
+    ./components/shop-directory.tsx
+    ./app/shops/page.tsx
+[00:19:16.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/3fbb4a35-5cd0-4ffe-a4df-c2c97c683fbb/profile-1763712005897-2rgvbp.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/63abd1d4-3ee6-455c-9d3f-2ea82e01326e/profile-1763712341198-aglw8aj.jpeg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/3fbb4a35-5cd0-4ffe-a4df-c2c97c683fbb/profile-1763712828558-fa9qu.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/3fbb4a35-5cd0-4ffe-a4df-c2c97c683fbb/profile-1763747808533-1ksuh.jpeg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/3fbb4a35-5cd0-4ffe-a4df-c2c97c683fbb/profile-1763826515914-7v40b.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Image with src "https://ejtvkywefkrxbkubhmfg.supabase.co/storage/v1/object/public/shop-images/3fbb4a35-5cd0-4ffe-a4df-c2c97c683fbb/profile-1763814679676-eexf6k.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[00:19:17.254] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:19:17.254] Browser WARN    As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+[00:19:17.254] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:17.254] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/shops","route":"/shops"}
+[00:19:17.254] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/shops color: rgb(120, 120, 120) color: inherit {"dp":"/shops","o":"http://localhost:3000/shops","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764057247534}
+[00:20:14.032] Server  LOG      ✓ Compiled in 116ms
+[00:21:33.147] Server  LOG      ✓ Compiled in 150ms
+[00:21:43.155] Server  LOG      ✓ Compiled in 154ms
+[00:22:02.352] Server  LOG      ✓ Compiled in 282ms
+[00:23:05.646] Server  LOG      ✓ Compiled in 161ms
+[00:23:18.711] Server  LOG      ✓ Compiled in 152ms
+[00:23:49.530] Server  LOG      ✓ Compiled in 253ms
+[00:24:12.870] Server  LOG      ✓ Compiled in 119ms
+[00:24:50.638] Server  LOG      ✓ Compiled in 124ms
+[00:25:01.631] Server  LOG      ✓ Compiled in 107ms
+[00:25:13.841] Server  LOG      ✓ Compiled in 164ms
+[00:26:43.418] Server  LOG      ✓ Compiled in 145ms
+[00:27:37.649] Server  LOG      ✓ Compiled in 108ms
+[00:27:51.182] Server  LOG      ✓ Compiled in 127ms
