@@ -279,7 +279,7 @@ export function ShopDirectory({ shops, diagnosis, repairComponent }: ShopDirecto
                         </div>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4 p-6 pt-0 flex-1 flex flex-col">
+                    <CardContent className="space-y-4 p-6 pt-0 flex-1 flex flex-col min-h-0 overflow-hidden">
                       <div className="flex flex-wrap gap-2">
                         {shop.expertise.map((exp) => (
                           <Badge key={exp} variant="secondary" className="break-words">
@@ -307,21 +307,21 @@ export function ShopDirectory({ shops, diagnosis, repairComponent }: ShopDirecto
                         )}
                       </div>
 
-                      <div className="flex gap-2 mt-auto">
+                      <div className="flex gap-2 mt-auto min-w-0 overflow-hidden">
                         <Link href={`/shops/${shop.id}`} className="flex-1 min-w-0" onClick={(e) => e.stopPropagation()}>
-                          <Button variant="outline" className="w-full bg-transparent text-xs sm:text-sm">
-                            {t.shops.viewDetails} & {t.shops.reviews}
+                          <Button variant="outline" className="w-full bg-transparent text-xs sm:text-sm max-w-full">
+                            <span className="truncate block w-full">{t.shops.viewDetails} & {t.shops.reviews}</span>
                           </Button>
                         </Link>
                         {diagnosis && (
                           <Button
-                            className="flex-1 min-w-0 text-xs sm:text-sm"
+                            className="flex-1 min-w-0 text-xs sm:text-sm max-w-full"
                             onClick={(e) => {
                               e.stopPropagation()
                               handleContactShop(shop.id)
                             }}
                           >
-                            {t.shops.contactShop}
+                            <span className="truncate block w-full">{t.shops.contactShop}</span>
                           </Button>
                         )}
                       </div>
